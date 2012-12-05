@@ -2,7 +2,7 @@ package tiwogrupowy.network;
 
 import java.util.Iterator;
 
-import algs.model.list.List;
+import tiwogrupowy.list.List;
 
 /**
  * Records information about a vertex's forward (Outgoing) edges and backward (Incoming)

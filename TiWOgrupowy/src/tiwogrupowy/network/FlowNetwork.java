@@ -1,6 +1,6 @@
 package tiwogrupowy.network;
 
-import algs.model.list.DoubleLinkedList;
+import tiwogrupowy.list.DoubleLinkedList;
 
 /**
  * Parent abstract class for representing a flow network problem to be solved.

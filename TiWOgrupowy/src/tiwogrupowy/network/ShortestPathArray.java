@@ -2,7 +2,7 @@ package tiwogrupowy.network;
 
 import java.util.Arrays;
 
-import algs.model.heap.BinaryHeap;
+import tiwogrupowy.heap.BinaryHeap;
 
 /**
  * Encapsulate algorithm by which the augmenting path for a Minimal Cost, Maximal

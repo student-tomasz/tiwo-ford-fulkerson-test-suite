@@ -2,7 +2,7 @@ package tiwogrupowy.network;
 
 import java.util.Iterator;
 
-import algs.model.list.DoubleLinkedList;
+import tiwogrupowy.list.DoubleLinkedList;
 
 /**
  * Store information regarding the graph in a two-dimensional matrix. The

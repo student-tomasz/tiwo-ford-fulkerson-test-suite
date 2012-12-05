@@ -1,6 +1,6 @@
 package tiwogrupowy.network;
 
-import algs.model.list.DoubleLinkedList;
+import tiwogrupowy.list.DoubleLinkedList;
 
 /**
  * Encapsulate algorithm by which the augmenting path for a flow network

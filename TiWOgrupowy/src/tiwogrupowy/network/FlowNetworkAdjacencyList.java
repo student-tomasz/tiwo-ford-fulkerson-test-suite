@@ -2,9 +2,9 @@ package tiwogrupowy.network;
 
 import java.util.Iterator;
 
-import algs.model.list.DoubleLinkedList;
-import algs.model.list.List;
-import algs.model.list.Node;
+import tiwogrupowy.list.DoubleLinkedList;
+import tiwogrupowy.list.List;
+import tiwogrupowy.list.Node;
 
 /**
  * Store information regarding the graph as an adjacency list. 

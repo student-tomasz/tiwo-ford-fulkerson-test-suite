@@ -1,7 +1,7 @@
 package tiwogrupowy.network;
 
 import java.util.Iterator;
-import algs.model.list.DoubleLinkedList;
+import tiwogrupowy.list.DoubleLinkedList;
 
 /**
  * Encapsulate algorithm by which the augmenting path for a flow network is found when the underlying

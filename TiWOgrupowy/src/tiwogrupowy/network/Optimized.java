@@ -2,7 +2,7 @@ package tiwogrupowy.network;
 
 import java.util.Iterator;
 
-import algs.model.list.DoubleLinkedList;
+import tiwogrupowy.list.DoubleLinkedList;
 
 /**
  * Optimized implementation of Ford-Fulkerson that uses arrays for all storage.
