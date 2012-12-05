@@ -5,15 +5,15 @@ import java.util.StringTokenizer;
 
 import org.junit.Test;
 
-import algs.model.network.Assignment;
-import algs.model.network.DisjointPairs;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetworkArray;
-import algs.model.network.BipartiteMatchingMinCost;
-import algs.model.network.ShortestPathArray;
-import algs.model.network.FordFulkerson;
-import algs.model.network.Transportation;
-import algs.model.network.Transshipment;
+import tiwogrupowy.network.Assignment;
+import tiwogrupowy.network.DisjointPairs;
+import tiwogrupowy.network.EdgeInfo;
+import tiwogrupowy.network.FlowNetworkArray;
+import tiwogrupowy.network.BipartiteMatchingMinCost;
+import tiwogrupowy.network.ShortestPathArray;
+import tiwogrupowy.network.FordFulkerson;
+import tiwogrupowy.network.Transportation;
+import tiwogrupowy.network.Transshipment;
 
 import junit.framework.TestCase;
 

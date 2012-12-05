@@ -6,18 +6,18 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import algs.model.list.DoubleLinkedList;
-import algs.model.network.BFS_SearchArray;
-import algs.model.network.BFS_SearchList;
-import algs.model.network.DFS_SearchArray;
-import algs.model.network.DFS_SearchList;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetwork;
-import algs.model.network.FlowNetworkAdjacencyList;
-import algs.model.network.FlowNetworkArray;
-import algs.model.network.FordFulkerson;
-import algs.model.network.Optimized;
-import algs.model.network.OptimizedFlowNetwork;
+import tiwogrupowy.list.DoubleLinkedList;
+import tiwogrupowy.network.BFS_SearchArray;
+import tiwogrupowy.network.BFS_SearchList;
+import tiwogrupowy.network.DFS_SearchArray;
+import tiwogrupowy.network.DFS_SearchList;
+import tiwogrupowy.network.EdgeInfo;
+import tiwogrupowy.network.FlowNetwork;
+import tiwogrupowy.network.FlowNetworkAdjacencyList;
+import tiwogrupowy.network.FlowNetworkArray;
+import tiwogrupowy.network.FordFulkerson;
+import tiwogrupowy.network.Optimized;
+import tiwogrupowy.network.OptimizedFlowNetwork;
 
 /** Test FlowNetwork code */
 public class ExampleTest extends TestCase {

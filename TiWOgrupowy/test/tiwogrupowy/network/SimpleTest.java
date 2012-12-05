@@ -2,8 +2,8 @@ package tiwogrupowy.network;
 
 import org.junit.Test;
 
-import algs.model.network.EdgeInfo;
-import algs.model.network.VertexInfo;
+import tiwogrupowy.network.EdgeInfo;
+import tiwogrupowy.network.VertexInfo;
 
 import junit.framework.TestCase;
 

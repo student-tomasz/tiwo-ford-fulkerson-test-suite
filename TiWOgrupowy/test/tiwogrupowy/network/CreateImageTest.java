@@ -6,12 +6,12 @@ import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import algs.model.network.DFS_SearchArray;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetworkArray;
-import algs.model.network.FordFulkerson;
-import algs.model.network.ShortestPathArray;
-import algs.model.network.debug.CreateImage;
+import tiwogrupowy.network.DFS_SearchArray;
+import tiwogrupowy.network.EdgeInfo;
+import tiwogrupowy.network.FlowNetworkArray;
+import tiwogrupowy.network.FordFulkerson;
+import tiwogrupowy.network.ShortestPathArray;
+import tiwogrupowy.network.debug.CreateImage;
 
 
 public class CreateImageTest extends TestCase {
