@@ -1,0 +1,53 @@
+\documentclass[10pt]{minutes}
+
+\begin{document}
+
+\Tytul{\emph{Ford-Fulkerson Przepływ maksymalny}}
+\Data{2012-12-12 1:00}
+\Miejsce{Przyczółek}
+\Obecni{MO}
+\MakeMinutesMeta
+
+
+\section{Wstęp} % (fold)
+  \subsection{Opis lagorytmu}
+
+\section{Instrukcja obsługi}
+  \subsection{Dane wejściowe}
+    Algorytm Forda-Fulkersona opisany powyżej przyjmuje dwa argumenty:
+    \begin{itemize}
+      \item \emph{FlowNetwork} - graf przepływu sieci
+      \item \emph{Search} - metoda wykorzystywana do wyszukiwania ścieżek powiększających.
+    \end{itemize}
+
+  \subsubsection{Graf przepływu}
+    Graf przepływu realizowany jest przy pomocy algorytmu z użyciem list powiązanych, \emph{FlowNetworkAdjacencyArray}. Do każdego wierzchołka grafu przypisywane są dwie listy,
+ krawędzi przednich oraz tylnich. Rozwiązanie to jest nieodpowiednie dla zastosowań z użyciem dużych grafów, ponieważ zajmuje spore ilości pamięci.\\
+Argumenty wejściowe:
+    \begin{itemize}
+      \item \emph{int} - ilość wszystkich węzłów w grafie
+      \item \emph{int} - indeks węzła początkowego
+      \item \emph{int} - indeks węzła docelowego
+      \item \emph{Iterator<EdgesInfo>} - lista krawedzi wraz z ich przepustowością
+    \end{itemize}
+
+  \subsubsection{Krawędzie}
+    Informacje o krawędziach grafu przechowywane są w kolekcji obiektów \emph{EgdeInfo}, które zawierają informację o wierzchołkach,
+pomiędzy którymi dana krawędź się znajduje oraz o jakie posiada możliwości przepustowe.
+    \begin{itemize}
+      \item \emph{int} - indeks węzła startowego
+      \item \emph{int} - indeks węzła końcowego
+      \item \emph{int} - wartość przepustowa krawędzi
+    \end{itemize}
+
+  \subsection{Dane wyjściowe}
+%wyjaśnione z rysunkami; sposób przechowywania danych wyjściowych.
+
+\section{Przykłady użycia}
+%fragmenty kodu i rysunki
+
+\section{Słownik pojęć i definicje}
+% może w postaci tabelki ładnie zrobić?
+
+
+\end{document}

@@ -1,0 +1,48 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{minutes-meta}[2012/11/24 Tabela informacyjna dla notatek ze spotkań w ramach projektu PPI 2012/2013]
+
+\RequirePackage{xparse}
+
+\RequirePackage{longtable}
+
+\RequirePackage{booktabs}
+\DeclareDocumentCommand {\AdjustArrayStretch} { m } {%
+    \RenewDocumentCommand {\arraystretch} { } {#1}
+}
+
+\RequirePackage[normalem]{ulem}
+
+\NewDocumentCommand {\GivenCwiczenie} { } {0}
+\NewDocumentCommand {\GivenTytul} { } {Spotkanie organizacyjne 0}
+\NewDocumentCommand {\GivenData} { } {2012-12-21 08:15}
+\NewDocumentCommand {\GivenMiejsce} { } {GG446}
+\NewDocumentCommand {\GivenObecni} { } {TC, DG, ŁG, MM, MO, AO, MS}
+\NewDocumentCommand {\Cwiczenie} { m } {%
+    \RenewDocumentCommand {\GivenCwiczenie} { } {#1}
+}
+\NewDocumentCommand {\Tytul} { m } {%
+    \RenewDocumentCommand {\GivenTytul} { } {#1}
+}
+\NewDocumentCommand {\Data} { m } {%
+    \RenewDocumentCommand {\GivenData} { } {#1}
+}
+\NewDocumentCommand {\Miejsce} { m } {%
+    \RenewDocumentCommand {\GivenMiejsce} { } {#1}
+}
+\NewDocumentCommand {\Obecni} { +m } {%
+    \RenewDocumentCommand {\GivenObecni} { } {#1}
+}
+
+\NewDocumentCommand {\MakeMinutesMeta} { } {%
+\AdjustArrayStretch{1.2}
+\begin{longtable}{@{} p{0.10\textwidth} @{\hspace{0.05\textwidth}} p{0.85\textwidth} @{}}
+    \toprule[2pt]
+    \multicolumn{2}{@{} c @{}}{\large{\GivenTytul}} \\
+    \multicolumn{2}{@{} c @{}}{Testowanie i weryfikacja oprogramowania} \\
+    \midrule[0.5pt]
+    \textbf{Czas}    & \GivenData    \\
+    \textbf{Miejsce} & \GivenMiejsce \\
+    \textbf{Obecni}  & \GivenObecni  \\
+    \bottomrule[2pt]
+\end{longtable}
+}
