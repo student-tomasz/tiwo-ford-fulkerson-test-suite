@@ -52,6 +52,7 @@
     \end{itemize}
 
   \subsubsection{Graf przepływu}
+%w zasadzie istnieją dwie reprezentacje
 	\item \emph{FlowNetworkAdjacencyArray} - zrealizowany z wykorzystaniem list powiązanych. Do każdego wierzchołka grafu przypisane są dwie listy krawędzi, przednich oraz tylnych. Rozwiązanie charakteryzuje się wysoką przejrzystością, okupioną jednak niską wydajnością pamięciową. Co ogranicza możliwość zastosowania w przypadku dużych grafów.
 
     Graf przepływu realizowany jest przy pomocy algorytmu z użyciem list powiązanych, \emph{FlowNetworkAdjacencyArray}. Do każdego wierzchołka grafu przypisywane są dwie listy,
@@ -143,10 +144,24 @@ Wyświetlenie wyznaczonego maksymalnego przepływu.
   System.out.println(network.toString());
 \end{lstlisting}
        
+\section{Opis algorytmu}
+\begin{enumerate}
+\item{Sprawdź czy istnieje ścieżka powiększająca w grafie.}
+\item{Jeśli nie istnieje ścieżka powiększająca w grafie, zakończ działanie algorytmu}
+\\\emph{Zgodnie z twierdzeniem o maksymalnym przepływie i minimalnym przekroju [Ford i Fulkerson, 1962], przy nieujemnych przepływach i przepustowościach, algorytm zawsze się kończy, identyfikując maksymalny przepływ w sieci.}
+\item{Zacznij od krawędzi kończącej się w ujściu \emph{(v=ujście)}
+\item{Ustaw przepływ znalezionej ścieżki na nieskończoność \emph{(delta=nieskończoność)}
+\item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 1 \emph{v==źródło}}
+\item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający koniec aktualnej krawędzi\emph{(v)}}
+\item{Jeśli aktualna krawędź \emph{(u,b)} nie jest krawędzią przednią, przejdź do punktu 9}
+\item{Jeśli maksymalny przepływ analizowanej ścieżki jest większy niż różnica przepustowości aktualnej krawędzi i jej przepływu, to zmniejsz wartość delty do różnicy przepustowości i przepływu aktualnej krawędzi \emph{delta=MIN((u,v).przepustowość-(u,v).przepływ,delta)} i przejdź po punktu 10}
+\item{Jeśli przepływ aktualnej krawędzi, jest mniejszy niż delta, to zmień wartość delty na przepływ aktualnej krawędzi \emph{delta=MIN((u,v).przepływ,delta)}}
+\item{przesuń}
+\end{enumerate}
 
 \section{Słownik pojęć i definicje}
-% może w postaci tabelki ładnie zrobić?
-% jeśli wolisz w postaci tabelki, nie będę Cię powstrzymywał /by RW
+% może w postaci tabelki ładnie zrobić? /by MO
+% jeśli wolisz w postaci tabelki, nie będę Cię powstrzymywał, nie robiłem tabelek w TeXie /by RW
 \subsection{Sieć przepływowa}
 Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z uwzględnieniem węzłów pośrednich.
 \subsection{Graf przepływu}
