@@ -154,15 +154,17 @@ Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w graf
 \subsection{Wierzchołek grafu przepływu}
 Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.
 \subsection{Krawędź grafu przepływu}
-Krawędź w grafie przepływu
-\subsection{Wierzchołek źródłowy}
-
-\subsection{Wierzchołek docelowy}
-
+Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi, co nie wyklucza możliwości dwóch krawędzi o tym samym kierunku, a przeciwnym zwrocie.
 \subsection{Przepustowość krawędzi}
-
+Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek, które mogą tą krawędzią przepłynąć.
+\subsection{Przepływ krawędzi}
+Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do \emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).
+\subsection{Wierzchołek źródłowy}
+Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki towarów, które przepływają przez krawędzi grafu do wierzchołka docelowego. Przyjmuje się, że wierzchołek źródłowy jest w stanie wytworzyć dowolną wymaganą liczbę jednostek towarów, które zostaną z niego odebrane.
+\subsection{Wierzchołek docelowy}
+Wierzchołek docelowy(ujście, stacja końcowa, ang. target, terminus) to wierzchołek, który konsumuje otrzymane jednostki towarów dostarczone z wierzchołka źródłowego za pośrednictwem krawędzi grafu. Przyjmuje się, że wierzchołek źródłowy jest w stanie skonsumować dowolną liczbę jednostek towarów jakie zostaną do niego dostarczone.
 \subsection{Ścieżka}
-
+Ścieżka oznacza niecykliczną ścieżkę w grafie z niepowtarzalnymi wierzchołkami, prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.
 \subsection{Ścieżka powiększająca}
-
+Ścieżka powiększająca (ang. augmenting path) to taka ścieżka, do której można dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce, przepływ jest mniejszy od jej przepustowości.
 \end{document}
