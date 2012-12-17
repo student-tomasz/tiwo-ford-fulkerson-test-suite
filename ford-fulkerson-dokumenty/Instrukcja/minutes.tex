@@ -185,8 +185,15 @@ Wyświetlenie wyznaczonego maksymalnego przepływu.
 \item{Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij analizować wcześniejszą krawędz}
 %19
 \item{Przejdź do punktu 13}
-
 \end{enumerate}
+\section{Objaśnienie algorytmu}
+Algorytm Forda-Fulkersona analizuje znalezioną ścieżkę powiększającą, obliczając maksymalny przepływ dostępny na tej ścieżce, tj najmniejszy z maksymalnych dostępnych przepływów krawędzi na ścieżce.\\
+Dla krawędzi przednich dostępny przepływ obliczamy jako różnicę przepustowości i wykorzystanego przepływu \emph{(u.v).przepustowość-(u.v).przepływ)}. Dla krawędzi tylnych dostępny przepływ jest równy wykorzystanemu przepływowi (do przodu) na tej krawędzi \emph{(u,v).przepływ}. Przepływ tylny krawędzi jest pojęciem abstrakcyjnym na potrzeby prowadzonych obliczeń, a biorąc pod uwagę, że przepływ musi być nieujemny, dostępny przepływ tylny dla krawędzi jest równy wykorzystanemu przepływowi do przodu dla tej krawędzi.
+Po przeanalizowaniu maksymalnej ścieżki powiększającej i obliczeniu maksymalnego przepływu dostępnego na tej ścieżce, aktualizujemy przepływy krawędzi.\\
+Dla krawędzi przednich, powiekszamy przepływ krawędzi o obliczoną wartość \emph{(u,v).przepływ+=delta}. Dla krawędzi tylnych, pomniejszamy przepływ krawędzi o obliczoną wartość \emph{(u,v).przepływ-=delta}.
+Dopóki możliwe jest znalezienie ścieżki powiększającej, kontynuujemy obliczanie maksymalnego przepływu dostępnego na kolejnych ścieżkach i aktualizujemy przepływy na poszczególnych krawędziach tych ścieżek.\\
+Algorytm zakończy swoją pracę w momencie, kiedy nie istnieją już żadne ścieżki powiększające, tj zostanie wykorzystana maksymalna przepustowość sieci ze źródła do ujścia.
+
 
 \section{Słownik pojęć i definicje}
 % może w postaci tabelki ładnie zrobić? /by MO
