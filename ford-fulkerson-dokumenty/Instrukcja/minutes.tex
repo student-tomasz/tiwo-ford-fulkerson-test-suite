@@ -7,10 +7,10 @@
 \definecolor{listinggray}{gray}{0.9}
 \definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
 \lstset{
-	backgroundcolor=\color{lbcolor},
-	tabsize=4,
-	rulecolor=,
-	language=Java,
+        backgroundcolor=\color{lbcolor},
+        tabsize=4,
+        rulecolor=,
+        language=Java,
         basicstyle=\scriptsize,
         upquote=true,
         aboveskip={1.5\baselineskip},
@@ -36,12 +36,65 @@
 \Tytul{\emph{Ford-Fulkerson Przepływ maksymalny}}
 \Data{2012-12-12 1:00}
 \Miejsce{Przyczółek}
-\Obecni{MO}
+\Obecni{MO, RW}
 \MakeMinutesMeta
 
 
 \section{Wstęp} % (fold)
   \subsection{Opis algorytmu}
+    Algorytm Forda-Fulkersona analizuje znalezioną ścieżkę powiększającą, obliczając maksymalny przepływ dostępny na tej ścieżce, tj najmniejszy z maksymalnych dostępnych przepływów krawędzi na ścieżce.\\
+    Dla krawędzi przednich dostępny przepływ obliczamy jako różnicę przepustowości i wykorzystanego przepływu \emph{(u.v).przepustowość-(u.v).przepływ)}. Dla krawędzi tylnych dostępny przepływ jest równy wykorzystanemu przepływowi (do przodu) na tej 
+    krawędzi \emph{(u,v).przepływ}. Przepływ tylny krawędzi jest pojęciem abstrakcyjnym na potrzeby prowadzonych obliczeń, a biorąc pod uwagę, że przepływ musi być nieujemny, dostępny przepływ tylny dla krawędzi jest równy wykorzystanemu przepływowi do przodu 
+    dla tej krawędzi.
+    Po przeanalizowaniu maksymalnej ścieżki powiększającej i obliczeniu maksymalnego przepływu dostępnego na tej ścieżce, aktualizujemy przepływy krawędzi.\\
+    Dla krawędzi przednich, powiekszamy przepływ krawędzi o obliczoną wartość \emph{(u,v).przepływ+=delta}. Dla krawędzi tylnych, pomniejszamy przepływ krawędzi o obliczoną wartość \emph{(u,v).przepływ-=delta}.
+    Dopóki możliwe jest znalezienie ścieżki powiększającej, kontynuujemy obliczanie maksymalnego przepływu dostępnego na kolejnych ścieżkach i aktualizujemy przepływy na poszczególnych krawędziach tych ścieżek.\\
+    Algorytm zakończy swoją pracę w momencie, kiedy nie istnieją już żadne ścieżki powiększające, tj zostanie wykorzystana maksymalna przepustowość sieci ze źródła do ujścia.
+
+  \subsection{Lista kroków}
+    \begin{enumerate}
+    %1
+    \item{Sprawdź czy istnieje ścieżka powiększająca w grafie.}
+    %2
+    \item{Jeśli nie istnieje ścieżka powiększająca w grafie, zakończ działanie algorytmu}\\
+      \emph{Zgodnie z twierdzeniem o maksymalnym przepływie i minimalnym przekroju [Ford i Fulkerson, 1962], przy nieujemnych przepływach i przepustowościach, algorytm zawsze się kończy, identyfikując maksymalny przepływ w sieci.}
+    %3
+    \item{Zacznij od krawędzi kończącej się w ujściu \emph{(v=ujście)}}
+    %4
+    \item{Ustaw przepływ znalezionej ścieżki na nieskończoność \emph{(delta=nieskończoność)}}
+    %5
+    \item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 12 \emph{v==źródło}}
+    %6
+    \item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający wierzchołek końcowy aktualnej krawędzi\emph{(v)}}
+    %7
+    \item{Jeśli aktualna krawędź \emph{(u,v)} nie jest krawędzią przednią, przejdź do punktu 9}
+    %8
+    \item{Jeśli maksymalny przepływ analizowanej ścieżki jest większy niż różnica przepustowości aktualnej krawędzi i jej przepływu, to zmniejsz wartość delty do różnicy przepustowości i przepływu aktualnej krawędzi 
+      \emph{delta=MIN((u,v).przepustowość-(u,v).przepływ,delta)} i przejdź po punktu 10}
+    %9
+    \item{Jeśli przepływ aktualnej krawędzi, jest mniejszy niż delta, to zmień wartość delty na przepływ aktualnej krawędzi \emph{delta=MIN((u,v).przepływ,delta)}}
+    %10
+    \item{Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij analizować wcześniejszą krawędz}
+    %11
+    \item{Przejdź do punktu 5}
+    %12
+    \item{Zacznij od krawędzi kończącej się w ujściu \emph{(v=ujście)}}
+    %13
+    \item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 1 \emph{v==źródło}}
+    %14
+    \item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający wierzchołek końcowy aktualnej krawędzi\emph{(v)}}
+    %15
+    \item{Jeśli aktualna krawędź \emph{(u,v)} nie jest krawędzią przednią, przejdź do punktu 17}
+    %16
+    \item{Zwiększ przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki \emph{(u,v).przepływ+=delta} i przejdź do punktu 18}
+    %17
+    \item{Zmniejsz przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki \emph{(u,v).przepływ-=delta}}
+    %18
+    \item{Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij analizować wcześniejszą krawędz}
+    %19
+    \item{Przejdź do punktu 13}
+  \end{enumerate}
+
 
 \section{Instrukcja obsługi}
   \subsection{Dane wejściowe}
@@ -53,7 +106,8 @@
 
   \subsubsection{Graf przepływu}
 %w zasadzie istnieją dwie reprezentacje
-	\item \emph{FlowNetworkAdjacencyArray} - zrealizowany z wykorzystaniem list powiązanych. Do każdego wierzchołka grafu przypisane są dwie listy krawędzi, przednich oraz tylnych. Rozwiązanie charakteryzuje się wysoką przejrzystością, okupioną jednak niską wydajnością pamięciową. Co ogranicza możliwość zastosowania w przypadku dużych grafów.
+    \emph{FlowNetworkAdjacencyArray} - zrealizowany z wykorzystaniem list powiązanych. Do każdego wierzchołka grafu przypisane są dwie listy krawędzi, przednich oraz tylnych. Rozwiązanie charakteryzuje się wysoką przejrzystością, okupioną jednak niską 
+wydajnością pamięciową. Co ogranicza możliwość zastosowania w przypadku dużych grafów.
 
     Graf przepływu realizowany jest przy pomocy algorytmu z użyciem list powiązanych, \emph{FlowNetworkAdjacencyArray}. Do każdego wierzchołka grafu przypisywane są dwie listy,
  krawędzi przednich oraz tylnich. Takie rozwiązanie charakteryzuje się bardzo dobrą przejrzystością, aczkolwiek, ze względu na niską wydajność pamięciową nie jest odpowiednia dla zastosowań uwzględniających duże grafy.
@@ -76,6 +130,30 @@ pomiędzy którymi dana krawędź się znajduje oraz o jakie posiada możliwośc
 
   \subsection{Dane wyjściowe}
 %wyjaśnione z rysunkami; sposób przechowywania danych wyjściowych.
+    Wyniki wyznaczania maksymalnego przepływu są zapisywane wewnątrz struktury reprezentującej graf. Obiekt \emph{FlowNetwork} posiada metodę \emph{toString}, która wyświetla aktualny stan grafu.\\
+Przykładowy wynik \emph{toString} przed i po wyznaczeniu maksymalnego przepływu:
+\begin{lstlisting}        
+ Przed:
+[0] -> [1] 0/3 @ 0
+[0] -> [2] 0/2 @ 0
+[1] -> [3] 0/2 @ 0
+[1] -> [4] 0/2 @ 0
+[2] -> [4] 0/3 @ 0
+[2] -> [3] 0/2 @ 0
+[3] -> [5] 0/3 @ 0
+[4] -> [5] 0/2 @ 0
+
+Po:
+[0] -> [1] 3/3 @ 0
+[0] -> [2] 2/2 @ 0
+[1] -> [3] 2/2 @ 0
+[1] -> [4] 1/2 @ 0
+[2] -> [4] 1/3 @ 0
+[2] -> [3] 1/2 @ 0
+[3] -> [5] 3/3 @ 0
+[4] -> [5] 2/2 @ 0
+\end{lstlisting}
+\emph{[indeks węzła startowego] -> [indeks wezła końcowego] przepływ/przepustowość}
 
 \section{Przykład użycia}
 %fragmenty kodu i rysunki
@@ -198,24 +276,45 @@ Algorytm zakończy swoją pracę w momencie, kiedy nie istnieją już żadne śc
 \section{Słownik pojęć i definicje}
 % może w postaci tabelki ładnie zrobić? /by MO
 % jeśli wolisz w postaci tabelki, nie będę Cię powstrzymywał, nie robiłem tabelek w TeXie /by RW
-\subsection{Sieć przepływowa}
-Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z uwzględnieniem węzłów pośrednich.
-\subsection{Graf przepływu}
-Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w grafie, odpowiadają węzłom sieci.
-\subsection{Wierzchołek grafu przepływu}
-Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.
-\subsection{Krawędź grafu przepływu}
-Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi.
-\subsection{Przepustowość krawędzi}
-Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek, które mogą tą krawędzią przepłynąć.
-\subsection{Przepływ krawędzi}
-Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do \emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).
-\subsection{Wierzchołek źródłowy}
-Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki towarów, które przepływają przez krawędzi grafu do wierzchołka docelowego. Przyjmuje się, że wierzchołek źródłowy jest w stanie wytworzyć dowolną wymaganą liczbę jednostek towarów, które zostaną z niego odebrane.
-\subsection{Wierzchołek docelowy}
-Wierzchołek docelowy(ujście, stacja końcowa, ang. target, terminus) to wierzchołek, który konsumuje otrzymane jednostki towarów dostarczone z wierzchołka źródłowego za pośrednictwem krawędzi grafu. Przyjmuje się, że wierzchołek źródłowy jest w stanie skonsumować dowolną liczbę jednostek towarów jakie zostaną do niego dostarczone.
-\subsection{Ścieżka}
-Ścieżka oznacza niecykliczną ścieżkę w grafie z niepowtarzalnymi wierzchołkami, prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.
-\subsection{Ścieżka powiększająca}
-Ścieżka powiększająca (ang. augmenting path) to taka ścieżka, do której można dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce, przepływ jest mniejszy od jej przepustowości.
+  \begin{longtable}{>{\bfseries}p{0.2\textwidth} p{0.8\textwidth}}
+    Pojęcie & Opis\\
+    \toprule
+    Sieć przepływowa  &  
+    Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z uwzględnieniem węzłów pośrednich.\\
+    \midrule
+    Graf przepływu &
+    Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w grafie, odpowiadają węzłom sieci.\\
+    \midrule
+    Wierzchołek grafu przepływu &
+    Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego 
+    i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka 
+    \emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami 
+    źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.\\
+    \midrule
+    Krawędź grafu przepływu &
+    Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi.\\
+    \midrule
+    Przepustowość krawędzi &
+    Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek, które mogą tą krawędzią przepłynąć.\\
+    \midrule
+    Przepływ krawędzi &
+    Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do \emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).\\
+    \midrule
+    Wierzchołek źródłowy &
+    Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki towarów, które przepływają przez krawędzi grafu do wierzchołka 
+    docelowego. Przyjmuje się, że wierzchołek źródłowy jest w stanie wytworzyć dowolną wymaganą liczbę jednostek towarów, które zostaną z niego odebrane.\\
+    \midrule
+    Wierzchołek docelowy &
+    Wierzchołek docelowy(ujście, stacja końcowa, ang. target, terminus) to wierzchołek, który konsumuje otrzymane jednostki towarów dostarczone z wierzchołka 
+    źródłowego za pośrednictwem krawędzi grafu. Przyjmuje się, że wierzchołek źródłowy jest w stanie skonsumować dowolną liczbę jednostek towarów jakie zostaną
+    do niego dostarczone.\\
+    \midrule
+    Ścieżka &
+    Ścieżka oznacza niecykliczną ścieżkę w grafie z niepowtarzalnymi wierzchołkami, prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.\\
+    \midrule
+    Ścieżka powiększająca &
+    Ścieżka powiększająca (ang. augmenting path) to taka ścieżka, do której można dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce, 
+    przepływ jest mniejszy od jej przepustowości.\\
+    \bottomrule
+  \end{longtable}
 \end{document}
