@@ -146,17 +146,46 @@ Wyświetlenie wyznaczonego maksymalnego przepływu.
        
 \section{Opis algorytmu}
 \begin{enumerate}
+%1
 \item{Sprawdź czy istnieje ścieżka powiększająca w grafie.}
+%2
 \item{Jeśli nie istnieje ścieżka powiększająca w grafie, zakończ działanie algorytmu}
 \\\emph{Zgodnie z twierdzeniem o maksymalnym przepływie i minimalnym przekroju [Ford i Fulkerson, 1962], przy nieujemnych przepływach i przepustowościach, algorytm zawsze się kończy, identyfikując maksymalny przepływ w sieci.}
+%3
 \item{Zacznij od krawędzi kończącej się w ujściu \emph{(v=ujście)}
+%4
 \item{Ustaw przepływ znalezionej ścieżki na nieskończoność \emph{(delta=nieskończoność)}
-\item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 1 \emph{v==źródło}}
-\item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający koniec aktualnej krawędzi\emph{(v)}}
-\item{Jeśli aktualna krawędź \emph{(u,b)} nie jest krawędzią przednią, przejdź do punktu 9}
+%5
+\item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 12 \emph{v==źródło}}
+%6
+\item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający wierzchołek końcowy aktualnej krawędzi\emph{(v)}}
+%7
+\item{Jeśli aktualna krawędź \emph{(u,v)} nie jest krawędzią przednią, przejdź do punktu 9}
+%8
 \item{Jeśli maksymalny przepływ analizowanej ścieżki jest większy niż różnica przepustowości aktualnej krawędzi i jej przepływu, to zmniejsz wartość delty do różnicy przepustowości i przepływu aktualnej krawędzi \emph{delta=MIN((u,v).przepustowość-(u,v).przepływ,delta)} i przejdź po punktu 10}
+%9
 \item{Jeśli przepływ aktualnej krawędzi, jest mniejszy niż delta, to zmień wartość delty na przepływ aktualnej krawędzi \emph{delta=MIN((u,v).przepływ,delta)}}
-\item{przesuń}
+%10
+\item{Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij analizować wcześniejszą krawędz}
+%11
+\item{Przejdź do punktu 5}
+%12
+\item{Zacznij od krawędzi kończącej się w ujściu \emph{(v=ujście)}
+%13
+\item{Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym, przejdź do punktu 1 \emph{v==źródło}}
+%14
+\item{Ustaw początek krawędzi \emph{(u)} na wierzchołek poprzedzający wierzchołek końcowy aktualnej krawędzi\emph{(v)}}
+%15
+\item{Jeśli aktualna krawędź \emph{(u,v)} nie jest krawędzią przednią, przejdź do punktu 17}
+%16
+\item{Zwiększ przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki \emph{(u,v).przepływ+=delta} i przejdź do punktu 18}
+%17
+\item{Zmniejsz przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki \emph{(u,v).przepływ-=delta}}
+%18
+\item{Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij analizować wcześniejszą krawędz}
+%19
+\item{Przejdź do punktu 13}
+
 \end{enumerate}
 
 \section{Słownik pojęć i definicje}
@@ -169,7 +198,7 @@ Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w graf
 \subsection{Wierzchołek grafu przepływu}
 Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.
 \subsection{Krawędź grafu przepływu}
-Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi, co nie wyklucza możliwości dwóch krawędzi o tym samym kierunku, a przeciwnym zwrocie.
+Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi.
 \subsection{Przepustowość krawędzi}
 Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek, które mogą tą krawędzią przepłynąć.
 \subsection{Przepływ krawędzi}
