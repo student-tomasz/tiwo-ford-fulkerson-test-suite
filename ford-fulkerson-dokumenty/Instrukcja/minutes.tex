@@ -41,7 +41,7 @@
 
 
 \section{Wstęp} % (fold)
-  \subsection{Opis lagorytmu}
+  \subsection{Opis algorytmu}
 
 \section{Instrukcja obsługi}
   \subsection{Dane wejściowe}
@@ -52,8 +52,10 @@
     \end{itemize}
 
   \subsubsection{Graf przepływu}
+	\item \emph{FlowNetworkAdjacencyArray} - zrealizowany z wykorzystaniem list powiązanych. Do każdego wierzchołka grafu przypisane są dwie listy krawędzi, przednich oraz tylnych. Rozwiązanie charakteryzuje się wysoką przejrzystością, okupioną jednak niską wydajnością pamięciową. Co ogranicza możliwość zastosowania w przypadku dużych grafów.
+
     Graf przepływu realizowany jest przy pomocy algorytmu z użyciem list powiązanych, \emph{FlowNetworkAdjacencyArray}. Do każdego wierzchołka grafu przypisywane są dwie listy,
- krawędzi przednich oraz tylnich. Rozwiązanie to jest nieodpowiednie dla zastosowań z użyciem dużych grafów, ponieważ zajmuje spore ilości pamięci.\\
+ krawędzi przednich oraz tylnich. Takie rozwiązanie charakteryzuje się bardzo dobrą przejrzystością, aczkolwiek, ze względu na niską wydajność pamięciową nie jest odpowiednia dla zastosowań uwzględniających duże grafy.
 Argumenty wejściowe:
     \begin{itemize}
       \item \emph{int} - ilość wszystkich węzłów w grafie
@@ -92,7 +94,7 @@ Następnie definiowane są poszczególne krawędzie grafu wraz z ich przepustowo
 \begin{itemize}
 \item Indeks węzła początkowego krawedzi
 \item Indeks węzła końcowego krawędzi
-\item Maksymalna prapustowość krawędzi
+\item Maksymalna przepustowość krawędzi
 \end{itemize}
 \begin{lstlisting}
   ArrayList preIterator = new ArrayList();
@@ -116,7 +118,7 @@ Następnie definiowane są poszczególne krawędzie grafu wraz z ich przepustowo
   Iterator<EdgeInfo> edges = preIterator.iterator();  
 \end{lstlisting}
  
-Tworzony jest obiekt reprazentujący cały graf przepływu.
+Tworzony jest obiekt reprezentujący cały graf przepływu.
 \begin{lstlisting}      
   FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList(numVertices, srcIndex, sinkIndex, edges);  
         
@@ -135,7 +137,7 @@ Wybierana jest funkcja wyszukująca i wykonywany jest algorytm Forda-Fulkersona.
   fordFulkerson.compute();
 \end{lstlisting}
 
-Wyświetlenie wyznaczonego maksymlnego przepływu.
+Wyświetlenie wyznaczonego maksymalnego przepływu.
 \begin{lstlisting}        
   System.out.println("Wynik:");
   System.out.println(network.toString());
@@ -144,6 +146,23 @@ Wyświetlenie wyznaczonego maksymlnego przepływu.
 
 \section{Słownik pojęć i definicje}
 % może w postaci tabelki ładnie zrobić?
+% jeśli wolisz w postaci tabelki, nie będę Cię powstrzymywał /by RW
+\subsection{Sieć przepływowa}
+Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z uwzględnieniem węzłów pośrednich.
+\subsection{Graf przepływu}
+Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w grafie, odpowiadają węzłom sieci.
+\subsection{Wierzchołek grafu przepływu}
+Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.
+\subsection{Krawędź grafu przepływu}
+Krawędź w grafie przepływu
+\subsection{Wierzchołek źródłowy}
 
+\subsection{Wierzchołek docelowy}
+
+\subsection{Przepustowość krawędzi}
+
+\subsection{Ścieżka}
+
+\subsection{Ścieżka powiększająca}
 
 \end{document}
