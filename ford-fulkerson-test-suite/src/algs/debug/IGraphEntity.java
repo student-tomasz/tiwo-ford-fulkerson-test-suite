@@ -42,9 +42,9 @@ public interface IGraphEntity {
 		 */
 		public static final String convert (int value) {
 			if (value == MoveEvaluation.minimum()) {
-				return "-�";  // - INF using an em-dash
+				return "-inf";  // - INF using an em-dash
 			} else if (value == MoveEvaluation.maximum()) {
-				return "�";   // that is char for INF in Symbol font.
+				return "inf";   // that is char for INF in Symbol font.
 			}
 
 			return "" + value;
