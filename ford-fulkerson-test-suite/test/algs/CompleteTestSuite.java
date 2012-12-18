@@ -5,6 +5,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+    algs.example.tests.model.performance.network.CompleteGraphs.class,
+    algs.example.tests.model.performance.network.SparseVsDense.class,
     algs.model.performance.network.DegenerateCaseTest.class,
     algs.model.performance.network.Figure8_3Test.class,
     algs.model.performance.network.Figure8_7Test.class,
