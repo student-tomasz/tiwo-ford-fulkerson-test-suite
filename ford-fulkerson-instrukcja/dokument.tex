@@ -176,13 +176,13 @@ System.out.println(network.toString());
 Wybierana jest funkcja wyszukująca. Następnie inicjowany i wykonywany jest
 algorytm Forda-Fulkersona.
 \begin{lstlisting}
-// algorytm wyszukiwania ścieżki wdłuż
+// algorytm wyszukiwania sciezki wdluz
 DFS_SearchList search = new DFS_SearchList(network);
 
 // algorytm Forda-Fulkersona
 FordFulkerson fordFulkerson = new FordFulkerson(network, search);
 
-// wywołanie algorytmu
+// wywolanie algorytmu
 fordFulkerson.compute();
 \end{lstlisting}
 
@@ -197,7 +197,8 @@ System.out.println(network.toString());
 \section{Słownik pojęć}
 \label{sec:slownik}
 
-\begin{longtable}{@{} >{\bfseries}p{0.19\textwidth} @{\hspace{0.02\textwidth}} p{0.79\textwidth} @{}}
+\AdjustArrayStretch{1.0}
+\begin{tabular}{@{} >{\bfseries}p{0.24\textwidth} @{\hspace{0.02\textwidth}} p{0.74\textwidth} @{}}
 \toprule
 Pojęcie & \bfseries{Opis} \\
 \toprule
@@ -212,11 +213,11 @@ odpowiadają węzłom sieci.\\
 Wierzchołek grafu przepływu &
 Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej.
 Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego,
-muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)}
-we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)}
-wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden
-wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani
-konsumować przepływu.\\
+muszą spełniać warunek, że suma \texttt{f(u,v)} wszystkich krawędzi
+\texttt{(u,v)} we wpływie do wierzchołka \texttt{u}, musi być równa sumie
+\texttt{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \texttt{u}. Co
+oznacza, iż żaden wierzchołek, poza wierzchołkami źródłowym i docelowym, nie
+mogą produkować ani konsumować przepływu.\\
 \midrule
 Krawędź grafu przepływu &
 Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie
@@ -227,8 +228,8 @@ Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednost
 które mogą tą krawędzią przepłynąć.\\
 \midrule
 Przepływ krawędzi &
-Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do
-\emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).\\
+Przepływ krawędzi definiuje liczbę jednostek przepływających z \texttt{u} do
+\texttt{v} (z punktu początkowego krawędzi do jej punktu końcowego).\\
 \midrule
 Wierzchołek źródłowy &
 Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki
@@ -252,13 +253,12 @@ prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.\\
 dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce, przepływ
 jest mniejszy od jej przepustowości.\\
 \bottomrule
-\end{longtable}
+\end{tabular}
 
 
 \section{Analiza algorytmu}
 \label{sec:analiza}
 
-\subsection{Opis algorytmu}
 Algorytm Forda-Fulkersona analizuje znalezioną ścieżkę powiększającą, obliczając
 maksymalny przepływ dostępny na tej ścieżce. Znajduje najmniejszy z maksymalnych
 dostępnych przepływów spośród krawędzi na ścieżce.
