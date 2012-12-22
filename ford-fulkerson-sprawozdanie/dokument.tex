@@ -16,18 +16,34 @@
 \subsubsection{Klasy abstrakcji}
 Na potrzeby realizacji testów czarnoskrzynkowych zostały zdefiniowane następujące klasy abstrakcji danych wejściowych:
 \subsubsubsection{Sieć bez węzłów}
-
+Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksymalnego przepływu.
 \subsubsubsection{Sieć z 1 węzłem}
-Za szczególny przypadek sieci przepływu można uznać sieć składającą się z dokładnie jednego węzła. Niezależnie od pozostałych cech, takiej sieci nie można w żadnym wypadku uznać za prawidłową, bowiem przepustowość wewnątrz węzła, nie jest w żaden sposób ograniczona.
+Za szczególny przypadek sieci przepływu można uznać sieć składającą się z dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
 \begin{itemize}
-    \item Sieć z samym źródłem, bez krawędzi.
-    \item Sieć z samym źródłem i pętlą.
-    \item Sieć z samym źródłem i pętlą o ujemnej przepustowości.
+%bez niczego
+%z pętlą
+%z ujemną pętlą
+    \item Samego źródła.
+    \item Węzła pośredniego.
+    \item Ujścia.
+    \item Wspólnego źródła i ujścia.
 \end{itemize}
+Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów.
+
 \subsubsubsection{Sieć bez węzłów pośrednich}
+Sieć złożona ze źródłą i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
-    \item Sieć bez węzłów pośrednich.
-    \item Sieć bez węzłów pośrednich z wieloma krawędziami.
+    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia.
+%o ujemnej przepustowości
+%o dodatniej przepustowości
+%o zerowej przepustowości
+    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła.
+%o ujemnej przepustowości
+%o dodatniej przepustowości
+%o zerowej przepustowości
+    \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
+    \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
+    
     \item Sieć bez węzłów pośrednich z pętlą.
     \item Sieć bez węzłów pośrednich z krawędzią o ujemnej przepustowości.
     \item Sieć bez węzłów pośrednich z krawędzią o zerowej przepustowości.
