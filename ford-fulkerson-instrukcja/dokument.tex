@@ -189,44 +189,58 @@ System.out.println(network.toString());
 
 \begin{longtable}{@{} >{\bfseries}p{0.19\textwidth} @{\hspace{0.02\textwidth}} p{0.79\textwidth} @{}}
 \toprule
-Pojęcie & \bfseries{Opis}\\
+Pojęcie & \bfseries{Opis} \\
 \toprule
 Sieć przepływowa  &
-Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z uwzględnieniem węzłów pośrednich.\\
+Sieć reprezentująca przepływy pomiędzy węzłem źródłowym i docelowym, z
+uwzględnieniem węzłów pośrednich.\\
 \midrule
 Graf przepływu &
-Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w grafie, odpowiadają węzłom sieci.\\
+Graf skierowany stanowiący abstrakcję sieci przepływowej, wierzchołki w grafie,
+odpowiadają węzłom sieci.\\
 \midrule
 Wierzchołek grafu przepływu &
-Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej. Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego
-i docelowego, muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)} we wpływie do wierzchołka
-\emph{u}, musi być równa sumie \emph{f(u,w)} wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden wierzchołek, poza wierzchołkami
-źródłowym i docelowym, nie mogą produkować ani konsumować przepływu.\\
+Wierzchołek w grafie przepływu reprezentuje węzeł w sieci przepływowej.
+Wierzchołki w grafie przepływu, z wyjątkiem wierzchołka źródłowego i docelowego,
+muszą spełniać warunek, że suma \emph{f(u,v)} wszystkich krawędzi \emph{(u,v)}
+we wpływie do wierzchołka \emph{u}, musi być równa sumie \emph{f(u,w)}
+wszystkich krawędzi w wypływie z wierzchołka \emph{u}. Co oznacza, iż żaden
+wierzchołek, poza wierzchołkami źródłowym i docelowym, nie mogą produkować ani
+konsumować przepływu.\\
 \midrule
 Krawędź grafu przepływu &
-Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie przepływu są krawedziami skierowanymi.\\
+Krawędź w grafie przepływu łączy dwa wierzchołki. Wszystkie krawędzie w grafie
+przepływu są krawedziami skierowanymi.\\
 \midrule
 Przepustowość krawędzi &
-Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek, które mogą tą krawędzią przepłynąć.\\
+Przepustowość krawędzi wyraża ograniczenie, co do maksymalnej liczby jednostek,
+które mogą tą krawędzią przepłynąć.\\
 \midrule
 Przepływ krawędzi &
-Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do \emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).\\
+Przepływ krawędzi definiuje liczbę jednostek przepływających z \emph{u} do
+\emph{v} (z punktu początkowego krawędzi do jej punktu końcowego).\\
 \midrule
 Wierzchołek źródłowy &
-Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki towarów, które przepływają przez krawędzi grafu do wierzchołka
-docelowego. Przyjmuje się, że wierzchołek źródłowy jest w stanie wytworzyć dowolną wymaganą liczbę jednostek towarów, które zostaną z niego odebrane.\\
+Wierzchołek źródłowy (źródło, ang. source) to wierzchołek wytwarzający jednostki
+towarów, które przepływają przez krawędzi grafu do wierzchołka docelowego.
+Przyjmuje się, że wierzchołek źródłowy jest w stanie wytworzyć dowolną wymaganą
+liczbę jednostek towarów, które zostaną z niego odebrane.\\
 \midrule
 Wierzchołek docelowy &
-Wierzchołek docelowy(ujście, stacja końcowa, ang. target, terminus) to wierzchołek, który konsumuje otrzymane jednostki towarów dostarczone z wierzchołka
-źródłowego za pośrednictwem krawędzi grafu. Przyjmuje się, że wierzchołek źródłowy jest w stanie skonsumować dowolną liczbę jednostek towarów jakie zostaną
-do niego dostarczone.\\
+Wierzchołek docelowy(ujście, stacja końcowa, ang. target, terminus) to
+wierzchołek, który konsumuje otrzymane jednostki towarów dostarczone z
+wierzchołka źródłowego za pośrednictwem krawędzi grafu. Przyjmuje się, że
+wierzchołek źródłowy jest w stanie skonsumować dowolną liczbę jednostek towarów
+jakie zostaną do niego dostarczone.\\
 \midrule
 Ścieżka &
-Ścieżka oznacza niecykliczną ścieżkę w grafie z niepowtarzalnymi wierzchołkami, prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.\\
+Ścieżka oznacza niecykliczną ścieżkę w grafie z niepowtarzalnymi wierzchołkami,
+prowadzącą z wierzchołka źródłowego do wierzchołka docelowego.\\
 \midrule
 Ścieżka powiększająca &
-Ścieżka powiększająca (ang. augmenting path) to taka ścieżka, do której można dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce,
-przepływ jest mniejszy od jej przepustowości.\\
+Ścieżka powiększająca (ang. augmenting path) to taka ścieżka, do której można
+dodać więcej przepływu. Co oznacza, że dla każdej krawędzi w ścieżce, przepływ
+jest mniejszy od jej przepustowości.\\
 \bottomrule
 \end{longtable}
 
