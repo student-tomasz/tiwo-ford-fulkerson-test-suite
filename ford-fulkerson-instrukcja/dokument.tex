@@ -260,66 +260,6 @@ Algorytm zakończy swoją pracę w momencie, kiedy nie istnieją już żadne śc
 powiększające, tj zostanie wykorzystana maksymalna przepustowość sieci ze źródła
 do ujścia.
 
-\subsection{Kroki algorytmu}
-\begin{enumerate}
-    \item%1
-    Sprawdź czy istnieje ścieżka powiększająca w grafie.
-    \item%2
-    Jeśli nie istnieje ścieżka powiększająca w grafie, zakończ działanie algorytmu.\\
-    \emph{Algorytm jest kompletny dla grafów z nieujemnymi wartościami
-    przepływów i przepustowości [Ford i Fulkerson, 1962].}
-    \item%3
-    Zacznij od krawędzi kończącej się w ujściu \texttt{(v=ujście)}.
-    \item%4
-    Ustaw przepływ znalezionej ścieżki na nieskończoność \texttt{(delta=$\inf$)}.
-    \item%5
-    Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym
-    \texttt{v==źródło} to i przejdź do punktu 12.
-    \item%6
-    Ustaw początek krawędzi \texttt{(u)} na wierzchołek poprzedzający
-    wierzchołek końcowy aktualnej krawędzi \texttt{(v)}.
-    \item%7
-    Jeśli aktualna krawędź \texttt{(u,v)} nie jest krawędzią przednią, przejdź
-    do punktu 9.
-    \item%8
-    Jeśli maksymalny przepływ analizowanej ścieżki jest większy niż różnica
-    przepustowości aktualnej krawędzi i jej przepływu, to zmniejsz wartość delty
-    do różnicy przepustowości i przepływu aktualnej krawędzi
-    \texttt{delta=MIN((u,v).przepustowość-(u,v).przepływ,delta)} i przejdź do
-    punktu 10.
-    \item%9
-    Jeśli przepływ aktualnej krawędzi, jest mniejszy niż delta, to zmień wartość
-    delty na przepływ aktualnej krawędzi
-    \texttt{delta=MIN((u,v).przepływ,delta)}.
-    \item%10
-    Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij
-    analizować wcześniejszą krawędź.
-    \item%11
-    Przejdź do punktu 5.
-    \item%12
-    Zacznij od krawędzi kończącej się w ujściu \texttt{(v=ujście)}.
-    \item%13
-    Jeśli koniec aktualnej krawędzi znajduje się w wierzchołku źródłowym
-    \texttt{v==źródło} to przejdź do punktu 1.
-    \item%14
-    Ustaw początek krawędzi \texttt{(u)} na wierzchołek poprzedzający wierzchołek
-    końcowy aktualnej krawędzi\texttt{(v)}.
-    \item%15
-    Jeśli aktualna krawędź \texttt{(u,v)} nie jest krawędzią przednią, przejdź do
-    punktu 17.
-    \item%16
-    Zwiększ przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki
-    \texttt{(u,v).przepływ+=delta} i przejdź do punktu 18.
-    \item%17
-    Zmniejsz przepływ na krawędzi o maksymalny przepływ znalezionej ścieżki
-    \texttt{(u,v).przepływ-=delta}.
-    \item%18
-    Zamień wierzchołek końcowy krawędzi na wierzchołek początkowy, zacznij
-    analizować wcześniejszą krawędź.
-    \item%19
-    Przejdź do punktu 13.
-\end{enumerate}
-
 
 \section{Historia dokumentu}
 \begin{versions}
@@ -338,6 +278,8 @@ do ujścia.
         Poprawiono literówki i formatowanie.
     \version{1.0}{2012-12-18}{TC}%
         Zatwierdzono.
+    \version{1.1}{2012-12-21}{TC}%
+        Usunięto kroki algorytmu.
 \end{versions}
 
 
