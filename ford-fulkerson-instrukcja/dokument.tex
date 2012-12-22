@@ -91,19 +91,14 @@ wszerz i wzdłuż. Oryginalnie algorytm Forda-Fulkersona korzysta z wyszukiwania
 \subsection{Dane wyjściowe}
 Wyniki wyznaczania maksymalnego przepływu są zapisywane wewnątrz struktury
 reprezentującej graf. Instancja \texttt{FlowNetwork} posiada metodę
-\texttt{toString()}, która wyświetla aktualny stan grafu.
-
-\noindent
-Wynik wywołania \texttt{FlowNetwork.toString()} przed i po
-wyznaczeniu maksymalnego przepływu jest zapisywany w formacie:
-
+\texttt{toString()}, która wyświetla aktualny stan grafu. Wynik wywołania
+tej metody po wyznaczeniu maksymalnego przepływu jest zapisywany w formacie:
 \begin{lstlisting}
 [indeks wezla startowego] -> [indeks wezla koncowego] przeplyw/przepustowosc
 \end{lstlisting}
 
 \noindent
-Przykładowy wydruk wywołania:
-
+Przykładowy wydruk wywołania tej metody:
 \begin{lstlisting}
 Przed:
 [0] -> [1] 0/3 @ 0
