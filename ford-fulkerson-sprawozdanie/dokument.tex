@@ -20,14 +20,11 @@ Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksy
 \subsubsubsection{Sieć z 1 węzłem}
 Za szczególny przypadek sieci przepływu można uznać sieć składającą się z dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
 \begin{itemize}
-%Warianty:
-%bez niczego
-%z pętlą
-%z ujemną pętlą
     \item Samego źródła.
     \item Węzła pośredniego.
     \item Ujścia.
     \item Wspólnego źródła i ujścia.
+    \item Wspólnego źródła i ujścia z pętlą.
 \end{itemize}
 Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów.
 
@@ -35,27 +32,50 @@ Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów.
 Sieć złożona ze źródłą i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
 %Warianty:
+%3 rodzaje przepustowości
 %o ujemnej przepustowości
 %o dodatniej przepustowości
 %o zerowej przepustowości
+
+%4 rodzaje pętli
 %z pętlą w źródle
 %z ujemną pętlą w źródle
 %z pętlą w ujściu
 %z ujemną pętlą w ujściu
+
+%6 rodzajów połączeń
+%bez krawędzi
+%z dobrą krawędzią
+%z odwróconą krawędzią
+%z wielokrotną dobrą krawędzią
+%z wielokrotną odwrócona krawędzią
+%z pomieszanymi krawędziami
+
+%Razem 72 przypadki testowe, ograniczyłem się do 11, które powinny być najbardziej reprezentatywne.
+
     \item Nie połączone żadną krawędzią.
-    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia.
-    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła.
+    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
+    \item Połączone pojedynczą krawędzia skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą w ujściu.
+    \item Połączone pojedynczą krawędzia skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
+    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
+    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
+    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
+    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
     \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
-    \item Z wieloma krawędziami skierowanymi w różnych stronach.   
+    \item Z wieloma krawędziami skierowanymi w różnych stronach.
 \end{itemize}
 
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
 Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
 %Warianty:
-%9 kombinacji przepływów dodatni/ujemny/zerowy
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródłą.
+% * 9 kombinacji przepływów dodatni/ujemny/zerowy
+% * 3 kombinacje z pętlą w źródle/pośrednim/ujściu * 3 dodatnią/ujemną/zerową
+% * 4 kombinacje wielokrotne oba/prawy/lewy/żaden
+% 9*3*4*4= 432 przypadki testowe (z czegoś trzeba zrezygnować)
+
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła.
 % Z -> P -> U
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego i z węzła pośredniego do źródła.
 % Z <- P <- U
@@ -63,15 +83,14 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 % Z <- P -> U
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego i z ujścia do węzła pośredniego.
 % Z -> P <- U
-
-
-    \item Sieć z 1 węzłem pośrednim z wieloma krawędziami od źródła do węzła pośredniego.
-    \item Sieć z 1 węzłem pośrednim z wieloma krawędziami od węzła pośredniego do ujścia.
-    \item Sieć z 1 węzłem pośrednim z krawędzią ze źródła do węzła pośredniego o dodatnim przepływie i z węzła pośredniego do ujścia o zerowej przepustowości.
-    \item Sieć z 1 węzłem pośrednim z krawędzią ze źródła do węzła pośredniego o zerowym przepływie i z węzła pośredniego do ujścia o dodatniej przepustowości.
-    \item Sieć z 1 węzłem pośrednim i pętlą w tym węźle.
-    \item Sieć z 1 węzłem pośrednim i pętlą o ujemnej przepustowści w tym węźle.
-    \item Sieć z 1 węzłem pośrednim i krawędzią ze źródła do ujścia.
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
+% Z -> P -> U
+% |---------^
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej przepustowości w węźle pośrednim.
+% Z -> P -> U
+%     / ^
+%     \_|
+    \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego i z węzła pośredniego do źródła, z mieszanymi zwrotami.
 \end{itemize}
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 \begin{itemize}
