@@ -51,12 +51,6 @@ Można bez problemu zdefiniować ponad 100 wariantów topologii sieci przepływo
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
 Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
-%Warianty:
-% * 9 kombinacji przepływów dodatni/ujemny/zerowy
-% * 3 kombinacje z pętlą w źródle/pośrednim/ujściu * 3 dodatnią/ujemną/zerową
-% * 4 kombinacje wielokrotne oba/prawy/lewy/żaden
-% 9*3*4*4= 432 przypadki testowe (z czegoś trzeba zrezygnować)
-
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła.
 % Z -> P -> U
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego i z węzła pośredniego do źródła.
@@ -67,13 +61,24 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 % Z -> P <- U
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
 % Z -> P -> U
-% |---------^
+% |_________^
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej przepustowości w węźle pośrednim.
 % Z -> P -> U
 %     / ^
 %     \_|
     \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego i z węzła pośredniego do źródła, z mieszanymi zwrotami.
+% Z -> P -> U
+%  ^__/ ^__/
+    \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła pośredniego, bez krawędzi do ujścia.
+% Z -> P    U
+    \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła pośredniego, oraz krawędzią ze źródłą do ujścia.
+% Z -> P    U
+% |_________^
+    \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do ujścia, bez połączenia ze źródłem.
+% Z    P -> U
+
 \end{itemize}
+
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 \begin{itemize}
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle.
