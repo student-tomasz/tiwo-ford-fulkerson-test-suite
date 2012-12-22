@@ -44,41 +44,49 @@ na stronie \pageref{sec:analiza}.
 
 \subsection{Dane wejściowe}
 Algorytm Forda-Fulkersona opisany powyżej przyjmuje dwa argumenty:
-\begin{itemize}
-  \item \texttt{FlowNetwork} -- graf przepływu sieci,
+\begin{itemize}[nosep]
+  \item \texttt{FlowNetwork} -- graf przepływu sieci, posiadający dwie możliwe
+  reprezentacje,
   \item \texttt{Search} -- metoda wykorzystywana do wyszukiwania ścieżek
   powiększających.
 \end{itemize}
 
 \subsubsection{Graf przepływu \texttt{FlowNetworkAdjacencyArray}}
-Graf przepływu realizowany jest przy pomocy algorytmu z użyciem list
-powiązanych. Do każdego wierzchołka grafu przypisane są dwie listy krawędzi,
-przednich oraz tylnych. Rozwiązanie charakteryzuje się wysoką przejrzystością. Z
-powodu redundacji w postaci duplikowaniu listy krawędzie wykazuje niską
-wydajność pamięciową. Niezalecane jest stosowanie reprezentacji w przypadku
-dużych, gęstych grafów.\\
+Korzystamy z reprezentacji grafu przepływu zrealizowanej z użyciem list
+powiązanych. Ten model grafu zaimplementowany jest w klasie
+\texttt{FlowNetworkAdjacencyArray}. Do każdego wierzchołka grafu przypisane są
+dwie listy krawędzi, przednich oraz tylnych. Korzystając z takiej struktury
+modelu grafu, otrzymujemy łatwo zrozumiałą implementację algorytmu. Jednak z
+powodu tej redundancji nasza implementacja wykazuje się niską wydajnością
+pamięciową. Niezalecane jest stosowanie tej reprezentacji w przypadku dużych,
+gęstych grafów.
 
 \noindent
 Argumenty wejściowe konstruktora \texttt{FlowNetworkAdjacencyArray}:
-\begin{itemize}
+\begin{itemize}[nosep]
   \item \texttt{int} -- ilość wszystkich węzłów w grafie,
   \item \texttt{int} -- indeks węzła początkowego,
   \item \texttt{int} -- indeks węzła docelowego,
   \item \texttt{Iterator<EdgesInfo>} -- lista krawędzi wraz z ich przepustowością.
 \end{itemize}
 
-\subsubsection{Krawędzie}
-Informacje o krawędziach grafu przechowywane jako kolekcji instancji klasy
+\subsubsection{Krawędzie \texttt{EdgeInfo}}
+Informacje o krawędziach grafu przechowywane są jako kolekcje instancji klasy
 \texttt{EgdeInfo}. Zawierają informacje o wierzchołkach, pomiędzy którymi
 dana krawędź się znajduje oraz wartość jej przepustowości.
 
 \noindent
 Argumenty konstruktora \texttt{EdgeInfo}:
-\begin{itemize}
-  \item \texttt{int} -- indeks węzła startowego
-  \item \texttt{int} -- indeks węzła końcowego
-  \item \texttt{int} -- wartość przepustowa krawędzi
+\begin{itemize}[nosep]
+  \item \texttt{int} -- indeks węzła startowego,
+  \item \texttt{int} -- indeks węzła końcowego,
+  \item \texttt{int} -- wartość przepustowa krawędzi.
 \end{itemize}
+
+\subsubsection{Metoda wyszkiwania ścieżki \texttt{DFS\_SearchList}}
+Dostępne są dwie, standardowe metody wyszukiwania ścieżki; metoda przeszukiwania
+wszerz i wzdłuż. Oryginalnie algorytm Forda-Fulkersona korzysta z wyszukiwania
+ścieżki metodą wdłuż. Z tej metody korzystamy.
 
 \subsection{Dane wyjściowe}
 Wyniki wyznaczania maksymalnego przepływu są zapisywane wewnątrz struktury
