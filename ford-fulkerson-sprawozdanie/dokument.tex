@@ -19,7 +19,6 @@ Na potrzeby realizacji testów czarnoskrzynkowych zostały zdefiniowane następu
 Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksymalnego przepływu.
 \subsubsubsection{Sieć z 1 węzłem}
 Za szczególny przypadek sieci przepływu można uznać sieć składającą się z dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
-
 \begin{itemize}
     \item Samego źródła.
     \item Węzła pośredniego.
@@ -27,26 +26,26 @@ Za szczególny przypadek sieci przepływu można uznać sieć składającą się
     \item Wspólnego źródła i ujścia.
     \item Wspólnego źródła i ujścia z pętlą.
 \end{itemize}
-Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów, jako jedyny posiadający krawędź, która można traktować jako krawędź ze źródła do ujścia.
+Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów, który jako jedyny posiadający krawędź, która można traktować jako krawędź ze źródła do ujścia.
 
 Można wyróżnić cztery schematy sieci z pojedynczym węzłem, każdy w czterech wariantach: bez pętli, z pętlą o dodatniej/ujemnej/zerowej przepustowości, co przekładałoby się na szesnaście przypadków testowych. W ramach planu ograniczono się do pięciu najistotniejszych kombinacji.
 
 \subsubsubsection{Sieć bez węzłów pośrednich}
-Sieć złożona ze źródłą i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione zostały następujące klasy abstrakcji:
+Sieć złożona ze źródła i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione zostały następujące klasy abstrakcji dla topologii sieci z węzłami:
 \begin{itemize}
-    \item Nie połączone żadną krawędzią.
-    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
-    \item Połączone pojedynczą krawędzia skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą w ujściu.
-    \item Połączone pojedynczą krawędzia skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
-    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
-    \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
-    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
-    \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
+    \item Nie połączonymi żadną krawędzią.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
     \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
     \item Z wieloma krawędziami skierowanymi w różnych stronach.
 \end{itemize}
-Można bez problemu zdefiniować ponad 100 wariantów topologii sieci przepływowej bez węzłów pośrednich. Trzy ze względu na rodzaj przepustowości krawędzi (dodatnia/ujemna/zerowa), siedem ze względu na istnienie i rodzaj pętli (brak/w źródle z dodatnią przepustowościa/w źródle z ujemną przepustowością/w źródle z zerową przepustowością/w ujściu z dodatnią przepustowościa/w ujściu z ujemną przepustowościa/w ujściu z zerową przepustowościa), oraz sześć wariantów połączeń pomiędzy krawędziami (bez krawędzi, pojedyncza od źródła do ujścia, pojedyncza od ujścia do źródła, zwielokrotniona ze źródła do ujścia, zwielokrotniona z ujścia do źródła, z pomieszanymi zwrotami). Do przetestowania zostało wybranych 11 najbardziej reprezentatywnych.
+Można bez problemu zdefiniować ponad sto wariantów topologii sieci przepływowej bez węzłów pośrednich. Trzy ze względu na rodzaj przepustowości krawędzi (dodatnia/ujemna/zerowa), siedem ze względu na istnienie i rodzaj pętli (brak/w źródle z dodatnią przepustowościa/w źródle z ujemną przepustowością/w źródle z zerową przepustowością/w ujściu z dodatnią przepustowościa/w ujściu z ujemną przepustowościa/w ujściu z zerową przepustowościa), oraz sześć wariantów połączeń pomiędzy krawędziami (bez krawędzi, pojedyncza od źródła do ujścia, pojedyncza od ujścia do źródła, zwielokrotniona ze źródła do ujścia, zwielokrotniona z ujścia do źródła, z pomieszanymi zwrotami). Do przetestowania zostało wybranych 11 najbardziej reprezentatywnych topologii sieci bez węzłów pośrednich.
 
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
 Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji:
@@ -113,7 +112,6 @@ W danych wejściowych liczba węzłów w sieci jest określona za pomocą liczby
 
 \subsubsubsection{Sieć z 1000000000 węzłów}
 Test dla bardzo dużej (najlepiej granicznej) wartości liczby węzłów.
-
 
 \section{Projekt testów}
 
