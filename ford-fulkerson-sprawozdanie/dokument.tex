@@ -83,7 +83,7 @@ W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad ty
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy sieci z 2 węzłami pośrednimi połączonymi równolegle:
 \begin{itemize}
-    \item Z krawędziami o dodatniej przepustowości.
+    \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów pośrednich i z obu węzłów pośrednich do ujścia.
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła pośredniego do drugiego węzła pośredniego.
     \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła pośredniego do pierwszego węzła pośredniego.
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła pośredniego do pierwszego węzła pośredniego.
@@ -97,8 +97,9 @@ W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy si
 Klasy abstrakcji dla sieci z 2 węzłami pośrednimi zostały pomyślane przede wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
 
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
+W tym wypadku jako istotne dla testów klasy abstrakcji zdefiniowano topologie sieci z 2 węzłami pośrednimi połączonymi szeregowo:
 \begin{itemize}
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo.
+    \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła pośredniej, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła pośredniego do ujścia.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma krawędziami pomiędzy węzłami pośrednimi.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o zerowej przepustowości pomiędzy węzłami pośrednimi.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o ujemnej przepustowości pomiędzy węzłami pośrednimi.
