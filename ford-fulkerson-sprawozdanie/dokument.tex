@@ -81,18 +81,21 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad tysiąc różnych rodzajów topologii sieci. Dla dwóch krawędzi istnieje już dziewięć kombinacji rodzajów przepustowości (dodatnia/ujemna/zerowa), trzy możliwe położenia pętli (w źródle/węźle pośrednim/ujściu), trzy rodzaje przepustowości w pętli (dodatni/ujemny/zerowy), cztery możliwe kombinacje zwrotów krawędzi, oraz cztery warianty zwielokrotnienia krawędzi w topologii sieci. Doliczenie się takiej liczby możliwych rodzajów topologii sieci, nie wymagało nawet uwzględnienia możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia, czy braku którejś krawędzi. Ostatecznie zdecydowano się zatem na dziesięć różnych klas abstrakcji.
 
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
+W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy sieci z 2 węzłami pośrednimi połączonymi równolegle:
 \begin{itemize}
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzła pośredniego.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z drugiego węzła pośredniego do pierwszego węzła pośredniego.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzła pośredniego i odwrotnie.\footnote{Potencjalne zagrożenie stworzeniem złożonej pętli}
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią ze źródła do ujścia.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzia z ujścia do źródła.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z ujścia do pierwszego węzła pośredniego.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do źródłą.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z ujścia do pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
+    \item Z krawędziami o dodatniej przepustowości.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła pośredniego do drugiego węzła pośredniego.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła pośredniego do pierwszego węzła pośredniego.
+    \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła pośredniego do pierwszego węzła pośredniego.
+\footnote{Potencjalne zagrożenie stworzeniem złożonej pętli}
+    \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
+    \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do pierwszego węzła pośredniego.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła pośredniego do źródłą.
+    \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
 \end{itemize}
 Klasy abstrakcji dla sieci z 2 węzłami pośrednimi zostały pomyślane przede wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
+
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
 \begin{itemize}
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo.
