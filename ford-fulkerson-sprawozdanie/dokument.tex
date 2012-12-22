@@ -48,9 +48,10 @@ Sieć złożona ze źródła i ujścia, bez jakichkolwiek węzłów pośrednich.
 Można bez problemu zdefiniować ponad sto wariantów topologii sieci przepływowej bez węzłów pośrednich. Trzy ze względu na rodzaj przepustowości krawędzi (dodatnia/ujemna/zerowa), siedem ze względu na istnienie i rodzaj pętli (brak/w źródle z dodatnią przepustowościa/w źródle z ujemną przepustowością/w źródle z zerową przepustowością/w ujściu z dodatnią przepustowościa/w ujściu z ujemną przepustowościa/w ujściu z zerową przepustowościa), oraz sześć wariantów połączeń pomiędzy krawędziami (bez krawędzi, pojedyncza od źródła do ujścia, pojedyncza od ujścia do źródła, zwielokrotniona ze źródła do ujścia, zwielokrotniona z ujścia do źródła, z pomieszanymi zwrotami). Do przetestowania zostało wybranych 11 najbardziej reprezentatywnych topologii sieci bez węzłów pośrednich.
 
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
-Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji:
+Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji w zależności od topologii:
 \begin{itemize}
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła.
+%Daj spokój tym "wanna be schematom", może powstaną w wersji nie-ASCII-art. Stworzyłem je, żeby było ładnie widać, co opisuję.
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do ujścia.
 % Z -> P -> U
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego i z węzła pośredniego do źródła.
 % Z <- P <- U
@@ -58,10 +59,10 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 % Z <- P -> U
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego i z ujścia do węzła pośredniego.
 % Z -> P <- U
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
 % Z -> P -> U
 % |_________^
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej przepustowości w węźle pośrednim.
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej przepustowości w węźle pośrednim.
 % Z -> P -> U
 %     / ^
 %     \_|
@@ -77,7 +78,7 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 % Z    P -> U
 
 \end{itemize}
-W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad tysiąc różnych rodzajów topologii sieci. Dla dwóch krawędzi istnieje już dziewięć kombinacji rodzajów przepustowości (dodatnia/ujemna/zerowa), trzy możliwe położenia pętli (w źródle/węźle pośrednim/ujściu), trzy rodzaje przepustowości w pętli (dodatni/ujemny/zerowy), cztery możliwe kombinacje zwrotów krawędzi, oraz cztery warianty zwielokrotnienia krawędzi w topologii sieci. Nawet nie uwzględniając możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia, czy braku którejś krawędzi. Ostatecznie zdecydowano się na dziesięć różnych klas abstrakcji.
+W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad tysiąc różnych rodzajów topologii sieci. Dla dwóch krawędzi istnieje już dziewięć kombinacji rodzajów przepustowości (dodatnia/ujemna/zerowa), trzy możliwe położenia pętli (w źródle/węźle pośrednim/ujściu), trzy rodzaje przepustowości w pętli (dodatni/ujemny/zerowy), cztery możliwe kombinacje zwrotów krawędzi, oraz cztery warianty zwielokrotnienia krawędzi w topologii sieci. Doliczenie się takiej liczby możliwych rodzajów topologii sieci, nie wymagało nawet uwzględnienia możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia, czy braku którejś krawędzi. Ostatecznie zdecydowano się zatem na dziesięć różnych klas abstrakcji.
 
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 \begin{itemize}
