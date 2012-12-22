@@ -124,10 +124,10 @@ Po:
 
 \section{Przykład użycia}
 W pierwszej kolejności ustalane są główne parametry grafu:
-\begin{itemize}
-\item liczba wezłów grafu (poza źródłem i ujściem),
-\item indeks węzła źródłowego,
-\item indeks węzła docelowego.
+\begin{itemize}[nosep]
+    \item liczba wezłów grafu (poza źródłem i ujściem),
+    \item indeks węzła źródłowego,
+    \item indeks węzła docelowego.
 \end{itemize}
 \begin{lstlisting}
 int numVertices = 6;
@@ -135,12 +135,13 @@ int srcIndex = 0;
 int sinkIndex = 5;
 \end{lstlisting}
 
+\noindent
 Następnie definiowane są poszczególne krawędzie grafu wraz z ich
 przepustowością:
-\begin{itemize}
-\item indeks węzła początkowego krawędzi,
-\item indeks węzła końcowego krawędzi,
-\item maksymalna przepustowość krawędzi.
+\begin{itemize}[nosep]
+    \item indeks węzła początkowego krawędzi,
+    \item indeks węzła końcowego krawędzi,
+    \item maksymalna przepustowość krawędzi.
 \end{itemize}
 \begin{lstlisting}
 ArrayList preIterator = new ArrayList();
@@ -164,25 +165,28 @@ preIterator.add(edge8);
 Iterator<EdgeInfo> edges = preIterator.iterator();
 \end{lstlisting}
 
+\noindent
 Tworzony jest obiekt reprezentujący cały graf przepływu.
 \begin{lstlisting}
 FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList(numVertices, srcIndex, sinkIndex, edges);
-
 System.out.println(network.toString());
 \end{lstlisting}
 
-Wybierana jest funkcja wyszukująca i wykonywany jest algorytm Forda-Fulkersona.
+\noindent
+Wybierana jest funkcja wyszukująca. Następnie inicjowany i wykonywany jest
+algorytm Forda-Fulkersona.
 \begin{lstlisting}
-//algorytm przeszukiwania wszerz
-BFS_SearchList search = new BFS_SearchList(network);
+// algorytm wyszukiwania ścieżki wdłuż
+DFS_SearchList search = new DFS_SearchList(network);
 
-//algorytm FORD-FULKERSON
+// algorytm Forda-Fulkersona
 FordFulkerson fordFulkerson = new FordFulkerson(network, search);
 
-//wykonaj algorytm
+// wywołanie algorytmu
 fordFulkerson.compute();
 \end{lstlisting}
 
+\noindent
 Wyświetlenie wyznaczonego maksymalnego przepływu.
 \begin{lstlisting}
 System.out.println("Wynik:");

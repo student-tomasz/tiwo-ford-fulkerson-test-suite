@@ -35,32 +35,37 @@
 }
 
 \RequirePackage{listings}
-\RequirePackage{color}
+\RequirePackage{xcolor}
 \RequirePackage{textcomp}
-\definecolor{listinggray}{gray}{0.9}
-\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\definecolor{dkgreen}{rgb}{0.2,0.6,0.2}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 \lstset{
-    backgroundcolor=\color{lbcolor},
-    tabsize=4,
-    rulecolor=,
+    aboveskip=0.67\baselineskip,
+    belowskip=1.0\baselineskip,
+    basicstyle=\ttfamily\footnotesize,
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    %firstnumber=1,
+    %stepnumber=5,
+    %numbersep=5pt,
     language=Java,
-    basicstyle=\scriptsize,
-    upquote=true,
-    aboveskip={1.5\baselineskip},
-    columns=fixed,
-    showstringspaces=false,
-    extendedchars=true,
+    tabsize=4,
     breaklines=true,
+    breakatwhitespace=false,
     prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
-    frame=single,
-    showtabs=false,
     showspaces=false,
     showstringspaces=false,
-    identifierstyle=\ttfamily,
-    keywordstyle=\color[rgb]{0,0,1},
-    commentstyle=\color[rgb]{0.133,0.545,0.133},
-    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    showtabs=false,
+    frame=tb,
+    captionpos=b,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{mauve},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve}
 }
+
+\RequirePackage[inline]{enumitem}
 
 \RequirePackage{dokument-tiwo-meta}
 \RequirePackage{dokument-tiwo-versions}
