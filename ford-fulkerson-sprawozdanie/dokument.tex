@@ -49,10 +49,22 @@ Sieć złożona ze źródłą i ujścia, bez jakichkolwiek węzłów pośrednich
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
     \item Z wieloma krawędziami skierowanymi w różnych stronach.   
 \end{itemize}
+
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
+Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
-    \item Sieć z 1 węzłem pośrednim.
-    \item Sieć z 1 węzłem pośrednim z krawędzią ze źródłą do węzła pośredniego i z ujścia do węzła pośredniego o dodatniej przepustowości.
+%Warianty:
+%9 kombinacji przepływów dodatni/ujemny/zerowy
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą pośredniego i z węzła pośredniego do źródłą.
+% Z -> P -> U
+    \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego i z węzła pośredniego do źródła.
+% Z <- P <- U
+    \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia i z węzła pośredniego do źródła.
+% Z <- P -> U
+    \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego i z ujścia do węzła pośredniego.
+% Z -> P <- U
+
+
     \item Sieć z 1 węzłem pośrednim z wieloma krawędziami od źródła do węzła pośredniego.
     \item Sieć z 1 węzłem pośrednim z wieloma krawędziami od węzła pośredniego do ujścia.
     \item Sieć z 1 węzłem pośrednim z krawędzią ze źródła do węzła pośredniego o dodatnim przepływie i z węzła pośredniego do ujścia o zerowej przepustowości.
