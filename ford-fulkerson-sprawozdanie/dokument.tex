@@ -79,6 +79,7 @@ Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i u
 
 \end{itemize}
 W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad tysiąc różnych rodzajów topologii sieci. Dla dwóch krawędzi istnieje już dziewięć kombinacji rodzajów przepustowości (dodatnia/ujemna/zerowa), trzy możliwe położenia pętli (w źródle/węźle pośrednim/ujściu), trzy rodzaje przepustowości w pętli (dodatni/ujemny/zerowy), cztery możliwe kombinacje zwrotów krawędzi, oraz cztery warianty zwielokrotnienia krawędzi w topologii sieci. Nawet nie uwzględniając możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia, czy braku którejś krawędzi. Ostatecznie zdecydowano się na dziesięć różnych klas abstrakcji.
+
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 \begin{itemize}
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle.
@@ -104,6 +105,10 @@ W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad ty
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od pierwszego węzła pośredniego do ujścia.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od źródła do drugiego węzła pośredniego.
 \end{itemize}
+
+\subsubsubsection{Sieć z nieistniejącymi węzłami}
+Liczba węzłów określona w danych wejściowych jest większa niż liczba zdefiniowanych węzłów.
+
 
 \section{Projekt testów}
 
