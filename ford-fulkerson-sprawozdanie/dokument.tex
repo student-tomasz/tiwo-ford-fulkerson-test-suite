@@ -83,28 +83,28 @@ W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad ty
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 \begin{itemize}
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle.
-    \item Sieć z 2 węzłąmi pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzłą pośredniego.
-    \item Sieć z 2 węzłąmi pośrednimi połączonymi równolegle z krawędzią z drugiego węzła pośredniego do pierwszego węzłą pośredniego.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzła pośredniego i odwrotnie.\footnote{Potencjalne zagrożenie stworzeniem żłożonej pętli}
+    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzła pośredniego.
+    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z drugiego węzła pośredniego do pierwszego węzła pośredniego.
+    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do drugiego węzła pośredniego i odwrotnie.\footnote{Potencjalne zagrożenie stworzeniem złożonej pętli}
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią ze źródła do ujścia.
-    \item Sieć z 2 węzłąmi pośrednimi połączonymi równolegle z krawędzia z ujścia do źródła.
+    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzia z ujścia do źródła.
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z ujścia do pierwszego węzła pośredniego.
-    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzłą pośredniego do źródłą.
+    \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z pierwszego węzła pośredniego do źródłą.
     \item Sieć z 2 węzłami pośrednimi połączonymi równolegle z krawędzią z ujścia do pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
 \end{itemize}
-Klasy abstrakcji dla siecie z 2 węzłami pośrednimi zostały pomyślane przede wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
+Klasy abstrakcji dla sieci z 2 węzłami pośrednimi zostały pomyślane przede wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
 \subsubsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
 \begin{itemize}
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma krawędziami pomiędzy węzłami pośrednimi.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o zerowej przepustowości pomiędzy węzłami pośrednimi.
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o ujemnym przepływie pomiędzy węzłami pośrednimi.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o ujemnej przepustowości pomiędzy węzłami pośrednimi.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z drugiego węzłą pośredniego do pierwszego węzła pośredniego.
 \footnote{Ujemna przepustowość pomiędzy pierwszym a drugim węzłem pośrednim nie jest tożsama z krawędzią o dodatniej przepustowości od drugiego do pierwszego węzła pośredniego. Ujemna przepustowość krawędzi jest niepoprawna z definicji, natomiast krawędź skierowana w przeciwną stronę jest jak najbardziej poprawna z punktu widzenia definicji, choć taka sieć wciąż nie miałaby żadnej przepustowości}.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od pierwszego węzła pośredniego do ujścia.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od źródła do drugiego węzła pośredniego.
 \end{itemize}
-Dodanie schematów z połączeniami szeregowymi zasadniczo wyczerpuje schematy połączeń, każdy bardziej złożony (prawidłowy) schemat połączeń będzie bazował na pewnej kombinacji powyższych wariacji na temat połączeń szeregowych i równoległych.
+Dodanie schematów z połączeniami szeregowymi zasadniczo wyczerpuje możliwości budowy schematów połączeń, każdy bardziej złożony (prawidłowy) schemat połączeń będzie bazował na pewnej kombinacji powyższych wariacji na temat połączeń szeregowych i równoległych.
 \subsubsubsection{Sieć z nieistniejącymi węzłami}
 Liczba węzłów określona w danych wejściowych jest większa niż liczba zdefiniowanych węzłów.
 
