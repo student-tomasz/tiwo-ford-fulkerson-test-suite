@@ -20,6 +20,7 @@ Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksy
 \subsubsubsection{Sieć z 1 węzłem}
 Za szczególny przypadek sieci przepływu można uznać sieć składającą się z dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
 \begin{itemize}
+%Warianty:
 %bez niczego
 %z pętlą
 %z ujemną pętlą
@@ -33,26 +34,20 @@ Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów.
 \subsubsubsection{Sieć bez węzłów pośrednich}
 Sieć złożona ze źródłą i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione zostały następujące klasy abstrakcji:
 \begin{itemize}
+%Warianty:
+%o ujemnej przepustowości
+%o dodatniej przepustowości
+%o zerowej przepustowości
+%z pętlą w źródle
+%z ujemną pętlą w źródle
+%z pętlą w ujściu
+%z ujemną pętlą w ujściu
+    \item Nie połączone żadną krawędzią.
     \item Połączone pojedynczą krawędzią skierowaną od źródła do ujścia.
-%o ujemnej przepustowości
-%o dodatniej przepustowości
-%o zerowej przepustowości
     \item Połączone pojedynczą krawędzią skierowaną od ujścia do źródła.
-%o ujemnej przepustowości
-%o dodatniej przepustowości
-%o zerowej przepustowości
     \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
-    
-    \item Sieć bez węzłów pośrednich z pętlą.
-    \item Sieć bez węzłów pośrednich z krawędzią o ujemnej przepustowości.
-    \item Sieć bez węzłów pośrednich z krawędzią o zerowej przepustowości.
-    \item Sieć bez węzłów pośrednich z krawędzią od ujścia do źródłą.
-    \item Sieć bez węzłów pośrednich z pętlą o ujemnej przepustowości.
-    \item Sieć bez węzłów pośrednich z wieloma krawędziami i pętlą.
-    \item Sieć bez węzłów pośrednich z wieloma krawędziami i krawędzią o ujemnej przepustowości.
-    \item Sieć bez węzłów pośrednich z wieloma krawędziami, pętlą i krawędzia o ujemnej przepustowości.
-    \item Sieć bez węzłów pośrednich z wieloma krawędziami i pętlą o ujemnej przepustowości.   
+    \item Z wieloma krawędziami skierowanymi w różnych stronach.   
 \end{itemize}
 \subsubsubsection{Sieć z 1 węzłem pośrednim}
 \begin{itemize}
