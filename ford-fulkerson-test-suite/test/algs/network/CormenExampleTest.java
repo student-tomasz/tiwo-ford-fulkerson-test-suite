@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import algs.list.DoubleLinkedList;
-import algs.network.BFS_SearchArray;
-import algs.network.BFS_SearchList;
 import algs.network.DFS_SearchArray;
 import algs.network.DFS_SearchList;
 import algs.network.EdgeInfo;
@@ -18,25 +16,24 @@ import algs.network.FlowNetwork;
 import algs.network.FlowNetworkAdjacencyList;
 import algs.network.FlowNetworkArray;
 import algs.network.FordFulkerson;
-import algs.network.Optimized;
 import algs.network.ShortestPathArray;
 
-/** Test the code on the Cormen example. */
-public class CormenExampleTest extends TestCase {
+/* Test the code on the Cormen example. */
+public class CormenExampleTest {
 	
 	ArrayList<EdgeInfo> edges;
 	EdgeInfo[] edgesOut;
 	EdgeInfo[] edgesIn;
 	
 	/**
-	 * Example drawn from [Cormen], p. 581]
-	 * 
+	 * Example drawn from [Cormen], p. 581
 	 */
+        @Before
 	public void setUp() {
 		edgesOut = new EdgeInfo[2];
 		edgesIn = new EdgeInfo[2];
 		
-		edges = new ArrayList<EdgeInfo>();
+		edges = new ArrayList<>();
 		edges.add(edgesOut[0] = new EdgeInfo(0, 1,   16));
 		edges.add(edgesOut[1] = new EdgeInfo(0, 2,   13));
 		
@@ -68,10 +65,10 @@ public class CormenExampleTest extends TestCase {
 		assertEquals (inSum, outSum);
 		assertEquals (23, inSum);
 		
-		// ensure minCut is satisfied.
+		// ensure minCut is satisfied
 		
-		// just for testing purposes.
-		Hashtable<EdgeInfo,Integer> edges = new Hashtable<EdgeInfo,Integer>();
+		// just for testing purposes
+		Hashtable<EdgeInfo,Integer> edges = new Hashtable<>();
 		EdgeInfo res[] = new EdgeInfo[] { new EdgeInfo (1, 3, 12),
 				new EdgeInfo (4, 3, 7),
 				new EdgeInfo (4, 5, 4)
@@ -111,23 +108,6 @@ public class CormenExampleTest extends TestCase {
 		validate (network);
 
 	}
-	
-	@Test
-	public void testFulkersonBFS () {
-		FlowNetworkArray network = new FlowNetworkArray (6, 0, 5, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchArray(network));
-		ffa.compute();
-		validate (network);
-		assertEquals (23, network.getFlow());
-	}
-	
-	@Test
-	public void testFulkersonBFSList () {
-		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList(6, 0, 5, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchList(network));
-		ffa.compute();
-		validate (network);
-	}
 
 	@Test
 	public void testFulkersonDFSList () {
@@ -135,13 +115,5 @@ public class CormenExampleTest extends TestCase {
 		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchList(network));
 		ffa.compute();
 		validate (network);
-	}
-	
-	@Test
-	public void testMoreOptimized () {
-		Optimized network = new Optimized(6, 0, 5, edges.iterator());
-		int maxFlow = network.compute(0,5);
-		assertEquals (23, maxFlow);
-		network.validate();
 	}
 }

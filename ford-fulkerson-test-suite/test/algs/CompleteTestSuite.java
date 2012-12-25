@@ -13,9 +13,7 @@ import org.junit.runners.Suite;
     algs.model.performance.network.Figure_FactSheet_FordFulkersonTest.class,
     algs.model.performance.network.FinalCaseTest.class,
     algs.network.CormenExampleTest.class,
-    algs.network.CreateImageTest.class,
     algs.network.ExampleTest.class,
-    algs.network.MaxFlowMinCostTest.class,
     algs.network.SampleBackflowTest.class,
     algs.network.SimpleTest.class,
     algs.network.WebExampleTest.class
