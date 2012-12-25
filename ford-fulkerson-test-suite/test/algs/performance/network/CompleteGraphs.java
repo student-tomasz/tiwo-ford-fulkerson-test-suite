@@ -1,15 +1,14 @@
-package algs.example.tests.model.performance.network;
+package algs.performance.network;
 
 import org.junit.Test;
 
-import algs.example.model.network.generator.FlowNetworkGenerator;
-import algs.model.network.BFS_SearchArray;
-import algs.model.network.BFS_SearchList;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetwork;
-import algs.model.network.FordFulkerson;
-import algs.model.network.VertexStructure;
-import algs.model.tests.common.TrialSuite;
+import algs.network.DFS_SearchArray;
+import algs.network.DFS_SearchList;
+import algs.network.EdgeInfo;
+import algs.network.FlowNetwork;
+import algs.network.FordFulkerson;
+import algs.network.VertexStructure;
+import algs.tests.common.TrialSuite;
 
 public class CompleteGraphs {
 	@Test

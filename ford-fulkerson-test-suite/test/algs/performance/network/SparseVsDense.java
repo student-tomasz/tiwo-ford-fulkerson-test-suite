@@ -1,4 +1,4 @@
-package algs.example.tests.model.performance.network;
+package algs.performance.network;
 
 import org.junit.Test;
 

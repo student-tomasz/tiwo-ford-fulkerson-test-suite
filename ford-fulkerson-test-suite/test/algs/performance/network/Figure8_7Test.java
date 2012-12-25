@@ -1,4 +1,4 @@
-package algs.model.performance.network;
+package algs.performance.network;
 
 import java.util.ArrayList;
 
