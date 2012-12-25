@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{dokument-tiwo}[2012/12/21 Klasa dla dokumentów powstałych w ramach projektu TiWO 2012/2013]
+\ProvidesClass{dokument-tiwo}[2012/12/25 Klasa dla dokumentów powstałych w ramach projektu TiWO 2012/2013]
 
 \LoadClassWithOptions{article}
 
@@ -66,6 +66,10 @@
 }
 
 \RequirePackage[inline]{enumitem}
+
+\RequirePackage{titlesec}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0pt}
 
 \RequirePackage{dokument-tiwo-meta}
 \RequirePackage{dokument-tiwo-versions}

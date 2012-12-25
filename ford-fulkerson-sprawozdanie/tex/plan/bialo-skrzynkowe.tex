@@ -1,0 +1,80 @@
+\subsection{Testowanie biało\dywiz skrzynkowe}
+
+\subsubsection{Wprowadzenie}
+Kryterium satysfakcji przeprowadzanych testów wyznaczane jest na podstawie
+współczynnika pokrycia kodu. Minimalną dopuszczalną wartością jest 90\%. Część
+testów została dostarczona razem z systemem.
+
+\subsubsection{Testowane elementy}
+Lista poszczególnych klas poddawanych testowaniu oraz pokrycie kodu zapewnione
+przez testy zawarte wraz z kodem źródłowym.
+
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.33\textwidth} @{\hspace{0.02\textwidth}} c @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries Pakiet \texttt{algs.network}} \\
+    \midrule
+    {\normalfont\bfseries Klasa} & {\bfseries Aktualne pokrycie} \\
+    \toprule
+    FordFulkerson & 100\% \\
+    FlowNetwork & 100\% \\
+    FlowNetworkAdjacencyList & 82\% \\
+    FlowNetworkArray & ??\% \\
+    Search & 100\% \\
+    DFS\_SearchList & ??\% \\
+    DFS\_SearchArray & ??\% \\
+    EdgeInfo & 100\% \\
+    VertexInfo & 100\% \\
+    VertexStructure & 93\% \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.33\textwidth} @{\hspace{0.02\textwidth}} c @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries Pakiet \texttt{algs.list}} \\
+    \midrule
+    {\normalfont\bfseries Klasa} & {\bfseries Aktualne pokrycie} \\
+    \toprule
+    DoubleLinkedList & 19\% \\
+    DoubleLinkedListIterator & 59\% \\
+    DoubleNode & 27\% \\
+    List & 33\% \\
+    ListIterator & 88\% \\
+    Node & 100\% \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Funkcje wyłączone z testowania}
+Lista nieużywanych metod dostarczanych przez testowane klasy:
+\begin{itemize}[nosep]
+    \item \verb|FlowNetworkAdjacencyList.getCost()|
+\end{itemize}
+
+\subsubsection{Podejście}
+Testowanie zostanie przeprowadzone techniką testowania strukturalnego. Głównym
+kryterium zaliczenia testów będzie wartość pokrycia linii kodu, którego wartość
+musi przekraczać 90\%.\\
+
+\noindent
+Dodatkowo do wytycznych środowiska testowego ustalonych globalnie użyte zostaną:
+\begin{itemize}[nosep]
+    \item EMMA Code Coverage plugin 2.3
+\end{itemize}
+
+\subsubsection{Zadania testowania}
+\begin{center}
+\begin{tabular}{@{} p{0.44\textwidth} @{\hspace{0.02\textwidth}} p{0.22\textwidth} @{}}
+    \toprule
+    {\bfseries Zadanie} & {\bfseries Osoba odpowiedzialna} \\
+    \toprule
+    Projekt testów & MO \\
+    Przygotowanie przypadków testowych & MO \\
+    Implementacja testów & MO \\
+    Uruchomienie testów i weryfikacja wyników & MO, TC \\
+    Akceptacja wyników przebiegu testowania & TC \\
+    \bottomrule
+\end{tabular}
+\end{center}
