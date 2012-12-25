@@ -2,21 +2,22 @@ package algs.performance.network;
 
 import java.util.ArrayList;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
-import algs.model.network.DFS_SearchArray;
-import algs.model.network.DFS_SearchList;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetwork;
-import algs.model.network.FlowNetworkAdjacencyList;
-import algs.model.network.FlowNetworkArray;
-import algs.model.network.FordFulkerson;
-import algs.model.network.VertexStructure;
-import algs.model.tests.common.TrialSuite;
+import algs.network.DFS_SearchArray;
+import algs.network.DFS_SearchList;
+import algs.network.EdgeInfo;
+import algs.network.FlowNetwork;
+import algs.network.FlowNetworkAdjacencyList;
+import algs.network.FlowNetworkArray;
+import algs.network.FordFulkerson;
+import algs.network.VertexStructure;
+import algs.tests.common.TrialSuite;
 
-public class DegenerateCaseTest extends TestCase {
+public class DegenerateCaseTest {
+    
 	FlowNetwork<EdgeInfo[][]> networkA;
 	ArrayList<EdgeInfo> edges;
 	EdgeInfo[] edgesOut;
@@ -28,11 +29,12 @@ public class DegenerateCaseTest extends TestCase {
 	 * augmenting paths. It seems impossible to actually make this happen (although it *may*). So we don't
 	 * worry about it.
 	 */
+        @Before
 	public void setUp() {
 		edgesOut = new EdgeInfo[2];
 		edgesIn = new EdgeInfo[2];
 		
-		edges = new ArrayList<EdgeInfo>();
+		edges = new ArrayList<>();
 		edges.add(edgesOut[0] = new EdgeInfo(0, 1,   1000000));
 		
 		edges.add(new EdgeInfo(1, 2,   1));
@@ -74,11 +76,13 @@ public class DegenerateCaseTest extends TestCase {
 			}
 		}
 		
-		System.out.println ("Array");
-		System.out.println (suiteArray.computeTable());
+                System.out.println();
+                System.out.println();
+		System.out.println("Array");
+		System.out.println(suiteArray.computeTable());
 		
-		System.out.println ("List");
-		System.out.println (suiteList.computeTable());
+		System.out.println("List");
+		System.out.println(suiteList.computeTable());
 	}
 	
 }

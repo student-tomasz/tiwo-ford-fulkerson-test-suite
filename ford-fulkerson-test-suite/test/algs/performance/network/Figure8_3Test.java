@@ -2,17 +2,18 @@ package algs.performance.network;
 
 import java.util.ArrayList;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
-import algs.model.network.DFS_SearchArray;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetwork;
-import algs.model.network.FlowNetworkArray;
-import algs.model.network.FordFulkerson;
+import algs.network.DFS_SearchArray;
+import algs.network.EdgeInfo;
+import algs.network.FlowNetwork;
+import algs.network.FlowNetworkArray;
+import algs.network.FordFulkerson;
 
-public class Figure8_3Test extends TestCase {
+public class Figure8_3Test {
+    
 	FlowNetwork<EdgeInfo[][]> network;
 	ArrayList<EdgeInfo> edges;
 	EdgeInfo[] edgesOut;
@@ -21,11 +22,12 @@ public class Figure8_3Test extends TestCase {
 	/**
 	 * Figure 8-3
 	 */
+        @Before
 	public void setUp() {
 		edgesOut = new EdgeInfo[3];
 		edgesIn = new EdgeInfo[2];
 		
-		edges = new ArrayList<EdgeInfo>();
+		edges = new ArrayList<>();
 		edges.add(edgesOut[0] = new EdgeInfo(0, 1,   10));
 		edges.add(edgesOut[1] = new EdgeInfo(0, 2,   5));
 		edges.add(edgesOut[2] = new EdgeInfo(0, 3,   4));
@@ -45,15 +47,10 @@ public class Figure8_3Test extends TestCase {
 	
 	@Test
 	public void testExample () {
-		network = new FlowNetworkArray (7, 0, 6, edges.iterator());		
-		FordFulkerson ff = new FordFulkerson (network, new DFS_SearchArray(network));
+		network = new FlowNetworkArray(7, 0, 6, edges.iterator());		
+		FordFulkerson ff = new FordFulkerson(network, new DFS_SearchArray(network));
 		ff.compute();
-		
 		System.out.println(network);
-		
-		assertEquals (15, network.getFlow());
-		
-		
+		assertEquals(15, network.getFlow());
 	}
-	
 }

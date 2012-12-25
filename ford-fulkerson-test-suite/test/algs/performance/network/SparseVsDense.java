@@ -2,20 +2,19 @@ package algs.performance.network;
 
 import org.junit.Test;
 
-import algs.example.model.network.generator.FlowNetworkGenerator;
-import algs.model.network.BFS_SearchArray;
-import algs.model.network.BFS_SearchList;
-import algs.model.network.EdgeInfo;
-import algs.model.network.FlowNetwork;
-import algs.model.network.FordFulkerson;
-import algs.model.network.Optimized;
-import algs.model.network.VertexStructure;
-import algs.model.tests.common.TrialSuite;
+import algs.network.generator.FlowNetworkGenerator;
+import algs.network.DFS_SearchArray;
+import algs.network.DFS_SearchList;
+import algs.network.EdgeInfo;
+import algs.network.FlowNetwork;
+import algs.network.FordFulkerson;
+import algs.network.VertexStructure;
+import algs.tests.common.TrialSuite;
 
 public class SparseVsDense {
 	
 	@Test
-	public void testBFSTiming () {
+	public void testDFSTiming () {
 		TrialSuite suiteArray = new TrialSuite();
 		TrialSuite suiteList = new TrialSuite();
 		TrialSuite suiteOptimal = new TrialSuite();
@@ -28,9 +27,8 @@ public class SparseVsDense {
 		int MAX_FANIN = 2;
 		int MIN_CAPACITY = 1;
 		int MAX_CAPACITY = 160;
-		int totalFlow = 0;
 
-		System.out.println ("BFS on ARRAY implementation");
+		System.out.println ("DFS on ARRAY and LIST implementation");
 		for (int n = 32; n <= 1024; n *= 2) {
 			System.out.println (n);
 			
@@ -38,7 +36,7 @@ public class SparseVsDense {
 				System.out.print(".." + k);
 				FlowNetworkGenerator.setSeed(seed+k);
 				FlowNetwork<EdgeInfo[][]> networkA = FlowNetworkGenerator.generateArray(n, MIN_FANIN, MAX_FANIN, MIN_CAPACITY, MAX_CAPACITY);
-				FordFulkerson ffa = new FordFulkerson(networkA, new BFS_SearchArray(networkA));
+				FordFulkerson ffa = new FordFulkerson(networkA, new DFS_SearchArray(networkA));
 				System.gc();
 				
 				// array
@@ -51,7 +49,7 @@ public class SparseVsDense {
 				// list
 				FlowNetworkGenerator.setSeed(seed+k);
 				FlowNetwork<VertexStructure[]> networkL = FlowNetworkGenerator.generateList(n, MIN_FANIN, MAX_FANIN, MIN_CAPACITY, MAX_CAPACITY);
-				ffa = new FordFulkerson(networkL, new BFS_SearchList(networkL));
+				ffa = new FordFulkerson(networkL, new DFS_SearchList(networkL));
 				System.gc();
 				
 				now = System.currentTimeMillis();
@@ -61,21 +59,6 @@ public class SparseVsDense {
 				if (checkSum != networkL.getFlow()) {
 					System.err.println ("DIFFERENT RESULTS!");
 				}
-				
-				// optimized.
-				FlowNetworkGenerator.setSeed(seed+k);
-				Optimized ofn = FlowNetworkGenerator.generateOptimized(n, MIN_FANIN, MAX_FANIN, MIN_CAPACITY, MAX_CAPACITY);
-				System.gc();
-				
-				now = System.currentTimeMillis();
-				int maxF = ofn.compute(0, n-1);
-				end = System.currentTimeMillis();
-				suiteOptimal.addTrial(n, now, end);
-				if (checkSum != maxF) {
-					System.err.println ("DIFFERENT RESULTS for OPTIMIZED!");
-				}
-				
-				totalFlow += maxF;
 			}
 		}
 		
@@ -84,11 +67,5 @@ public class SparseVsDense {
 		
 		System.out.println ("List");
 		System.out.println (suiteList.computeTable());
-		
-		System.out.println ("Optimized");
-		System.out.println (suiteOptimal.computeTable());
-		
-		System.out.println ("Total flow:" + totalFlow);
 	}
-	
 }

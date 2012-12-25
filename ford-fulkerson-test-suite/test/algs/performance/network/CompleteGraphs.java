@@ -8,9 +8,11 @@ import algs.network.EdgeInfo;
 import algs.network.FlowNetwork;
 import algs.network.FordFulkerson;
 import algs.network.VertexStructure;
+import algs.network.generator.FlowNetworkGenerator;
 import algs.tests.common.TrialSuite;
 
 public class CompleteGraphs {
+    
 	@Test
 	public void testBFSTiming () {
 		TrialSuite suiteArray = new TrialSuite();
@@ -22,7 +24,6 @@ public class CompleteGraphs {
 		int MIN_CAPACITY = 15;
 		int MAX_CAPACITY = 20;
 
-		System.out.println ("BFS on ARRAY implementation");
 		for (int n = 8; n <= 256; n *= 2) {
 			System.out.println (n);
 			
@@ -30,7 +31,7 @@ public class CompleteGraphs {
 				System.out.print(".." + k);
 				FlowNetworkGenerator.setSeed(seed+k);
 				FlowNetwork<EdgeInfo[][]> networkA = FlowNetworkGenerator.generateArray(n, n-3, n-3, MIN_CAPACITY, MAX_CAPACITY);
-				FordFulkerson ffa = new FordFulkerson(networkA, new BFS_SearchArray(networkA));
+				FordFulkerson ffa = new FordFulkerson(networkA, new DFS_SearchArray(networkA));
 				System.gc();
 				
 				long now = System.currentTimeMillis();
@@ -41,7 +42,7 @@ public class CompleteGraphs {
 				
 				FlowNetworkGenerator.setSeed(seed+k);
 				FlowNetwork<VertexStructure[]> networkL = FlowNetworkGenerator.generateList(n, n-3, n-3, MIN_CAPACITY, MAX_CAPACITY);
-				ffa = new FordFulkerson(networkL, new BFS_SearchList(networkL));
+				ffa = new FordFulkerson(networkL, new DFS_SearchList(networkL));
 				System.gc();
 				
 				now = System.currentTimeMillis();
@@ -54,11 +55,12 @@ public class CompleteGraphs {
 			}
 		}
 		
-		System.out.println ("Array");
-		System.out.println (suiteArray.computeTable());
+                System.out.println();
+                System.out.println();
+		System.out.println("Array");
+		System.out.println(suiteArray.computeTable());
 		
-		System.out.println ("List");
-		System.out.println (suiteList.computeTable());
-	}
-	
+		System.out.println("List");
+		System.out.println(suiteList.computeTable());
+	}	
 }
