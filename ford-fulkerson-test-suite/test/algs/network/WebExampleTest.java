@@ -2,12 +2,10 @@ package algs.network;
 
 import java.util.ArrayList;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
-import algs.network.BFS_SearchArray;
-import algs.network.BFS_SearchList;
 import algs.network.DFS_SearchArray;
 import algs.network.DFS_SearchList;
 import algs.network.EdgeInfo;
@@ -15,10 +13,9 @@ import algs.network.FlowNetwork;
 import algs.network.FlowNetworkAdjacencyList;
 import algs.network.FlowNetworkArray;
 import algs.network.FordFulkerson;
-import algs.network.Optimized;
 
-/** Test the code on another example. */
-public class WebExampleTest extends TestCase {
+/* Test the code on another example. */
+public class WebExampleTest {
 	
 	ArrayList<EdgeInfo> edges;
 	EdgeInfo[] edgesOut;
@@ -28,13 +25,13 @@ public class WebExampleTest extends TestCase {
 	 * Example drawn from 
 	 *
 	 * http://www.me.utexas.edu/~jensen/models/network/net11.html
-	 * 
 	 */
+        @Before
 	public void setUp() {
 		edgesOut = new EdgeInfo[3];
 		edgesIn = new EdgeInfo[3];
 		
-		edges = new ArrayList<EdgeInfo>();
+		edges = new ArrayList<>();
 		edges.add(edgesOut[0] = new EdgeInfo(0, 1,   15));
 		edges.add(edgesOut[1] = new EdgeInfo(0, 2,   10));
 		edges.add(edgesOut[2] = new EdgeInfo(0, 3,   12));
@@ -66,46 +63,23 @@ public class WebExampleTest extends TestCase {
 			outSum += edgesOut[i].getFlow();
 		}
 		
-		assertEquals (inSum, outSum);
-		assertEquals (30, inSum);		
+		assertEquals(inSum, outSum);
+		assertEquals(30, inSum);		
 	}
 	
 	@Test
-	public void testFulkersonDFS () {
-		FlowNetworkArray network = new FlowNetworkArray (8, 0, 7, edges.iterator());
+	public void testFulkersonDFS() {
+		FlowNetworkArray network = new FlowNetworkArray(8, 0, 7, edges.iterator());
 		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchArray(network));
 		ffa.compute();
-		validate (network);
+		validate(network);
 	}
 	
 	@Test
-	public void testFulkersonBFS () {
-		FlowNetworkArray network = new FlowNetworkArray (8, 0, 7, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchArray(network));
-		ffa.compute();
-		validate (network);
-	}
-
-	@Test
-	public void testFulkersonBFSList () {
-		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList (8, 0, 7, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchList(network));
-		ffa.compute();
-		validate (network);
-	}
-	
-	@Test
-	public void testFulkersonDFSList () {
-		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList (8, 0, 7, edges.iterator());
+	public void testFulkersonDFSList() {
+		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList(8, 0, 7, edges.iterator());
 		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchList(network));
 		ffa.compute();
-		validate (network);
-	}
-	
-	@Test
-	public void testMoreOptimized () {
-		Optimized network = new Optimized(8, 0, 7, edges.iterator());
-		int maxFlow = network.compute(0,7);
-		assertEquals (30, maxFlow);
+		validate(network);
 	}
 }

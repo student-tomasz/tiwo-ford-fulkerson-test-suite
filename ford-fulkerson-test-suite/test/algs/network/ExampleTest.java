@@ -2,13 +2,11 @@ package algs.network;
 
 import java.util.ArrayList;
 
-import junit.framework.TestCase;
-
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import algs.list.DoubleLinkedList;
-import algs.network.BFS_SearchArray;
-import algs.network.BFS_SearchList;
 import algs.network.DFS_SearchArray;
 import algs.network.DFS_SearchList;
 import algs.network.EdgeInfo;
@@ -16,20 +14,18 @@ import algs.network.FlowNetwork;
 import algs.network.FlowNetworkAdjacencyList;
 import algs.network.FlowNetworkArray;
 import algs.network.FordFulkerson;
-import algs.network.Optimized;
-import algs.network.OptimizedFlowNetwork;
 
-/** Test FlowNetwork code */
-public class ExampleTest extends TestCase {
+/* Test FlowNetwork code */
+public class ExampleTest {
 	
 	ArrayList<EdgeInfo> edges;
 	EdgeInfo[] edgesOut;
 	EdgeInfo[] edgesIn;
 	
 	/**
-	 * Example drawn from [Drozdek, Algorithms in Java], p. 391]
-	 * 
+	 * Example drawn from [Drozdek, Algorithms in Java], p. 391
 	 */
+        @Before
 	public void setUp() {
 		edgesOut = new EdgeInfo[3];
 		edgesIn = new EdgeInfo[3];
@@ -92,83 +88,23 @@ public class ExampleTest extends TestCase {
 		assertEquals (0, network.edge(5, 4).getFlow());
 		assertEquals (1, network.edge(5, 7).getFlow());
 		assertEquals (1, network.edge(6, 7).getFlow());
-		
 	}
 	
 	@Test
 	public void testFulkersonDFS () {
 		// (int numVertices, Iterator<EdgeInfo> edges, int srcIndex, int tgtIndex) {
-		FlowNetworkArray network = new FlowNetworkArray (8, 0, 7, edges.iterator());
+		FlowNetworkArray network = new FlowNetworkArray(8, 0, 7, edges.iterator());
 		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchArray(network));
 		ffa.compute();
-		validate (network);
+		validate(network);
 	}
 	
-	@Test
-	public void testFulkersonBFS () {
-		// (int numVertices, Iterator<EdgeInfo> edges, int srcIndex, int tgtIndex) {
-		FlowNetworkArray network = new FlowNetworkArray (8, 0, 7, edges.iterator());
-		assertEquals (8, network.numVertices);
-		assertEquals (0, network.sourceIndex);
-		assertEquals (7, network.sinkIndex);
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchArray(network));
-		ffa.compute();
-		validate (network);
-	}
-
-	@Test
-	public void testDefaultFulkersonBFS () {
-		// (int numVertices, Iterator<EdgeInfo> edges, int srcIndex, int tgtIndex) {
-		FlowNetworkArray network = new FlowNetworkArray (8, 0, 7, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchArray(network));
-		ffa.compute();
-		validate (network);
-	}
-
-	
-	@Test
-	public void testFulkersonBFSList () {
-		// (int numVertices, Iterator<EdgeInfo> edges, int srcIndex, int tgtIndex) {
-		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList (8, 0, 7, edges.iterator());
-		FordFulkerson ffa = new FordFulkerson(network, new BFS_SearchList(network));
-		ffa.compute();
-		validate (network);
-	}
-	
-	@Test
+        @Test
 	public void testFulkersonDFSList () {
 		// (int numVertices, Iterator<EdgeInfo> edges, int srcIndex, int tgtIndex) {
-		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList (8, 0, 7, edges.iterator());
+		FlowNetworkAdjacencyList network = new FlowNetworkAdjacencyList(8, 0, 7, edges.iterator());
 		FordFulkerson ffa = new FordFulkerson(network, new DFS_SearchList(network));
 		ffa.compute();
-		validate (network);
-	}
-	
-	@Test
-	public void testMoreOptimized () {
-		Optimized network = new Optimized(8, 0, 7, edges.iterator());
-		
-		int maxFlow = network.compute(0,7);
-		assertEquals (5, maxFlow);
-		assertEquals (5, network.getFlow());
-		
-		OptimizedFlowNetwork arrayBased = new OptimizedFlowNetwork(8, 0, 7, edges.iterator());
-		assertEquals (0, arrayBased.getSource());
-		assertEquals (7, arrayBased.getSink());
-		maxFlow = arrayBased.compute(0,7);
-		assertEquals (5, maxFlow);
-		
-		// compare min cuts
-		DoubleLinkedList<EdgeInfo> one = network.getMinCut();
-		DoubleLinkedList<EdgeInfo> two = arrayBased.getMinCut();
-		assertEquals (one.size(), two.size());
-		while (one.size()>0) {
-			assertEquals (one.removeFirst(), two.removeFirst());
-		}
-		
-		assertTrue (arrayBased.toString() != null);
-		
-		// network model knows about cost. just confirm this
-		assertEquals (0, network.getCost());
+		validate(network);
 	}
 }
