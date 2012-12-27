@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Example {
     
-    public static void Main(String[] args){
+    public static void main(String[] args){
         
         int numVertices = 6; // Liczba wezlow w grafie
         int srcIndex = 0;    // indeks wezla zrodlowego
