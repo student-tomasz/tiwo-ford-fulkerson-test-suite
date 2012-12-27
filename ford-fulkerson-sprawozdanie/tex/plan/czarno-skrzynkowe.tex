@@ -68,7 +68,7 @@ powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty zło�
     \item Wspólnego źródła i ujścia z pętlą.
 \end{itemize}
 Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów, który jako
-jedyny posiadający krawędź, która można traktować jako krawędź ze źródła do
+jedyny posiadający krawędź, którą można traktować jako krawędź ze źródła do
 ujścia.
 
 Można wyróżnić cztery schematy sieci z pojedynczym węzłem, każdy w czterech
@@ -78,7 +78,7 @@ się do pięciu najistotniejszych kombinacji.
 
 \paragraph{Sieć bez węzłów pośrednich}
 Sieć złożona ze źródła i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione
-zostały następujące klasy abstrakcji dla topologii sieci z węzłami:
+zostały następujące przypadki testowe dla topologii sieci z węzłami:
 \begin{itemize}[nosep]
     \item Nie połączonymi żadną krawędzią.
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
@@ -106,7 +106,7 @@ pośrednich.
 
 \paragraph{Sieć z 1 węzłem pośrednim}
 Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia.
-Wyróżnione zostały następujące klasy abstrakcji w zależności od topologii:
+Wyróżnione zostały następujące przypadki testowe w zależności od topologii:
 \begin{itemize}[nosep]
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
     pośredniego i z węzła pośredniego do ujścia.
@@ -155,7 +155,7 @@ cztery warianty zwielokrotnienia krawędzi w topologii sieci. Doliczenie się
 takiej liczby możliwych rodzajów topologii sieci, nie wymagało nawet
 uwzględnienia możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia,
 czy braku którejś krawędzi. Ostatecznie zdecydowano się zatem na dziesięć
-różnych klas abstrakcji.
+różnych przypadków testowych.
 
 \paragraph{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy sieci
@@ -180,12 +180,12 @@ z 2 węzłami pośrednimi połączonymi równolegle:
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
 \end{itemize}
-Klasy abstrakcji dla sieci z 2 węzłami pośrednimi zostały pomyślane przede
+Przypadki testowe dla sieci z 2 węzłami pośrednimi zostały pomyślane przede
 wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów
 połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
 
 \paragraph{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
-W tym wypadku jako istotne dla testów klasy abstrakcji zdefiniowano topologie
+W tym wypadku jako istotne przypadki testowe zdefiniowano topologie
 sieci z 2 węzłami pośrednimi połączonymi szeregowo:
 \begin{itemize}[nosep]
     \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
