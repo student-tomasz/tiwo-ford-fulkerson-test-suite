@@ -42,12 +42,15 @@ Wyłączenia z testowania funkcjonalności obejmują wyłączenia projektu, a do
 
 \paragraph{Nie wnoszące dodatkowej funkcjonalności}
 \begin{itemize}[nosep]
-    \item Klasa \texttt{Example} --- stanowi tylko przykładowy sposób wykorzystania algorytmu \textsc{Forda-Fulkersona}, nie jest elementem implementacji
-%Do Kierownika: Możesz pomyśleć nad dodaniem Example.java, do project-wide wyłączeń z testów
+    \item Klasa \texttt{Example} --- stanowi tylko przykładowy sposób wykorzystania algorytmu \textsc{Forda-Fulkersona}, nie jest elementem implementacji%Do Kierownika: Możesz pomyśleć nad dodaniem Example.java, do project-wide wyłączeń z testów
 \end{itemize}
 
-\subsubsection{Podejście}
-Testy czarno\dywiz skrzynkowe zostaną przeprowadzone we
+\subsubsection{Podejście}%%%TU PRACUJE <<USUNĄĆ PRZED COMMITEM
+Podstawą do realizacji testów czarno\dywiz skrzynkowych było wyróżnienie klas abstrakcji, które pozwoliłyby możliwie solidnie przetestować funkcjonalność dostarczonej wraz z książką \emph{Algorytmy. Almanach} implementacji algorytmu \textsc{Forda-Fulkersona}, unikając jednocześnie testowania totalnego.
+
+Zidentyfikowane zostały następujące klasy abstrakcji:
+
+
 
 \subsubsection{Projekt testów}
 Do realizacji w ramach testów czarnoskrzynkowych zostały wybrane przypadki testowe opisane poniżej.
