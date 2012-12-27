@@ -7,11 +7,16 @@ Obiekt realizowanych testów czarno\dywiz skrzynkowych nie odbiega w istotny spo
 Obiektem testów czarnoskrzynkowych jest klasa \texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite}, zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów bezpośrednio wykorzystywane z projektu \texttt{ford-fulkerson-test-suite} są również klasy:
 \begin{itemize}[nosep]
     \item\texttt{FlowNetworkArray} implementująca sieć przepływową w oparciu o macierz, przechowywująca wejściową sieć przepływową
-    \item\texttt{DFS_SearchArray} implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
+    \item\texttt{DFS\_SearchArray} implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
 \end{itemize}
 
 \subsubsection{Testowana funkcjonalność}
-
+Testowana w ramach testów czarno\dywiz skrzynkowych funkcjonalność obejmuje:
+\begin{itemize}[nosep]
+    \item Działanie konstruktora klasy \texttt{FordFulkerson}
+    \item Możliwość wykonania metody \textttt{compute()} klasy \texttt{FordFulkerson}
+    \item Poprawność wyników działania algorytmu \textsc{Forda-Fulkersona}, tj porównanie wartości zwróconych przez metodę \textttt{toString()}, klasy \texttt{FordFulkerson} po wykonaniu metody \texttt{compute()} do wyroczni.
+\end
 \subsubsection{Testowana funkcjonalność --- wyłączenia}
 
 \subsubsection{Podejście}
