@@ -18,34 +18,32 @@ Testowana w ramach testów czarno\dywiz skrzynkowych funkcjonalność obejmuje:
     \item Poprawność wyników działania algorytmu \textsc{Forda-Fulkersona}, tj porównanie wartości zwróconych przez metodę \textttt{toString()}, klasy \texttt{FordFulkerson} po wykonaniu metody \texttt{compute()} do wyroczni.
 \end
 \subsubsection{Testowana funkcjonalność --- wyłączenia}
-Wyłączenia z testowania funkcjonalności obejmują wyłączenia projektu, a dodatkowo, ze względu na wybór implementacji:
+Wyłączenia z testowania funkcjonalności obejmują wyłączenia projektu, a dodatkowo:
+\paragraph{Niewykorzystywane ze względu na wybór implementacji}
 \begin{itemize}[nosep]
-
+    \item Klasa \texttt{DFS\_SearchList}
+    \item Klasa \texttt{FlowNetworkAdjacencyList}
+    \item Klasa \texttt{ShortestPathArray}
 \end{itemize}
 
-klasy abstrakcyjne, po których dziedziczą wykorzystywane klasy:
+\paragraph{Klasy abstrakcyjne, po których dziedziczą wykorzystywane przy testowaniu klasy}
 \begin{itemize}[nosep]
-
+    \item Klasa abstrakcyjna \texttt{FlowNetwork}
+    \item Klasa abstrakcyjna\texttt{Search}
 \end{itemize}
 
-szczegóły wykorzystywanej implementacji:
+\paragraph{Szczegóły wykorzystywanej implementacji}
 \begin{itemize}[nosep]
-
+    \item Klasa \texttt{EdgeInfo}
+    \item Klasa \texttt{DFS\_SearchArray} --- implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
+    \item Klasa \texttt{VertexInfo}
+    \item Klasa \texttt{VertexStructure}
 \end{itemize}
 
+\paragraph{Nie wnoszące dodatkowej funkcjonalności}
 \begin{itemize}[nosep]
-    \item Klasa \texttt{DFS\_SearchList} --- ze względu na wybór implementacji opartej o macierze
-    \item Klasa \texttt{FlowNetworkAdjacencyList} --- ze względu na wybór implementacji opartej o macierze
-    \item Klasa \texttt{EdgeInfo} --- jest wykorzystywana, ale stanowi szczegół implementacji grafu przepływu
     \item Klasa \texttt{Example} --- stanowi tylko przykładowy sposób wykorzystania algorytmu \textsc{Forda-Fulkersona}, nie jest elementem implementacji
 %Do Kierownika: Możesz pomyśleć nad dodaniem Example.java, do project-wide wyłączeń z testów
-    \item Klasa abstrakcyjna \texttt{FlowNetwork} --- wykorzystujemy rozszerzającą klasę \texttt{FlowNetworkArray}
-    \item Klasa \texttt{FlowNetworkArray} --- implementująca sieć przepływową w oparciu o macierz, wykorzystywana do przechowywania wejściowej sieci przepływowej
-    \item Klasa \texttt{DFS\_SearchArray} --- implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
-    \item Klasa abstrakcyjna\texttt{Search} --- wykorzystujemy rozszerzającą klasę \texttt{DFS\_SearchArray}
-    \item Klasa \texttt{ShortestPathArray} --- ze względu na wybór implementacji opartej o klasę \texttt{DFS\_SearchArray}
-    \item Klasa \texttt{VertexInfo} --- jest wykorzystywana, ale stanowi szczegół implementacji grafu przepływu
-    \item Klasa \texttt{VertexStructure} --- jest wykorzystywana, ale stanowi szczegół implementacji grafu przepływu
 \end{itemize}
 
 \subsubsection{Podejście}
