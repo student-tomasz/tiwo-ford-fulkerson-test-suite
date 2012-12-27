@@ -4,6 +4,11 @@
 Obiekt realizowanych testów czarno\dywiz skrzynkowych nie odbiega w istotny sposób od założeń dla całego projektu. Testy czarno\dywiz skrzynkowe koncentrują się na analizie poprawności wyników działania algorytmu \textsc{Forda-Fulkersona} przy znanych danych wejściowych. %Napisać coś o zastosowanej wyroczni. Weryfikacja ręcznie nie brzmi najlepiej 
 
 \subsubsection{Testowane elementy}
+Obiektem testów czarnoskrzynkowych jest klasa \texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite}, zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów bezpośrednio wykorzystywane z projektu \texttt{ford-fulkerson-test-suite} są również klasy:
+\begin{itemize}[nosep]
+    \item\texttt{FlowNetworkArray} implementująca sieć przepływową w oparciu o macierz, przechowywująca wejściową sieć przepływową
+    \item\texttt{DFS_SearchArray} implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
+\end{itemize}
 
 \subsubsection{Testowana funkcjonalność}
 
