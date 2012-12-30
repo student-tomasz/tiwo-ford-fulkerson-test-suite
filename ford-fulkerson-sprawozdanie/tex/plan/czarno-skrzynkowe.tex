@@ -5,18 +5,15 @@ Obiekt realizowanych testów czarno\dywiz skrzynkowych nie odbiega w istotny spo
 
 \subsubsection{Testowane elementy}
 Obiektem testów czarnoskrzynkowych jest klasa \texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite}, zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów bezpośrednio wykorzystywane z projektu \texttt{ford-fulkerson-test-suite} są również klasy:
-\begin{itemize}[nosep]
-
-
-\end{itemize}
 
 \subsubsection{Testowana funkcjonalność}
 Testowana w ramach testów czarno\dywiz skrzynkowych funkcjonalność obejmuje:
 \begin{itemize}[nosep]
     \item Działanie konstruktora klasy \texttt{FordFulkerson}
-    \item Możliwość wykonania metody \textttt{compute()} klasy \texttt{FordFulkerson}
-    \item Poprawność wyników działania algorytmu \textsc{Forda-Fulkersona}, tj porównanie wartości zwróconych przez metodę \textttt{toString()}, klasy \texttt{FordFulkerson} po wykonaniu metody \texttt{compute()} do wyroczni.
-\end
+    \item Możliwość wykonania metody \texttt{compute()} klasy \texttt{FordFulkerson}
+    \item Poprawność wyników działania algorytmu \textsc{Forda-Fulkersona}, tj porównanie wartości zwróconych przez metodę \texttt{toString()}, klasy \texttt{FordFulkerson} po wykonaniu metody \texttt{compute()} do wyroczni.
+\end{itemize}
+
 \subsubsection{Testowana funkcjonalność --- wyłączenia}
 Wyłączenia z testowania funkcjonalności obejmują wyłączenia projektu, a dodatkowo:
 \paragraph{Niewykorzystywane ze względu na wybór implementacji}
@@ -83,14 +80,14 @@ Zidentyfikowane zostały następujące klasy abstrakcji:
     \item Dodatnia.
     \item Zerowa.
     \item Ujemna.
-\end
+\end{itemize}
 
 \paragraph{Ze względu na poprawność krawędzi}
 \begin{itemize}[nosep]
     \item Poprawne krawędzie.
     \item Krawędzie zaczynające się w nieistniejącym węźle.
     \item Krawędzie kończące się w nieistniejącym węźle.
-\end
+\end{itemize}
 
 \paragraph{Ze względu na istnienie krawędzi zwielokrotnionych}
 \begin{itemize}[nosep]
