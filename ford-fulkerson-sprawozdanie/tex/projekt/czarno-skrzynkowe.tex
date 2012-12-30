@@ -1,11 +1,12 @@
-\subsubsection{Testy czarno\dywiz skrzynkowe}
-Do realizacji w ramach testów czarnoskrzynkowych zostały wybrane przypadki testowe opisane poniżej.
+\subsection{Testy czarno\dywiz skrzynkowe}
+Poniżej opisane są przypadki testowe wybrane do realizacji w ramach testów
+czarno\dywiz skrzynkowych.
 
-\paragraph{Sieć bez węzłów}
+\subsubsection{Sieć bez węzłów}
 Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksymalnego
 przepływu.
 
-\paragraph{Sieć z 1 węzłem}
+\subsubsection{Sieć z 1 węzłem}
 Za szczególny przypadek sieci przepływu można uznać sieć składającą się z
 dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć
 powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
@@ -25,7 +26,7 @@ wariantach: bez pętli, z pętlą o dodatniej/ujemnej/zerowej przepustowości, c
 przekładałoby się na szesnaście przypadków testowych. W ramach planu ograniczono
 się do pięciu najistotniejszych kombinacji.
 
-\paragraph{Sieć bez węzłów pośrednich}
+\subsubsection{Sieć bez węzłów pośrednich}
 Sieć złożona ze źródła i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione
 zostały następujące przypadki testowe dla topologii sieci z węzłami:
 \begin{itemize}[nosep]
@@ -53,7 +54,7 @@ zwielokrotniona z ujścia do źródła, z pomieszanymi zwrotami). Do przetestowa
 zostało wybranych 11 najbardziej reprezentatywnych topologii sieci bez węzłów
 pośrednich.
 
-\paragraph{Sieć z 1 węzłem pośrednim}
+\subsubsection{Sieć z 1 węzłem pośrednim}
 Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia.
 Wyróżnione zostały następujące przypadki testowe w zależności od topologii:
 \begin{itemize}[nosep]
@@ -106,7 +107,7 @@ uwzględnienia możliwości istnienia krawędzi bezpośredniej ze źródła do u
 czy braku którejś krawędzi. Ostatecznie zdecydowano się zatem na dziesięć
 różnych przypadków testowych.
 
-\paragraph{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
+\subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy sieci
 z 2 węzłami pośrednimi połączonymi równolegle:
 \begin{itemize}[nosep]
@@ -133,7 +134,7 @@ Przypadki testowe dla sieci z 2 węzłami pośrednimi zostały pomyślane przede
 wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów
 połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
 
-\paragraph{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
+\subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
 W tym wypadku jako istotne przypadki testowe zdefiniowano topologie
 sieci z 2 węzłami pośrednimi połączonymi szeregowo:
 \begin{itemize}[nosep]
@@ -164,13 +165,13 @@ budowy schematów połączeń, każdy bardziej złożony (prawidłowy) schemat p
 będzie bazował na pewnej kombinacji powyższych wariacji na temat połączeń
 szeregowych i równoległych.
 
-\paragraph{Sieć z nieistniejącymi węzłami}
+\subsubsection{Sieć z nieistniejącymi węzłami}
 Liczba węzłów określona w danych wejściowych jest większa niż liczba
 zdefiniowanych węzłów.
 
-\paragraph{Sieć z ujemną liczbą węzłów}
+\subsubsection{Sieć z ujemną liczbą węzłów}
 W danych wejściowych liczba węzłów w sieci jest określona za pomocą liczby
 ujemnej.
 
-\paragraph{Sieć z $1e9$ węzłów}
+\subsubsection{Sieć z $1e9$ węzłów}
 Test dla bardzo dużej (najlepiej granicznej) wartości liczby węzłów.
