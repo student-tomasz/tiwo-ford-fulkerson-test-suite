@@ -1,0 +1,176 @@
+\subsubsection{Testy czarno\dywiz skrzynkowe}
+Do realizacji w ramach testów czarnoskrzynkowych zostały wybrane przypadki testowe opisane poniżej.
+
+\paragraph{Sieć bez węzłów}
+Sieć bez żadnych węzłów nie istnieje, nie da się dla niej wyznaczyć maksymalnego
+przepływu.
+
+\paragraph{Sieć z 1 węzłem}
+Za szczególny przypadek sieci przepływu można uznać sieć składającą się z
+dokładnie jednego węzła. Niezależnie od pozostałych parametrów, taka sieć
+powinna zostać odrzucona jako nieprawidłowa. Wyróżnić można warianty złożone z:
+\begin{itemize}[nosep]
+    \item Samego źródła.
+    \item Węzła pośredniego.
+    \item Ujścia.
+    \item Wspólnego źródła i ujścia.
+    \item Wspólnego źródła i ujścia z pętlą.
+\end{itemize}
+Szczególną uwagę należy zwrócić na ostatni z wymienionych wariantów, który jako
+jedyny posiadający krawędź, którą można traktować jako krawędź ze źródła do
+ujścia.
+
+Można wyróżnić cztery schematy sieci z pojedynczym węzłem, każdy w czterech
+wariantach: bez pętli, z pętlą o dodatniej/ujemnej/zerowej przepustowości, co
+przekładałoby się na szesnaście przypadków testowych. W ramach planu ograniczono
+się do pięciu najistotniejszych kombinacji.
+
+\paragraph{Sieć bez węzłów pośrednich}
+Sieć złożona ze źródła i ujścia, bez jakichkolwiek węzłów pośrednich. Wyróżnione
+zostały następujące przypadki testowe dla topologii sieci z węzłami:
+\begin{itemize}[nosep]
+    \item Nie połączonymi żadną krawędzią.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
+    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
+    \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
+    \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
+    \item Z wieloma krawędziami skierowanymi w różnych stronach.
+\end{itemize}
+Można bez problemu zdefiniować ponad sto wariantów topologii sieci przepływowej
+bez węzłów pośrednich. Trzy ze względu na rodzaj przepustowości krawędzi
+(dodatnia/ujemna/zerowa), siedem ze względu na istnienie i rodzaj pętli (brak/w
+źródle z dodatnią przepustowościa/w źródle z ujemną przepustowością/w źródle z
+zerową przepustowością/w ujściu z dodatnią przepustowościa/w ujściu z ujemną
+przepustowościa/w ujściu z zerową przepustowościa), oraz sześć wariantów
+połączeń pomiędzy krawędziami (bez krawędzi, pojedyncza od źródła do ujścia,
+pojedyncza od ujścia do źródła, zwielokrotniona ze źródła do ujścia,
+zwielokrotniona z ujścia do źródła, z pomieszanymi zwrotami). Do przetestowania
+zostało wybranych 11 najbardziej reprezentatywnych topologii sieci bez węzłów
+pośrednich.
+
+\paragraph{Sieć z 1 węzłem pośrednim}
+Prosta sieć przepływu zbudowana ze źródła, jednego węzła pośredniego i ujścia.
+Wyróżnione zostały następujące przypadki testowe w zależności od topologii:
+\begin{itemize}[nosep]
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
+    pośredniego i z węzła pośredniego do ujścia.
+    % Z -> P -> U
+    \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
+    i z węzła pośredniego do źródła.
+    % Z <- P <- U
+    \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
+    i z węzła pośredniego do źródła.
+    % Z <- P -> U
+    \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
+    i z ujścia do węzła pośredniego.
+    % Z -> P <- U
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
+    pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
+    dodatniej przepustowości ze źródła do ujścia.
+    % Z -> P -> U
+    % |_________^
+    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
+    pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
+    przepustowości w węźle pośrednim.
+    % Z -> P -> U
+    %     / ^
+    %     \_|
+    \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
+    i z węzła pośredniego do źródła, z mieszanymi zwrotami.
+    % Z -> P -> U
+    %  ^__/ ^__/
+    \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
+    pośredniego, bez krawędzi do ujścia.
+    % Z -> P    U
+    \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
+    pośredniego, oraz krawędzią ze źródłą do ujścia.
+    % Z -> P    U
+    % |_________^
+    \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
+    ujścia, bez połączenia ze źródłem.
+    % Z    P -> U
+\end{itemize}
+W przypadku sieci z jednym węzłem pośrednim można wyróżnić nawet ponad tysiąc
+różnych rodzajów topologii sieci. Dla dwóch krawędzi istnieje już dziewięć
+kombinacji rodzajów przepustowości (dodatnia/ujemna/zerowa), trzy możliwe
+położenia pętli (w źródle/węźle pośrednim/ujściu), trzy rodzaje przepustowości w
+pętli (dodatni/ujemny/zerowy), cztery możliwe kombinacje zwrotów krawędzi, oraz
+cztery warianty zwielokrotnienia krawędzi w topologii sieci. Doliczenie się
+takiej liczby możliwych rodzajów topologii sieci, nie wymagało nawet
+uwzględnienia możliwości istnienia krawędzi bezpośredniej ze źródła do ujścia,
+czy braku którejś krawędzi. Ostatecznie zdecydowano się zatem na dziesięć
+różnych przypadków testowych.
+
+\paragraph{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
+W tej sekcji jako warte przetestowania wyróżnioniono następujące schematy sieci
+z 2 węzłami pośrednimi połączonymi równolegle:
+\begin{itemize}[nosep]
+    \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
+    pośrednich i z obu węzłów pośrednich do ujścia.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
+    pośredniego do drugiego węzła pośredniego.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
+    pośredniego do pierwszego węzła pośredniego.
+    \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
+    węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
+    pośredniego do pierwszego węzła pośredniego.\footnote{Potencjalne zagrożenie
+    stworzeniem złożonej pętli.}
+    \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
+    \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
+    pierwszego węzła pośredniego.
+    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
+    pośredniego do źródłą.
+    \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
+    pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
+\end{itemize}
+Przypadki testowe dla sieci z 2 węzłami pośrednimi zostały pomyślane przede
+wszystkim dla przetestowania zachowania oprogramowania dla różnych schematów
+połączeń, stąd chociażby brak w tej sekcji klas abstrakcji z pętlami.
+
+\paragraph{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
+W tym wypadku jako istotne przypadki testowe zdefiniowano topologie
+sieci z 2 węzłami pośrednimi połączonymi szeregowo:
+\begin{itemize}[nosep]
+    \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
+    pośredniej, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
+    drugiego węzła pośredniego do ujścia.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
+    krawędziami pomiędzy węzłami pośrednimi.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
+    zerowej przepustowości pomiędzy węzłami pośrednimi.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
+    ujemnej przepustowości pomiędzy węzłami pośrednimi.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
+    drugiego węzłą pośredniego do pierwszego węzła pośredniego.\footnote{Ujemna
+    przepustowość pomiędzy pierwszym a drugim węzłem pośrednim nie jest tożsama
+    z krawędzią o dodatniej przepustowości od drugiego do pierwszego węzła
+    pośredniego. Ujemna przepustowość krawędzi jest niepoprawna z definicji,
+    natomiast krawędź skierowana w przeciwną stronę jest jak najbardziej
+    poprawna z punktu widzenia definicji, choć taka sieć wciąż nie miałaby
+    żadnej przepustowości.}
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
+    pierwszego węzła pośredniego do ujścia.
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
+    źródła do drugiego węzła pośredniego.
+\end{itemize}
+Dodanie schematów z połączeniami szeregowymi zasadniczo wyczerpuje możliwości
+budowy schematów połączeń, każdy bardziej złożony (prawidłowy) schemat połączeń
+będzie bazował na pewnej kombinacji powyższych wariacji na temat połączeń
+szeregowych i równoległych.
+
+\paragraph{Sieć z nieistniejącymi węzłami}
+Liczba węzłów określona w danych wejściowych jest większa niż liczba
+zdefiniowanych węzłów.
+
+\paragraph{Sieć z ujemną liczbą węzłów}
+W danych wejściowych liczba węzłów w sieci jest określona za pomocą liczby
+ujemnej.
+
+\paragraph{Sieć z $1e9$ węzłów}
+Test dla bardzo dużej (najlepiej granicznej) wartości liczby węzłów.
