@@ -1,97 +1,109 @@
 \subsection{Testy czarno\dywiz skrzynkowe}
 
 \subsubsection{Wprowadzenie}
-Obiekt realizowanych testów czarno\dywiz skrzynkowych nie odbiega w istotny sposób od założeń dla całego projektu. Testy czarno\dywiz skrzynkowe koncentrują się na analizie poprawności wyników działania algorytmu \textsc{Forda-Fulkersona} przy znanych danych wejściowych. %Napisać coś o zastosowanej wyroczni. Weryfikacja ręcznie nie brzmi najlepiej
+Cel testów czarno\dywiz skrzynkowych nie różni się od wcześniejszych założeń.
+Testy czarno\dywiz skrzynkowe koncentrują się na weryfikacji wyników działania
+algorytmu \textsc{Forda\dywiz Fulkersona} dla określonych danych wejściowych.
 
 \subsubsection{Testowane elementy}
-Obiektem testów czarnoskrzynkowych jest klasa \texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite}, zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów bezpośrednio wykorzystywane z projektu \texttt{ford-fulkerson-test-suite} są również klasy:
+Głównym obiektem testów czarno\dywiz skrzynkowych jest klasa
+\texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite},
+zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów
+bezpośrednio wykorzystywane są inne klasy wchodzące do projektu
+\texttt{ford-fulkerson-test-suite}.
 
 \subsubsection{Testowana funkcjonalność}
-Testowana w ramach testów czarno\dywiz skrzynkowych funkcjonalność obejmuje:
-\begin{itemize}[nosep]
-    \item Działanie konstruktora klasy \texttt{FordFulkerson}
-    \item Możliwość wykonania metody \texttt{compute()} klasy \texttt{FordFulkerson}
-    \item Poprawność wyników działania algorytmu \textsc{Forda-Fulkersona}, tj porównanie wartości zwróconych przez metodę \texttt{toString()}, klasy \texttt{FordFulkerson} po wykonaniu metody \texttt{compute()} do wyroczni.
-\end{itemize}
+Zakres testów czarno\dywiz skrzynkowych obejmuje:
+\begin{enumerate}
+    \item Działanie konstruktora klasy \texttt{FordFulkerson}.
+    \item Możliwość wykonania metody \texttt{compute()} klasy \texttt{FordFulkerson}.
+    \item Poprawność wyników działania implementacja algorytmu \textsc{Forda\dywiz
+        Fulkersona} w klasie \texttt{FordFulkerson}. Weryfikacja polega na
+        porównaniu wartości zwracanych przez \texttt{toString()} po wykonaniu
+        metody \texttt{compute()}, do wartości zwracanych przez wyrocznię.
+\end{enumerate}
 
 \subsubsection{Testowana funkcjonalność --- wyłączenia}
-Wyłączenia z testowania funkcjonalności obejmują wyłączenia projektu, a dodatkowo:
-\paragraph{Niewykorzystywane ze względu na wybór implementacji}
-\begin{itemize}[nosep]
-    \item Klasa \texttt{DFS\_SearchList}
-    \item Klasa \texttt{FlowNetworkAdjacencyList}
-    \item Klasa \texttt{ShortestPathArray}
+Z testowania czarno\dywiz skrzynkowego dodatkowo wyłączone zostaną grupy klas.
+\begin{itemize}
+    \item Klasy niewykorzystywane ze względu na wybór implementacji:
+        \begin{itemize}
+            \item \texttt{DFS\_SearchList},
+            \item \texttt{FlowNetworkAdjacencyList},
+            \item \texttt{ShortestPathArray}.
+        \end{itemize}
+    \item Klasy abstrakcyjne, po których dziedziczą wykorzystywane przy testowaniu klasy:
+        \begin{itemize}
+            \item \texttt{FlowNetwork}
+            \item \texttt{Search}
+        \end{itemize}
+    \item Klasy szczegółowe, wykorzystywane wewnątrz implementacji:
+        \begin{itemize}
+            \item \texttt{EdgeInfo},
+            \item \texttt{DFS\_SearchArray} -- implementująca algorytm
+                przeszukiwania \textsc{Depth\dywiz first search} na
+                implementacji sieci z klasy \texttt{FlowNetworkArray}, której
+                instancja jest wymagana jako drugi argument konstruktura klasy
+                \texttt{FordFulkerson};
+            \item \texttt{VertexInfo},
+            \item \texttt{VertexStructure}.
+        \end{itemize}
 \end{itemize}
 
-\paragraph{Klasy abstrakcyjne, po których dziedziczą wykorzystywane przy testowaniu klasy}
-\begin{itemize}[nosep]
-    \item Klasa abstrakcyjna \texttt{FlowNetwork}
-    \item Klasa abstrakcyjna\texttt{Search}
-\end{itemize}
-
-\paragraph{Szczegóły wykorzystywanej implementacji}
-\begin{itemize}[nosep]
-    \item Klasa \texttt{EdgeInfo}
-    \item Klasa \texttt{DFS\_SearchArray} --- implementująca algorytm Deep\dywiz First\dywiz Search do wykorzystania na sieciach przepływowych z \texttt{FlowNetworkArray}, która jest wymagana jako drugi argument konstruktura klasy \texttt{FordFulkerson}
-    \item Klasa \texttt{VertexInfo}
-    \item Klasa \texttt{VertexStructure}
-\end{itemize}
-
-\paragraph{Nie wnoszące dodatkowej funkcjonalności}
-\begin{itemize}[nosep]
-    \item Klasa \texttt{Example} --- stanowi tylko przykładowy sposób wykorzystania algorytmu \textsc{Forda-Fulkersona}, nie jest elementem implementacji%Do Kierownika: Możesz pomyśleć nad dodaniem Example.java, do project-wide wyłączeń z testów
-\end{itemize}
-
-\subsubsection{Podejście}%%%TU PRACUJE <<USUNĄĆ PRZED COMMITEM
-Podstawą do realizacji testów czarno\dywiz skrzynkowych było wyróżnienie klas abstrakcji, które pozwoliłyby możliwie solidnie przetestować funkcjonalność dostarczonej wraz z książką \emph{Algorytmy. Almanach} implementacji algorytmu \textsc{Forda-Fulkersona}, unikając jednocześnie testowania totalnego.
-
-Zidentyfikowane zostały następujące klasy abstrakcji:
-
-\paragraph{Ze względu na ilość węzłów}
-\begin{itemize}[nosep]
-    \item Ujemna ilość węzłów.
-    \item Brak jakichkolwiek węzłów.
-    \item Dokładnie jeden węzeł, źródłowy, pośredni lub ujście.
-    \item Sieć przepływowa bez węzłów pośrednich.
-    \item Sieć przepływowa z jednym węzłem pośrednim --- jako minimalna ilość węzłów pośrednich w sieci przepływowej z węzłami pośrednimi
-    \item Sieć przepływowa z kilkoma węzłami pośrednimi --- jako niegraniczna ilość węzłów w sieci przepływowej z węzłami pośrednimi
-    \item Sieć przepływowa z $1e9$ węzłami pośrednimi --- jako maksymalna ilość węzłów pośrednich w sieci przepływowej z węzłami pośrednimi
-    \item Ilość węzłów mniejsza od zadeklarowanej.
-    \item Ilość węzłów większa od zadeklarowanej.
-\end{itemize}
-
-\paragraph{Ze względu pętle}
-\begin{itemize}[nosep]
-    \item W źródle.
-    \item W węźle pośrednim.
-    \item W ujściu.
-    \item Bez pętli.
-\end{itemize}
-
-\paragraph{Ze względu na krawędzie bezpośrednich między źródłem, a ujściem}
-\begin{itemize}[nosep]
-    \item Ze źródła do ujścia.
-    \item Z ujścia do źródła.
-    \item Bez krawędzi pomiędzy źródłem, a ujściem.
-\end{itemize}
-
-\paragraph{Ze względu na przepustowość krawędzi}
-\begin{itemize}[nosep]
-    \item Dodatnia.
-    \item Zerowa.
-    \item Ujemna.
-\end{itemize}
-
-\paragraph{Ze względu na poprawność krawędzi}
-\begin{itemize}[nosep]
-    \item Poprawne krawędzie.
-    \item Krawędzie zaczynające się w nieistniejącym węźle.
-    \item Krawędzie kończące się w nieistniejącym węźle.
-\end{itemize}
-
-\paragraph{Ze względu na istnienie krawędzi zwielokrotnionych}
-\begin{itemize}[nosep]
-    \item Bez krawędzi zwielokrotnionych.
-    \item Z bezpośrednią zwielokrotnioną krawędzią pomiędzy źródłem, a ujściem.
-    \item Z krawędziami zwielokrotnionymi o przeciwnych zwrotach.
-\end{itemize}
+\subsubsection{Podejście}
+Podstawą do projektu testów czarno\dywiz skrzynkowych jest wyróżnienie klas
+abstrakcji. Odpowiedni dobór klas pozwoli przetestować naszą implementację
+algorytmu \textsc{Forda\dywiz Fulkersona} w rozsądnym zakresie, jednocześnie
+unikając testowania totalnego. Zidentyfikowane zostały następujące klasy
+abstrakcji:
+\begin{enumerate}
+    \item Ze względu na ilość węzłów:
+        \begin{enumerate}
+            \item Ujemna ilość węzłów.
+            \item Brak jakichkolwiek węzłów.
+            \item Dokładnie jeden węzeł, źródłowy, pośredni lub ujście.
+            \item Sieć przepływowa bez węzłów pośrednich.
+            \item Sieć przepływowa z jednym węzłem pośrednim -- jako minimalna
+                ilość węzłów pośrednich w sieci przepływowej z węzłami
+                pośrednimi.
+            \item Sieć przepływowa z kilkoma węzłami pośrednimi -- jako
+                niegraniczna ilość węzłów w sieci przepływowej z węzłami
+                pośrednimi.
+            \item Sieć przepływowa z $1e9$ węzłami pośrednimi -- jako maksymalna
+                ilość węzłów pośrednich w sieci przepływowej z węzłami
+                pośrednimi.
+            \item Ilość węzłów mniejsza od zadeklarowanej.
+            \item Ilość węzłów większa od zadeklarowanej.
+        \end{enumerate}
+    \item Ze względu pętle:
+        \begin{enumerate}
+            \item W źródle.
+            \item W węźle pośrednim.
+            \item W ujściu.
+            \item Bez pętli.
+        \end{enumerate}
+    \item Ze względu na krawędzie bezpośrednich między źródłem, a ujściem:
+        \begin{enumerate}
+            \item Ze źródła do ujścia.
+            \item Z ujścia do źródła.
+            \item Bez krawędzi pomiędzy źródłem, a ujściem.
+        \end{enumerate}
+    \item Ze względu na przepustowość krawędzi:
+        \begin{enumerate}
+            \item Dodatnia.
+            \item Zerowa.
+            \item Ujemna.
+        \end{enumerate}
+    \item Ze względu na poprawność krawędzi:
+        \begin{enumerate}
+            \item Poprawne krawędzie.
+            \item Krawędzie zaczynające się w nieistniejącym węźle.
+            \item Krawędzie kończące się w nieistniejącym węźle.
+        \end{enumerate}
+    \item Ze względu na istnienie krawędzi zwielokrotnionych:
+        \begin{enumerate}
+            \item Bez krawędzi zwielokrotnionych.
+            \item Z bezpośrednią zwielokrotnioną krawędzią pomiędzy źródłem, a ujściem.
+            \item Z krawędziami zwielokrotnionymi o przeciwnych zwrotach.
+        \end{enumerate}
+\end{enumerate}
