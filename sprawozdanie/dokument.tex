@@ -27,10 +27,10 @@ znajduje się w repozytorium, w rewizji \texttt{e5ebef7} o nazwie \texttt
 
 \subsection{Testowana funkcjonalność}
 Uwaga procesu testowania będzie skupiona na konkretnych implementacjach systemu:
-\begin{itemize}[nosep]
+\begin{itemize}
     \item dla klasy \texttt{FlowNetwork} --- implementacja
         \texttt{FlowNetworkArray},
-    \item dla klasy \texttt{Search} --- implementacja \texttt{DFS\_SearchArray},
+    \item dla klasy \texttt{Search} --- implementacja \texttt{DFS\_SearchArray}.
 \end{itemize}
 W chwili obecnej dostępne są też alternatywne implementacje operujące na
 listach, odpowiednio \texttt{FlowNetworkAdjacencyList} oraz
@@ -40,18 +40,18 @@ nie mają wiedzy o wybranej implementacji, powinny działać niezależnie od wyb
 
 \subsection{Testowana funkcjonalność --- wyłączenia}
 Do zakresu testów nie wchodzą moduły pomocnicze:
-\begin{itemize}[nosep]
+\begin{itemize}
     \item pakiet \texttt{algs.heap},
     \item pakiet \texttt{algs.list}.
 \end{itemize}
 Oraz moduły nie wykorzystywane przez testowany system algorytmu:
-\begin{itemize}[nosep]
+\begin{itemize}
     \item moduł \texttt{algs.network.generator}.
 \end{itemize}
 
 \subsection{Podejście}
-Środowisko testowe wymaga korzystani z:
-\begin{itemize}[nosep]
+Środowisko testowe zakłada korzystanie z:
+\begin{itemize}
     \item NetBeans IDE 7.2.1
     \item Oracle JDK 1.7\_u9
     \item TestNG 6.8
