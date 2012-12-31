@@ -9,7 +9,7 @@ algorytmu \textsc{Forda\dywiz Fulkersona} dla określonych danych wejściowych.
 Głównym obiektem testów czarno\dywiz skrzynkowych jest klasa
 \texttt{FordFulkerson} z projektu \texttt{ford-fulkerson-test-suite},
 zawierająca implementację algorytmu \textsc{Forda-Fulkersona}. W trakcie testów
-bezpośrednio wykorzystywane są inne klasy wchodzące do projektu
+bezpośrednio wykorzystywane są również inne klasy wchodzące do projektu
 \texttt{ford-fulkerson-test-suite}.
 
 \subsubsection{Testowana funkcjonalność}
@@ -24,20 +24,20 @@ Zakres testów czarno\dywiz skrzynkowych obejmuje:
 \end{enumerate}
 
 \subsubsection{Testowana funkcjonalność --- wyłączenia}
-Z testowania czarno\dywiz skrzynkowego dodatkowo wyłączone zostaną grupy klas.
+Z testowania czarno\dywiz skrzynkowego dodatkowo wyłączone zostaną funkcjonalności:
 \begin{itemize}
-    \item Klasy niewykorzystywane ze względu na wybór implementacji:
+    \item Z klas niewykorzystywanych ze względu na wybór implementacji:
         \begin{itemize}
             \item \texttt{DFS\_SearchList},
             \item \texttt{FlowNetworkAdjacencyList},
             \item \texttt{ShortestPathArray}.
         \end{itemize}
-    \item Klasy abstrakcyjne, po których dziedziczą wykorzystywane przy testowaniu klasy:
+    \item Z klas abstrakcyjnych, po których dziedziczą wykorzystywane przy testowaniu klasy:
         \begin{itemize}
             \item \texttt{FlowNetwork}
             \item \texttt{Search}
         \end{itemize}
-    \item Klasy szczegółowe, wykorzystywane wewnątrz implementacji:
+    \item Z klas reprezentujących szczegóły implementacji:
         \begin{itemize}
             \item \texttt{EdgeInfo},
             \item \texttt{DFS\_SearchArray} -- implementująca algorytm
