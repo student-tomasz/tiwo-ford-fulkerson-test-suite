@@ -67,6 +67,7 @@ public class TwoParallelVerticesTest {
         preIterator.add(edge2);
         preIterator.add(edge3);
         preIterator.add(edge4);
+        preIterator.add(edge5);
         
         edges = preIterator.iterator();
         
@@ -78,5 +79,5 @@ public class TwoParallelVerticesTest {
         
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
-    
+
 }
