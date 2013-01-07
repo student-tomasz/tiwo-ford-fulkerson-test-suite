@@ -60,9 +60,7 @@ public class HugeNetworkTest {
     public void ComputeTest(int numVertices, int minFanOut, int maxFanOut, int minCapacity, int maxCapacity){
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
-        flowBefore=siecPrzeplywu.getFlow();
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
-        flowAfter=siecPrzeplywu.getFlow();
         assertEquals(fulkerson.compute(),false,"Znaleziono ścieżkę powiększającej w sprawdzonej sieci przepływu.");
     }
     
