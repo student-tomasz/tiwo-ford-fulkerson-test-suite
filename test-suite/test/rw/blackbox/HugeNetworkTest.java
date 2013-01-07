@@ -21,11 +21,7 @@ public class HugeNetworkTest {
     FordFulkerson fulkerson;
     public HugeNetworkTest() {
     }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+
     @Test
     public void failAtCompute(){
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
