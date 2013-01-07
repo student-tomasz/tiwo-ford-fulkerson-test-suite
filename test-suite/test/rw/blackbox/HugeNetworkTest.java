@@ -9,9 +9,11 @@ import algs.network.EdgeInfo;
 import algs.network.FlowNetwork;
 import algs.network.FordFulkerson;
 import algs.network.generator.FlowNetworkGenerator;
+import java.util.ArrayList;
+import java.util.Iterator;
 import static org.testng.Assert.*;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
@@ -20,6 +22,7 @@ import org.testng.annotations.Test;
  */
 public class HugeNetworkTest {
     FordFulkerson fulkerson;
+    int flowBefore, flowAfter;
     public HugeNetworkTest() {
     }
 
@@ -28,18 +31,37 @@ public class HugeNetworkTest {
         FlowNetworkGenerator.setSeed(System.nanoTime()+System.currentTimeMillis());
     }
     
+    @DataProvider
+    public Iterator<Integer[]> arrayData(){
+        ArrayList<Integer[]> argumenty = new ArrayList<Integer[]>();
+        Integer[] arg1e1={10,1,5,1,4};
+        argumenty.add(arg1e1);
+        Integer[] arg1e2={10,1,5,1,4};
+        argumenty.add(arg1e2);
+        Integer[] arg1e3={10,1,5,1,4};
+        argumenty.add(arg1e3);
+        Integer[] arg1e4={10,1,5,1,4};
+        argumenty.add(arg1e4);
+        Integer[] arg1e5={10,1,5,1,4};
+        argumenty.add(arg1e5);
+        Integer[] arg1e6={10,1,5,1,4};
+        argumenty.add(arg1e6);
+        return argumenty.iterator();
+    }
+    
+    
     @Test
     public void Vertices1e1Test(){
-        System.gc();
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(10, 1, 5, 1, 4);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
+        flowBefore=siecPrzeplywu.getFlow();
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
+        flowAfter=siecPrzeplywu.getFlow();
         assertEquals(fulkerson.compute(),false,"Znaleziono ścieżkę powiększającej w sprawdzonej sieci przepływu.");
     }
     
     @Test
     public void Vertices1e2Test(){
-        System.gc();
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(100, 1, 5, 1, 4);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
@@ -48,7 +70,6 @@ public class HugeNetworkTest {
     
     @Test
     public void Vertices1e3Test(){
-        System.gc();
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(1000, 1, 5, 1, 4);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
