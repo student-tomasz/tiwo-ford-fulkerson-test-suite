@@ -59,7 +59,7 @@ public class FlowNetworkGenerator {
 			vertices[i] = new int [minFanOut+num-1];
 		}
 		
-		for (int i = 0; i < numVertices; i++) {
+		for (int i = 0; i < numVertices; i++) {//N^2
 			for (int j = 0; j < vertices[i].length; j++) {
 				vertices[i][j] = -1;
 			}
@@ -67,7 +67,7 @@ public class FlowNetworkGenerator {
 		
 		// makes sure each edge is unique within itself. These do not involve either
 		// the source {0} or the sink {numVertices-1}.
-		for (int i = 0; i < numVertices; i++) {
+		for (int i = 0; i < numVertices; i++) {//N^3
 			for (int j = 0; j < vertices[i].length; j++) {
 				boolean duplicate;
 				int t = -1;
