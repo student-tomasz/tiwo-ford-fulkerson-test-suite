@@ -370,11 +370,9 @@ public class JustSourceAndSinkTest {
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
-        assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
+        assertFalse(fulkerson.compute(), "Algorytm znalazł niezerowy przepływ maksymalny w sieci bez ścieżki ze źródła do ujścia.");
 
         assertEquals(siecPrzeplywu.getFlow(), 0, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
-
-        assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
 
     @Test(expectedExceptions = Exception.class)
