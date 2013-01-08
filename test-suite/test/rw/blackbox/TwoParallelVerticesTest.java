@@ -21,15 +21,15 @@ import org.testng.annotations.Test;
  * @author robert
  */
 public class TwoParallelVerticesTest {
-    ArrayList preIterator;
+    /*ArrayList preIterator;
     Iterator<EdgeInfo> edges;
-    FlowNetwork siecPrzeplywu;
+    FlowNetwork siecPrzeplywu;*/
     FordFulkerson fulkerson;
     public TwoParallelVerticesTest() {
     }
     
     @DataProvider
-    public Iterator<FlowNetworkArray> sieci(){
+    public static Iterator<FlowNetworkArray> sieci(){
         ArrayList<EdgeInfo> zbiorKrawedzi = new ArrayList<>();
         ArrayList<FlowNetworkArray> zbiorSieci = new ArrayList<>();
         EdgeInfo edge1, edge2, edge3, edge4, edge5, edge6, edge7, edge8;
@@ -43,12 +43,20 @@ public class TwoParallelVerticesTest {
         zbiorKrawedzi.add(edge3);
         zbiorKrawedzi.add(edge4);
         
-        zbiorSieci.add(new FlowNetworkArray(4,0,3,zbiorKrawedzi.iterator()));
+        zbiorSieci.add(new FlowNetworkArray(4, 0, 3, zbiorKrawedzi.iterator()));
         
         return zbiorSieci.iterator();
     }
 
-    @Test
+    @Test(dataProvider="sieci")
+    public void TwoParallelVerticesTest(FlowNetworkArray siecPrzeplywu) throws Exception {
+        fulkerson=new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+        
+        assertTrue(fulkerson.compute(),"Algorytm nie wyznaczył maksymalnego przepływu.");
+        assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
+    }
+    
+   /* @Test
     public void testCase1() throws Exception {
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 1);
@@ -154,6 +162,6 @@ public class TwoParallelVerticesTest {
         assertEquals(siecPrzeplywu, 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
         
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
-    }
+    }*/
     
 }
