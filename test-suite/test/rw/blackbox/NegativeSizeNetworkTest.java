@@ -18,19 +18,19 @@ import org.testng.annotations.Test;
  */
 public class NegativeSizeNetworkTest {
 
-    FordFulkerson fulkerson;
-
     public NegativeSizeNetworkTest() {
     }
 
     @Test(expectedExceptions = NegativeArraySizeException.class)
     public void FailAtNegativeSizeNetworkTest() {
+        FordFulkerson fulkerson;
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = new FlowNetworkArray(-5, 2, 5, null);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
     }
 
     @Test(expectedExceptions = NegativeArraySizeException.class)
     public void FailAtNegativeSizeNetworkTest2() throws Exception {
+        FordFulkerson fulkerson;
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(-5, 1, 5, 3, 10);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
     }
