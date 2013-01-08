@@ -111,8 +111,8 @@ public class TwoParallelVerticesTest {
     @Test
     public void testCase4() throws Exception {
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
-        EdgeInfo edge1 = new EdgeInfo(0, 1, 7);
-        EdgeInfo edge2 = new EdgeInfo(0, 2, 1);
+        EdgeInfo edge1 = new EdgeInfo(0, 1, 17);
+        EdgeInfo edge2 = new EdgeInfo(0, 2, 11);
         EdgeInfo edge3 = new EdgeInfo(1, 3, 5);
         EdgeInfo edge4 = new EdgeInfo(2, 3, 3);
         EdgeInfo edge5 = new EdgeInfo(2, 1, 9);
@@ -132,7 +132,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 8, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -159,7 +159,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 10, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -186,7 +186,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 3, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -213,7 +213,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 5, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -240,7 +240,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 8, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -269,7 +269,7 @@ public class TwoParallelVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 5, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
