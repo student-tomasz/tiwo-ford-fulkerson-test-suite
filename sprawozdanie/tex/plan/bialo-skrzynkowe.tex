@@ -29,22 +29,21 @@ przez testy zawarte wraz z kodem źródłowym.
     \bottomrule
 \end{tabular}
 \end{center}
-Załacznik: \href{./raport/index.html}{Raport obecnego stanu pokrycia.}
+W oddzielnym załączniku \url{sprawozdanie/raport/index.html} znajduje się stan
+pokrycia przed utworzeniem nowego zestawu testów.
 
-\subsubsection{Funkcje wyłączone z testowania}
-Lista metod dostarczanych przez testowane klasy, które nie wchodzą w zakres
-testowania biało\dywiz skrzynkowego:
+\subsection{Testowana funkcjonalność --- wyłączenia}
+W zakres testowania biało\dywiz skrzynkowego nie wchodzi część metod
+dostarczanych przez klasy testowane:
 \begin{itemize}[nosep]
-    \item \verb|FlowNetworkAdjacencyList.getCost()|
+    \item \texttt{FlowNetworkArray.getCost()}
 \end{itemize}
 
 \subsubsection{Podejście}
 Testowanie zostanie przeprowadzone techniką testowania strukturalnego. Głównym
 kryterium zaliczenia testów będzie współczynnik pokrycia linii kodu, którego wartość
-musi przekraczać 90\%.\\
-
-\noindent
-Dodatkowo do wytycznych środowiska testowego ustalonych globalnie użyte zostaną:
+musi przekraczać 90\%. Dodatkowo do wytycznych środowiska testowego ustalonych
+globalnie użyte zostaną:
 \begin{itemize}[nosep]
-    \item Cobertura plugin 1.9.4.1
+    \item Cobertura 1.9.4.1
 \end{itemize}
