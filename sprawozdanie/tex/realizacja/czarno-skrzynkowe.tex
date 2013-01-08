@@ -817,47 +817,302 @@ zebrane w klasie TwoParallelVerticesTest.
     \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
     pośrednich i z obu węzłów pośrednich do ujścia.
     \emph{testCase1}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 1
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 4
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 2
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 4
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do drugiego węzła pośredniego.
     \emph{testCase2}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 7
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 1
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 5
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 3
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 9
+    \end{enumerate}
+    Oczekiwany wynik: 8
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
     \emph{testCase3}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 3
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 6
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 10
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 4
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 2
+    \end{enumerate}
+    Oczekiwany wynik: 9
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
     węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
     \emph{testCase4}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 17
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 11
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 5
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 3
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 9
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 6
+    \end{enumerate}
+    Oczekiwany wynik: 8
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
     \emph{testCase5}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 5
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 3
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 4
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 9
+        \item krawędź:
+        początek: 0
+        koniec: 3
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 10
+
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
     \emph{testCase6}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 2
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 8
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 1
+        \item krawędź:
+        początek: 3
+        koniec: 0
+        przepustowość: 4
+    \end{enumerate}
+    Oczekiwany wynik: 3
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego.
     \emph{testCase7}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 1
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 9
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 12
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 4
+        \item krawędź:
+        początek: 3
+        koniec: 1
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 5
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do źródłą.
     \emph{testCase8}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 8
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 3
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 5
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 7
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 6
+    \end{enumerate}
+    Oczekiwany wynik: 8
+
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
     \emph{testCase9}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 7
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 8
+        \item krawędź:
+        początek: 1
+        koniec: 3
+        przepustowość: 2
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 3
+        \item krawędź:
+        początek: 3
+        koniec: 1
+        przepustowość: 11
+        \item krawędź:
+        początek: 1
+        koniec: 0
+        przepustowość: 8
+    \end{enumerate}
+    Oczekiwany wynik: 5
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 \end{itemize}
 
@@ -869,12 +1124,14 @@ TwoSerialVerticesTest.
     \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
     pośredniego, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
     drugiego węzła pośredniego do ujścia.
+
     \emph{testCase1}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
     krawędziami pomiędzy węzłami pośrednimi.
+
     \emph{testCase2a i testCase2b}
     \emph{Zwraca niepoprawną wartość. Konstruktor ani funkcja validate()
     z klasy FlowNetworkArray nie podnoszą wyjątków.}
@@ -882,31 +1139,37 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     zerowej przepustowości pomiędzy węzłami pośrednimi.
     \emph{testCase3}
+
     \emph{Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
     w sieci o zerowym przepływie maksymalnym.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     ujemnej przepustowości pomiędzy węzłami pośrednimi.
+
     \emph{testCase4}
+
     \emph{Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
     w sieci z ujemną przepustowością krawędzi w wąskim gardle.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
     drugiego węzłą pośredniego do pierwszego węzła pośredniego.
+
     \emph{testCase5}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     pierwszego węzła pośredniego do ujścia.
+
     \emph{testCase6}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     źródła do drugiego węzła pośredniego.
+
     \emph{testCase7}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
