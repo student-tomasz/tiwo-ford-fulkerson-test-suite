@@ -171,79 +171,81 @@ w klasie SingleVertexTest.
 
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
-
+Testy operujące na sieciach z 2 węzłami pośrednimi połączonymi równolegle zostały
+zebrane w klasie TwoParallelVerticesTest.
 \begin{itemize}[nosep]
     \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
     pośrednich i z obu węzłów pośrednich do ujścia.
-    \emph{Zrealizowano jako testCase1 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase1. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do drugiego węzła pośredniego.
-    \emph{Zrealizowano jako testCase2 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase2. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
-    \emph{Zrealizowano jako testCase3 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase3. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
     węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.\footnote{Potencjalne zagrożenie
     stworzeniem złożonej pętli.}
-    \emph{Zrealizowano jako testCase4 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase4. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
-    \emph{Zrealizowano jako testCase5 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase5. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
-    \emph{Zrealizowano jako testCase6 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase6. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego.
-    \emph{Zrealizowano jako testCase7 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase7. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do źródłą.
-    \emph{Zrealizowano jako testCase8 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase8. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
-    \emph{Zrealizowano jako testCase9 w klasie TwoParallelTest. Algorytm
+    \emph{Zrealizowano jako testCase9. Algorytm
     poprawnie znajduje maksymalny przepływ.}
 \end{itemize}
 
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
-
+Testy wykorzystujące sieci z 2 węzłami pośrednimi znajdują się z kolei w klasie
+TwoSerialVerticesTest.
 \begin{itemize}[nosep]
     \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
     pośredniego, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
     drugiego węzła pośredniego do ujścia.
-    \emph{Zrealizowano jako testCase1 w klasie TwoSerialVerticesTest. Algorytm
+    \emph{Zrealizowano jako testCase1. Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
     krawędziami pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano jako testCase2a i testCase2b w klasie TwoSerialVerticesTest.
+    \emph{Zrealizowano jako testCase2a i testCase2b.
     Zwraca niepoprawną wartość. Konstruktor ani funkcja validate()
     z klasy FlowNetworkArray nie podnoszą wyjątków.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     zerowej przepustowości pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano jako testCase3 w klasie TwoSerialVerticesTest. Poprawnie
+    \emph{Zrealizowano jako testCase3. Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
     w sieci o zerowym przepływie maksymalnym.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     ujemnej przepustowości pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano jako testCase4 w klasie TwoSerialVerticesTest. Poprawnie
+    \emph{Zrealizowano jako testCase4. Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
     w sieci z ujemną przepustowością krawędzi w wąskim gardle.}
 
@@ -255,17 +257,17 @@ w klasie SingleVertexTest.
     natomiast krawędź skierowana w przeciwną stronę jest jak najbardziej
     poprawna z punktu widzenia definicji, choć taka sieć wciąż nie miałaby
     żadnej przepustowości.}
-    \emph{Zrealizowano jako testCase5 w klasie TwoSerialVerticesTest. Algorytm
+    \emph{Zrealizowano jako testCase5. Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     pierwszego węzła pośredniego do ujścia.
-    \emph{Zrealizowano jako testCase2 w klasie TwoSerialVerticesTest. Algorytm
+    \emph{Zrealizowano jako testCase6. Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     źródła do drugiego węzła pośredniego.
-    \emph{Zrealizowano jako testCase2 w klasie TwoSerialVerticesTest. Algorytm
+    \emph{Zrealizowano jako testCase7. Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
 \end{itemize}
