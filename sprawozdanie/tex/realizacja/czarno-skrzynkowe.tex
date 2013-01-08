@@ -1,8 +1,23 @@
 \subsection{Testy czarno\dywiz skrzynkowe}
 
+
+
 \subsubsection{Sieć bez węzłów}
 Wszystkie testy na sieci bez węzłów zrealizowano w klasie EmptyNetworkTest.
-\emph{testCase1 i testCase2.}
+
+\emph{testCase1}
+Liczba węzłów w sieci:0
+Indeks źródła: 2
+Indeks ujścia: 5
+Krawędzie: NULL
+Oczekiwany wynik: 0
+
+\emph{testCase2}
+Liczba węzłów w sieci: 0
+Indeks źródła: 0
+Indeks ujścia: 0
+Krawędzie: NULL
+Oczekiwany wynik: Exception
 
 \emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
 z samym źródłem.}
@@ -12,26 +27,62 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
 \begin{itemize}[nosep]
     \item Samego źródła.
     \emph{testCase1}
+    Liczba węzłów w sieci: 1
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie: NULL
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
     z samym źródłem.}
 
     \item Węzła pośredniego.
     \emph{testCase2}
+    Liczba węzłów w sieci: 1
+    Indeks źródła: 2
+    Indeks ujścia: 1
+    Krawędzie: NULL
+    Oczekiwany wynik: Exception
+
     \emph{Algorytm poprawnie zwraca wyjątek przy próbie odwołania się
     do nieistniejącego węzła.}
 
     \item Ujścia.
     \emph{testCase3}
+    Liczba węzłów w sieci: 1
+    Indeks źródła: 1
+    Indeks ujścia: 0
+    Krawędzie: NULL
+    Oczekiwany wynik: Exception
+
     \emph{Algorytm poprawnie zwraca wyjątek przy próbie odwołania się
     do nieistniejącego węzła.}
 
     \item Wspólnego źródła i ujścia.
     \emph{testCase4}
+    Liczba węzłów w sieci: 1
+    Indeks źródła: 0
+    Indeks ujścia: 0
+    Krawędzie: NULL
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci ze źródłem i ujściem w tym samym punkcie.}
 
     \item Wspólnego źródła i ujścia z pętlą.
     \emph{testCase5}
+    Liczba węzłów w sieci: 1
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 0
+        przepustowość: 5
+    \end{enumerate}
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci ze źródłem i ujściem w tym samym punkcie z pętlą.}
 \end{itemize}
