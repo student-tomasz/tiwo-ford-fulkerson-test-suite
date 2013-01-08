@@ -1,16 +1,24 @@
 package algs.network;
 
+import org.testng.annotations.*;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Example {
+public class SampleUsageTest {
+        
+    private int numVertices = 6; // liczba wezlow w grafie
+    private int srcIndex = 0;    // indeks wezla zrodlowego
+    private int sinkIndex = 5;   // indeks wezla docelowego
+            
+    private FlowNetwork network;
+    private Search search;
+    private FordFulkerson ffalgorithm;
+    private Iterator<EdgeInfo> edges;
+    private Iterator<EdgeInfo> edges2;
     
-    public static void main(String[] args){
-        
-        int numVertices = 6; // Liczba wezlow w grafie
-        int srcIndex = 0;    // indeks wezla zrodlowego
-        int sinkIndex = 5;   // indeks wezla docelowego
-        
+    @BeforeTest
+    public void createNetwork() {
         ArrayList preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 3);
         EdgeInfo edge2 = new EdgeInfo(1, 3, 2);
@@ -29,15 +37,12 @@ public class Example {
         preIterator.add(edge7);
         preIterator.add(edge8);
                                 
-        Iterator<EdgeInfo> edges = preIterator.iterator();  // zbior krawedzi grafu
-        Iterator<EdgeInfo> edges2 = preIterator.iterator(); // zbior krawedzi grafu
-        
-        
-        FlowNetwork network;
-        Search search;
-        FordFulkerson ffalgorithm;
-        
-
+        edges = preIterator.iterator();  // zbior krawedzi grafu
+        edges2 = preIterator.iterator(); // zbior krawedzi grafu
+    }
+    
+    @Test
+    public void listTest() {
         System.out.println("Implementacja z podwojna lista. Wysoka zlozonosc pamieciowa.");
         network = new FlowNetworkAdjacencyList(numVertices, srcIndex, sinkIndex, edges); // graf przeplywu sieci na listach
         
@@ -50,8 +55,10 @@ public class Example {
         
         System.out.println("Po:");
         System.out.println(network.toString());
-        
-        
+    }
+    
+    @Test
+    public void arrayTest() {   
         System.out.println("Implementacja z macierza dwuwymiarowa. Oszczedniejsza pamieciowo.");   
         network = new FlowNetworkArray(numVertices, srcIndex, sinkIndex, edges2); // graf przeplywu sieci na macierzy
         
