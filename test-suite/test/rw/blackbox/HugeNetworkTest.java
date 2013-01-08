@@ -32,7 +32,7 @@ public class HugeNetworkTest {
     }
     
     @DataProvider
-    public Iterator<Integer[]> arrayData(){
+    public static Iterator<Integer[]> arrayData(){
         ArrayList<Integer[]> argumenty = new ArrayList<>();
         Integer[] arg1e1={10,         1, 5, 1, 4};
         argumenty.add(arg1e1);
