@@ -32,5 +32,15 @@ public class MinimalNetworkConstructorTest {
         FlowNetworkArray network = new FlowNetworkArray(-1, -2, -1);        
     }
     
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void sinkBeforeSourceTest() {
+        FlowNetworkArray network = new FlowNetworkArray(1, 0, 2);        
+    }
+    
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void tooFewVerticesTest() {
+        FlowNetworkArray network = new FlowNetworkArray(0, 4, 2);        
+    }
+    
 
 }
