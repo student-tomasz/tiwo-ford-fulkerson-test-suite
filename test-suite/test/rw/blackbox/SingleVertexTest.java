@@ -38,7 +38,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -66,7 +66,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -92,7 +92,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -116,7 +116,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -140,7 +140,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -166,7 +166,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -194,7 +194,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -222,7 +222,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
         
         siecPrzeplywu.validate();
 
@@ -251,7 +251,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -283,7 +283,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
         
         siecPrzeplywu.validate();
     }
@@ -309,7 +309,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
         
@@ -335,7 +335,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -359,7 +359,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -384,7 +384,7 @@ public class SingleVertexTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        siecPrzeplywu = new FlowNetworkArray(3, 0, 2, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
