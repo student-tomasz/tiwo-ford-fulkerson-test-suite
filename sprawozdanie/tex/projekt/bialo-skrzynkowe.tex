@@ -4,8 +4,6 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{ToStringTest}} \\
-    \midrule
     {\bfseries Id} & B.1.1 \\
     \hline
     {\bfseries Funkcja} & \bfseries String \texttt{toString()} \\
@@ -27,8 +25,6 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{MinimalNetworkConstructorTest}} \\
-    \midrule
     {\bfseries Id} & B.2.1 \\
     \hline
     {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex, \bfseries int sinkIndex, \bfseries int numVertices)} \\
@@ -39,7 +35,7 @@
                                         \item Wartości oczekiwane
                                         \item Ujemne wartości
                                         \item sinkIndex < sourceIndex
-                                        \item sinkIndex - sourceIndex != numVertices
+                                        \item sinkIndex - sourceIndex > numVertices
                                     \end{enumerate}} \\
     \hline
     {\bfseries Wykonawca} & MO \\
@@ -50,8 +46,6 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{NetworkConstructorTest}} \\
-    \midrule
     {\bfseries Id} & B.2.1 \\
     \hline
     {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex,
@@ -63,8 +57,8 @@
     {\bfseries Przypadki testowe} & {\begin{enumerate}
                                         \item Wartości oczekiwane
                                         \item Ujemne wartości
-                                        \item sinkIndex - sourceIndex != numVertices
-                                        \item sinkIndex > sourceIndex
+                                        \item sinkIndex - sourceIndex > numVertices
+                                        \item sinkIndex < sourceIndex
                                         \item Pusta kolekcja krawędzi
                                     \end{enumerate}} \\
     \hline
@@ -76,8 +70,6 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{IllegalStateExceptionTest}} \\
-    \midrule
     {\bfseries Id} & B.2.2 \\
     \hline
     {\bfseries Funkcja} & \bfseries void \texttt{ validate()} \\
