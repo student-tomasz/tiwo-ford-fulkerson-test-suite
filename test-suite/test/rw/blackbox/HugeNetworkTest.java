@@ -41,7 +41,7 @@ public class HugeNetworkTest {
         Integer[] arg1e3 = {1000, 6, 8, 2, 4};
         argumenty.add(arg1e3);
         /*Integer[] arg1e4={10000,      4,12, 2, 7};
-         argumenty.add(arg1e4);
+        argumenty.add(arg1e4);
          Integer[] arg1e5={100000,     2, 7, 4, 6};
          argumenty.add(arg1e5);
          Integer[] arg1e6={1000000,    1,10, 5, 9};
@@ -58,8 +58,8 @@ public class HugeNetworkTest {
     @Test(dataProvider = "arrayData")
     public void ComputeTest(int numVertices, int minFanOut, int maxFanOut, int minCapacity, int maxCapacity) {
         FordFulkerson fulkerson;
-        FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
-        fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
+        FlowNetwork<EdgeInfo[][]> flowNetwork = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
+        fulkerson = new FordFulkerson((flowNetwork), new DFS_SearchArray(flowNetwork));
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
         assertEquals(fulkerson.compute(), false, "Znaleziono ścieżkę powiększającej w sprawdzonej sieci przepływu.");
     }
@@ -68,11 +68,11 @@ public class HugeNetworkTest {
     public void ComputedFlowTest(int numVertices, int minFanOut, int maxFanOut, int minCapacity, int maxCapacity) {
         FordFulkerson fulkerson;
         int flowBefore, flowAfter;
-        FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
-        fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
-        flowBefore = siecPrzeplywu.getFlow();
+        FlowNetwork<EdgeInfo[][]> flowNetwork = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
+        fulkerson = new FordFulkerson((flowNetwork), new DFS_SearchArray(flowNetwork));
+        flowBefore = flowNetwork.getFlow();
         fulkerson.compute();
-        flowAfter = siecPrzeplywu.getFlow();
+        flowAfter = flowNetwork.getFlow();
         assertNotEquals(flowBefore, flowAfter, "Algorytm nie wyznaczył maksymalnego przepływu.");
     }
 }
