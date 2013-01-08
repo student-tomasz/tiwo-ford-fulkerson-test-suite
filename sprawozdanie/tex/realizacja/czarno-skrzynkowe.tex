@@ -36,67 +36,79 @@
 \begin{itemize}[nosep]
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
     pośredniego i z węzła pośredniego do ujścia.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+    \emph{Zrealizowano jako testCase1a i testCase1b w klasie SingleVertexTest.
+    Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
     % Z -> P -> U
 
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
     i z węzła pośredniego do źródła.
-    \emph{Zrealizowano. Algorytm poprawnie nie znajduje niezerowego przepływu
+    \emph{Zrealizowano jako testCase2 w klasie SingleVertexTest. Algorytm
+    poprawnie nie znajduje niezerowego przepływu
     maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z <- P <- U
 
     \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
     i z węzła pośredniego do źródła.
-    \emph{Zrealizowano. Algorytm poprawnie nie znajduje niezerowego przepływu
+    \emph{Zrealizowano jako testCase3 w klasie SingleVertexTest. Algorytm
+    poprawnie nie znajduje niezerowego przepływu
     maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z <- P -> U
 
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
     i z ujścia do węzła pośredniego.
-    \emph{Zrealizowano. Algorytm poprawnie nie znajduje niezerowego przepływu
+    \emph{Zrealizowano jako testCase4 w klasie SingleVertexTest. Algorytm
+    poprawnie nie znajduje niezerowego przepływu
     maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z -> P <- U
 
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
     pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
     dodatniej przepustowości ze źródła do ujścia.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+    \emph{Zrealizowano jako testCase5 w klasie SingleVertexTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
     % Z -> P -> U
     % |_________^
 
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
     pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
     przepustowości w węźle pośrednim.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.
-    Algorytm nie informuje o istnieniu pętli w sieci.}
+    \emph{Zrealizowano jako testCase6a i testCase6b w klasie SingleVertexTest.
+    Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm nie informuje
+    o istnieniu pętli w sieci.}
     % Z -> P -> U
     %     / ^
     %     \_|
 
     \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
     i z węzła pośredniego do źródła, z mieszanymi zwrotami.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci
-    o pojedynczych krawędziach. W przypadku zwielokrotnienia krawędzi algorytm
-    nie jest w stanie wyznaczyć prawidłowego maksymalnego przepływu w sieci.}
+    \emph{Zrealizowano jako testCase7a, testCase7b i testCase7c w klasie
+    SingleVertexTest. Algorytm poprawnie znajduje maksymalny przepływ w sieci
+    o pojedynczych krawędziach. Konstruktor ani funkcja validate() z klasy
+    FlowNetworkArray nie podnoszą wyjątków. W przypadku zwielokrotnienia
+    krawędzi algorytm nie jest w stanie wyznaczyć prawidłowego maksymalnego
+    przepływu w sieci.}
     % Z -> P -> U
     %  ^__/ ^__/
 
     \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
     pośredniego, bez krawędzi do ujścia.
-    \emph{Zrealizowano. Algorytm poprawnie nie znajduje niezerowego przepływu
-    maksymalnego w sieci bez ścieżki od źródła do ujścia.}
+    \emph{Zrealizowano jako testCase8 w klasie SingleVertexTest. Algorytm
+    poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
     % Z -> P    U
 
     \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
     pośredniego, oraz krawędzią ze źródłą do ujścia.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+    \emph{Zrealizowano jako testCase9 w klasie SingleVertexTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
     % Z -> P    U
     % |_________^
 
     \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
     ujścia, bez połączenia ze źródłem.
-    \emph{Zrealizowano. Algorytm poprawnie nie znajduje niezerowego przepływu
-    maksymalnego w sieci bez ścieżki od źródła do ujścia.}
+    \emph{Zrealizowano jako testCase10 w klasie SingleVertexTest. Algorytm
+    poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
     % Z    P -> U
 \end{itemize}
 
@@ -106,39 +118,48 @@
 \begin{itemize}[nosep]
     \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
     pośrednich i z obu węzłów pośrednich do ujścia.
-    \emph{Zrealizowano. Algorytm znajduje maksymalny przepływ.}
+    \emph{Zrealizowano jako testCase1 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do drugiego węzła pośredniego.
-    \emph{Zrealizowano. Algorytm znajduje maksymalny przepływ.}
+    \emph{Zrealizowano jako testCase2 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
-    \emph{Zrealizowano. Algorytm znajduje maksymalny przepływ.}
+    \emph{Zrealizowano jako testCase3 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
     węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.\footnote{Potencjalne zagrożenie
     stworzeniem złożonej pętli.}
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase4 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase5 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase6 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase7 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do źródłą.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase8 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase9 w klasie TwoParallelTest. Algorytm
+    poprawnie znajduje maksymalny przepływ.}
 \end{itemize}
 
 
@@ -148,20 +169,25 @@
     \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
     pośredniego, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
     drugiego węzła pośredniego do ujścia.
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+    \emph{Zrealizowano jako testCase1 w klasie TwoSerialVerticesTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
     krawędziami pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano. Zwraca niepoprawną wartość.}
+    \emph{Zrealizowano jako testCase2a i testCase2b w klasie TwoSerialVerticesTest.
+    Zwraca niepoprawną wartość. Konstruktor ani funkcja validate()
+    z klasy FlowNetworkArray nie podnoszą wyjątków.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     zerowej przepustowości pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano. Poprawnie nie znajduje niezerowego maksymalnego przepływu
+    \emph{Zrealizowano jako testCase3 w klasie TwoSerialVerticesTest. Poprawnie
+    nie znajduje niezerowego maksymalnego przepływu
     w sieci o zerowym przepływie maksymalnym.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     ujemnej przepustowości pomiędzy węzłami pośrednimi.
-    \emph{Zrealizowano. Poprawnie nie znajduje niezerowego maksymalnego przepływu
+    \emph{Zrealizowano jako testCase4 w klasie TwoSerialVerticesTest. Poprawnie
+    nie znajduje niezerowego maksymalnego przepływu
     w sieci z ujemną przepustowością krawędzi w wąskim gardle.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
@@ -172,15 +198,18 @@
     natomiast krawędź skierowana w przeciwną stronę jest jak najbardziej
     poprawna z punktu widzenia definicji, choć taka sieć wciąż nie miałaby
     żadnej przepustowości.}
-    \emph{Zrealizowano. Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+    \emph{Zrealizowano jako testCase5 w klasie TwoSerialVerticesTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     pierwszego węzła pośredniego do ujścia.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase2 w klasie TwoSerialVerticesTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     źródła do drugiego węzła pośredniego.
-    \emph{Zrealizowano.}
+    \emph{Zrealizowano jako testCase2 w klasie TwoSerialVerticesTest. Algorytm
+    poprawnie znajduje maksymalny przepływ w sieci.}
 
 \end{itemize}
 
@@ -193,7 +222,7 @@
 Nie jest możliwe stworzenie sieci z ujemną ilością węzłów.
 
 \subsubsection{Sieć z $1e9$ węzłów}
-\emph{Ograniczono wielkość testowanej sieci do $1e3$ węzłów}
+\emph{Ograniczono wielkość testowanej sieci do $1e3$ węzłów, zrealizowano w klasie HugeFlowNetworkTest}
 Ręczne stworzenie sieci przepływu tej wielkości jest nierealne.
 Metoda generateEdges z klasy FlowNetworkGenerator ma złożoność rzędu O(n^3),
 co znacząco ogranicza możliwości w tym zakresie.
