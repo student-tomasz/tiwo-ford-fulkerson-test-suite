@@ -18,10 +18,27 @@
 
 \begin{itemize}[nosep]
     \item Nie połączonymi żadną krawędzią.
+    \emph{Zrealizowano jako testCase1 w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
+    \emph{Zrealizowano jako testCase2 w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
+    \emph{Zrealizowano jako testCase3a i testCase3b w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm
+    nie informuje o istnieniu pętli w sieci.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
+    \emph{Zrealizowano jako testCase4a i testCase4b w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm nie podnosi
+    wyjątku przy pętli o ujemnej przepustowości.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
+
+
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
@@ -43,22 +60,22 @@
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
     i z węzła pośredniego do źródła.
     \emph{Zrealizowano jako testCase2 w klasie SingleVertexTest. Algorytm
-    poprawnie nie znajduje niezerowego przepływu
-    maksymalnego w sieci bez ścieżki od źródła do ujścia.}
+    poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci bez
+    ścieżki od źródła do ujścia.}
     % Z <- P <- U
 
     \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
     i z węzła pośredniego do źródła.
     \emph{Zrealizowano jako testCase3 w klasie SingleVertexTest. Algorytm
-    poprawnie nie znajduje niezerowego przepływu
-    maksymalnego w sieci bez ścieżki od źródła do ujścia.}
+    poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
     % Z <- P -> U
 
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
     i z ujścia do węzła pośredniego.
     \emph{Zrealizowano jako testCase4 w klasie SingleVertexTest. Algorytm
-    poprawnie nie znajduje niezerowego przepływu
-    maksymalnego w sieci bez ścieżki od źródła do ujścia.}
+    poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
     % Z -> P <- U
 
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
