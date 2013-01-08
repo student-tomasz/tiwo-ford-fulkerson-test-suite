@@ -34,7 +34,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -56,7 +56,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -82,7 +82,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -108,7 +108,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         siecPrzeplywu.validate();
         
@@ -132,7 +132,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -158,7 +158,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         siecPrzeplywu.validate();
         
@@ -180,7 +180,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -202,7 +202,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
@@ -224,7 +224,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         siecPrzeplywu.validate();
         
@@ -246,7 +246,7 @@ public class JustSourceAndSinkTest {
 
         edges = preIterator.iterator();
 
-        siecPrzeplywu = new FlowNetworkArray(4, 0, 1, edges);
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
 
         fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
 
