@@ -21,15 +21,16 @@ import org.testng.annotations.Test;
  * @author robert
  */
 public class SingleVertexTest {
-    ArrayList preIterator;
-    Iterator<EdgeInfo> edges;
-    FlowNetwork siecPrzeplywu;
-    FordFulkerson fulkerson;
     public SingleVertexTest() {
     }
     
     @Test
     public void testCase1() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 512);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 126);
@@ -49,8 +50,13 @@ public class SingleVertexTest {
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
     
-        @Test
-        public void testCase1b() throws Exception {
+    @Test
+    public void testCase1b() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+    
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 104526);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 75269);
@@ -74,6 +80,11 @@ public class SingleVertexTest {
         
     @Test
     public void testCase2() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(1, 0, 43);
         EdgeInfo edge2 = new EdgeInfo(2, 1, 76);
@@ -93,6 +104,11 @@ public class SingleVertexTest {
         
     @Test
     public void testCase3() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(1, 0, 325);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 12);
@@ -112,6 +128,11 @@ public class SingleVertexTest {
     
     @Test
     public void testCase4() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+    
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 9);
         EdgeInfo edge2 = new EdgeInfo(2, 1, 13);
@@ -131,6 +152,11 @@ public class SingleVertexTest {
     
     @Test
     public void testCase5() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 107209);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 75269);
@@ -154,6 +180,11 @@ public class SingleVertexTest {
     
     @Test
     public void testCase6() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+    
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 73);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 17);
@@ -177,6 +208,11 @@ public class SingleVertexTest {
     
     @Test
     public void testCase7a() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 5);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 7);
@@ -203,6 +239,11 @@ public class SingleVertexTest {
         
     @Test
     public void testCase7b() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 16);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 8);
@@ -230,12 +271,15 @@ public class SingleVertexTest {
     
     @Test
     public void testCase8() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 3);
-        //EdgeInfo edge2 = new EdgeInfo(1, 2, 7);
 
         preIterator.add(edge1);
-        //preIterator.add(edge2);
 
         
         edges = preIterator.iterator();
@@ -251,6 +295,11 @@ public class SingleVertexTest {
     
     @Test
     public void testCase9() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 13);
         EdgeInfo edge2 = new EdgeInfo(0, 2, 5);
@@ -269,4 +318,5 @@ public class SingleVertexTest {
         
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
+ 
 }
