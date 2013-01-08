@@ -13,6 +13,7 @@ import algs.network.Search;
 import java.util.ArrayList;
 import java.util.Iterator;
 import static org.testng.Assert.*;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
@@ -26,11 +27,26 @@ public class TwoParallelVerticesTest {
     FordFulkerson fulkerson;
     public TwoParallelVerticesTest() {
     }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    @DataProvider
+    public Iterator<FlowNetworkArray> sieci(){
+        ArrayList<EdgeInfo> zbiorKrawedzi = new ArrayList<>();
+        ArrayList<FlowNetworkArray> zbiorSieci = new ArrayList<>();
+        EdgeInfo edge1, edge2, edge3, edge4, edge5, edge6, edge7, edge8;
+        
+        edge1 = new EdgeInfo(0, 1, 1);
+        edge2 = new EdgeInfo(0, 2, 4);
+        edge3 = new EdgeInfo(1, 3, 2);
+        edge4 = new EdgeInfo(2, 3, 3);
+        zbiorKrawedzi.add(edge1);
+        zbiorKrawedzi.add(edge2);
+        zbiorKrawedzi.add(edge3);
+        zbiorKrawedzi.add(edge4);
+        
+        zbiorSieci.add(new FlowNetworkArray(4,0,3,zbiorKrawedzi.iterator()));
+        
+        return zbiorSieci.iterator();
+    }
 
     @Test
     public void testCase1() throws Exception {
