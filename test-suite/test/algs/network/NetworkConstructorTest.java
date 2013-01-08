@@ -63,6 +63,16 @@ public class NetworkConstructorTest {
                 FlowNetworkArray network = new FlowNetworkArray( 4, 0, -3, edges);
     }
     
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void tooFewVerticesTest() {
+                FlowNetworkArray network = new FlowNetworkArray( 2, 0, 3, edges);
+    }
+    
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void sinkBeforeSourceTest() {
+                FlowNetworkArray network = new FlowNetworkArray( 4, 3, 0, edges);
+    }
+    
     @Test
     public void noEdgesTest() {
                 edges = new ArrayList().iterator();
