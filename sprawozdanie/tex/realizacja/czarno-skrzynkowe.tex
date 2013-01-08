@@ -93,20 +93,104 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
 \begin{itemize}[nosep]
     \item Nie połączonymi żadną krawędzią.
     \emph{testCase1}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie: NULL
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
     \emph{testCase2}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 9
+    \end{enumerate}
+    Oczekiwany wynik: 9
     \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
-    \emph{testCase3a i testCase3b}
+    \emph{testCase3a}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 57956756
+        \item krawędź:
+        początek: 1
+        koniec: 1
+        przepustowość: 6363
+    \end{enumerate}
+    Oczekiwany wynik: 57956756
+
+    \emph{testCase3b}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 12
+        \item krawędź:
+        początek: 1
+        koniec: 1
+        przepustowość: 2
+    \end{enumerate}
+    Oczekiwany wynik: Exception
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ
-    w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
+w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
     \emph{testCase4a i testCase4b}
+    \emph{testCase4a}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 346723
+        \item krawędź:
+        początek: 0
+        koniec: 0
+        przepustowość: -1623474
+    \end{enumerate}
+    Oczekiwany wynik: 346723
+
+    \emph{testCase4b}
+    Liczba węzłów w sieci: 2
+    Indeks źródła: 0
+    Indeks ujścia: 1
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 346723
+        \item krawędź:
+        początek: 0
+        koniec: 0
+        przepustowość: -1623474
+    \end{enumerate}
+    Oczekiwany wynik: 346723
+
     \emph{Algorytm poprawnie znajduje maksymalny przepływ
     w sieci. Algorytm nie podnosi wyjątku przy pętli o ujemnej przepustowości.}
 
