@@ -398,4 +398,104 @@ public class JustSourceAndSinkTest {
 
         fulkerson.compute();
     }
+    
+    @Test
+    public void testCase11a() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(0, 1, -16);
+        EdgeInfo edge2 = new EdgeInfo(0, 1, -5);
+        EdgeInfo edge3 = new EdgeInfo(0, 1, -3);
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+        preIterator.add(edge3);
+
+        edges = preIterator.iterator();
+
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
+
+        fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+
+        assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
+
+        assertEquals(siecPrzeplywu.getFlow(), 0, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+
+        assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
+    }
+    
+    @Test(expectedExceptions=Exception.class)
+    public void testCase11b() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(1, 0, -7);
+        EdgeInfo edge2 = new EdgeInfo(1, 0, -1);
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+
+        edges = preIterator.iterator();
+
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
+
+        fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+
+        fulkerson.compute();
+    }
+    
+        @Test
+    public void testCase11c() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(0, 1, -16);
+        EdgeInfo edge2 = new EdgeInfo(0, 1, -5);
+        EdgeInfo edge3 = new EdgeInfo(0, 1, -3);
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+        preIterator.add(edge3);
+
+        edges = preIterator.iterator();
+
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
+
+        fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+
+        assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
+
+        assertEquals(siecPrzeplywu.getFlow(), 0, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+
+        assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
+    }
+    
+    @Test(expectedExceptions=Exception.class)
+    public void testCase11d() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(1, 0, -7);
+        EdgeInfo edge2 = new EdgeInfo(1, 0, -1);
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+
+        edges = preIterator.iterator();
+
+        siecPrzeplywu = new FlowNetworkArray(2, 0, 1, edges);
+
+        fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+
+        fulkerson.compute();
+    }
 }
