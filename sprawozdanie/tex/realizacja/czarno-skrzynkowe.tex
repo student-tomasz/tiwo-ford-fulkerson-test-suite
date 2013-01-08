@@ -37,14 +37,47 @@
     wyjątku przy pętli o ujemnej przepustowości.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
-
+    \emph{Zrealizowano jako testCase5 w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
+    \emph{Zrealizowano jako testCase6a i testCase6b w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje dodatniego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia. Poprawnie podnoszony jest wyjątek dla krawędzi
+    o ujemnej przepustowości.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
+    \emph{Zrealizowano jako testCase7 w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki od źródła do ujścia.}
+
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
+    \emph{Zrealizowano jako testCase8a i testCase8b w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki o dodatniej przepustowości od źródła do ujścia. Nie jest podnoszony
+    wyjątek w związku z występowaniem krawędzi o ujemnej przepustowości.}
+
     \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
+    \emph{Zrealizowano jako testCase9a i testCase9b w klasie JustSourceAndSinkTest.
+    Algorytm nie odczytuje poprawnie przepustowości ze zwielokrotnionych krawędzi.
+    Nie jest podnoszony wyjątek w związku z występowaniem zwielokrotnionych krawędzi.}
+
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
+    \emph{Zrealizowano jako testCase10a i testCase10b w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki o dodatniej przepustowości od źródła do ujścia. Nie jest podnoszony
+    wyjątek mimo występowania krawędzi o ujemnej przepustowości i krawędzi
+    zwielokrotnionych.}
+
     \item Z wieloma krawędziami skierowanymi w różnych stronach.
+    \emph{Zrealizowano jako testCase11a, testCase11b i testCase11c w klasie JustSourceAndSinkTest.
+    Algorytm poprawnie znajduje przepływ maksymalny w sieci z dodatkową krawędzią
+    o tym samym kierunku, a przeciwnym zwrocie. W przypadku zwielokrotnienia,
+    którejkolwiek z tych krawędzi, algorytm zwraca nieprawidłową wartość
+    przepływu, nie podnosząc wyjątku w związku z występowaniem krawędzi
+    o ujemnej przepustowości.}
+
 \end{itemize}
 
 
