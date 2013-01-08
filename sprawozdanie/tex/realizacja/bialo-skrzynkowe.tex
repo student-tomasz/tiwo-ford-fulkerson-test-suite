@@ -1,6 +1,6 @@
-\subsection{Testy biało\dywiz skrzynkowe}
+\subsection{Testowanie biało\dywiz skrzynkowe}
 
-\subsubsection{\texttt algs.netvork.VertexStructure}
+\subsubsection{\texttt{algs.network.VertexStructure}}
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
@@ -10,14 +10,14 @@
     \hline
     {\bfseries Opis} & Wypisuje listę węzłów wychodzących i wchodzacych. \\
     \hline
-    {\bfseries Dane wejściowe} & {\begin{enumerate} 
-                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia 
+    {\bfseries Dane wejściowe} & {\begin{enumerate}
+                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia
                                         \item Krawędź wyjścia (1, 2, 1); krawędź wejścia (2, 1, 1)
                                         \item Trzy krawędzie  wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1); trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1) , (3, 6, 1)
                                     \end{enumerate}} \\
     \hline
-    {\bfseries Oczekiwany wynik} & {\begin{enumerate} 
-                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia 
+    {\bfseries Oczekiwany wynik} & {\begin{enumerate}
+                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia
                                         \item Krawędź wyjścia (1, 2, 1); krawędź wejścia (2, 1, 1)
                                         \item Trzy krawędzie  wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1); trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1) , (3, 6, 1)
                                     \end{enumerate}} \\
@@ -27,11 +27,11 @@
 \end{tabular}
 \end{center}
 
-\subsubsection{\texttt algs.network.FlowNetworkArray}
+\subsubsection{\texttt{algs.network.FlowNetworkArray}}
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{MinimalNetworkConstructorTest}} \\ 
+    \multicolumn{2}{@{}c@{}}{\bfseries{MinimalNetworkConstructorTest}} \\
     \midrule
     {\bfseries Id} & B.2.1 \\
     \hline
@@ -39,14 +39,14 @@
     \hline
     {\bfseries Opis} & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
     \hline
-    {\bfseries Dane wejściowe} & {\begin{enumerate} 
+    {\bfseries Dane wejściowe} & {\begin{enumerate}
                                         \item sourceIndex = 0; sinkIndex = 1; numVertices = 2
                                         \item sourceIndex = -1; sinkIndex = -2; numVertices = -2
                                         \item sourceIndex = 0; sinkIndex = 1; numVertices = 2
                                         \item sourceIndex = 0; sinkIndex = 7; numVertices = 2
                                     \end{enumerate}} \\
     \hline
-    {\bfseries Oczekiwany wynik} & {\begin{enumerate} 
+    {\bfseries Oczekiwany wynik} & {\begin{enumerate}
                                         \item sourceIndex = 0; sinkIndex = 1; numVertices = 2
                                         \item IllegalArgumentException
                                         \item IllegalArgumentException
@@ -61,17 +61,17 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries{NetworkConstructorTest}} \\ 
+    \multicolumn{2}{@{}c@{}}{\bfseries{NetworkConstructorTest}} \\
     \midrule
     {\bfseries Id} & B.2.1 \\
     \hline
-    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int numVertices, \bfseries int sourceIndex, 
+    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int numVertices, \bfseries int sourceIndex,
                                                     \bfseries int sinkIndex,
                                                     \bfseries Iterator<Edges> edges} \\
     \hline
     {\bfseries Opis} & Konstruktor struktury reprezentującej graf przpływu. \\
     \hline
-    {\bfseries Dane wejściowe} & {\begin{enumerate} 
+    {\bfseries Dane wejściowe} & {\begin{enumerate}
                                         \item numVertices = 4; sourceIndex = 0; sinkIndex = 3;  edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
                                         \item numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
                                         \item numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
@@ -81,7 +81,7 @@
                                         \item numVertices = 0; sourceIndex = 1; sinkIndex = 2; edges =  pusty Iterator
                                     \end{enumerate}} \\
     \hline
-    {\bfseries Oczekiwany wynik} & {\begin{enumerate} 
+    {\bfseries Oczekiwany wynik} & {\begin{enumerate}
                                         \item numVertices = 4; sourceIndex = 0; sinkIndex = 3;  edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
                                         \item IllegalArgumentException
                                         \item IllegalArgumentException
@@ -105,19 +105,19 @@
     \hline
     {\bfseries Funkcja} & \bfseries void \texttt{ validate()} \\
     \hline
-    {\bfseries Opis} & Metoda weryfikuje czy informacje na temat sieci są akceptowalne. 
+    {\bfseries Opis} & Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
                        Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
         \begin{enumerate}
             \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
             \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
         \end{enumerate}\\
     \hline
-    {\bfseries Dane wejściowe} & {\begin{enumerate} 
+    {\bfseries Dane wejściowe} & {\begin{enumerate}
                                         \item Krawędź (1, 2, 1), wymuszony flow = 2
                                         \item Krawędź (1, 2, 1), wymuszony flow = 1
                                     \end{enumerate}} \\
     \hline
-    {\bfseries Oczekiwany wynik} & {\begin{enumerate} 
+    {\bfseries Oczekiwany wynik} & {\begin{enumerate}
                                         \item IllegalStateException
                                         \item IllegalStateException
                                     \end{enumerate}} \\
