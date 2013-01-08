@@ -80,4 +80,27 @@ public class TwoSerialVerticesTest {
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
     
+    @Test
+    public void testCase3() throws Exception {
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(0, 1, 3);
+        EdgeInfo edge2 = new EdgeInfo(1, 2, 0);
+        EdgeInfo edge3 = new EdgeInfo(2, 3, 4);
+
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+        preIterator.add(edge3);
+
+        
+        edges = preIterator.iterator();
+        
+        siecPrzeplywu=new FlowNetworkArray(4, 0, 3, edges);
+        
+        fulkerson=new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+        
+        assertFalse(fulkerson.compute(),"Algorytm znalazł niezerowy maksymalny przepływ w sieci o zerowym przepływie maksymalnym.");
+        
+        assertEquals(siecPrzeplywu.getFlow(), 0, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+    }
+    
 }
