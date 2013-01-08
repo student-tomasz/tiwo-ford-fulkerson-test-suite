@@ -24,15 +24,26 @@ planowania testów biało\dywiz skrzynkowych. Testy czarno\dywiz skrzynkowe
 nie mają wiedzy o wybranej implementacji, powinny działać niezależnie od wyboru.
 
 \subsection{Testowana funkcjonalność --- wyłączenia}
-Do zakresu testów nie wchodzą moduły pomocnicze:
+Do zakresu testów nie wchodzą moduły oferujące funkcjonalność trywialną lub
+wyłącznie pomocniczną:
 \begin{itemize}
     \item pakiet \texttt{algs.heap},
     \item pakiet \texttt{algs.list}.
 \end{itemize}
-Oraz moduły nie wykorzystywane przez testowany system algorytmu:
+Z zakresu testowania wyłączone zostaną również klasy, które
 \begin{itemize}
-    \item moduł \texttt{algs.network.generator}.
+    \item udostępniają funkcjonalność nie wykorzystywaną przez testowany algorytm:
+        \begin{itemize}
+            \item klasa \texttt{algs.network.ShortestPathArray},
+            \item klasa \texttt{algs.network.generator.FlowNetworkGenerator};
+        \end{itemize}
+    \item oraz zawierają implementacje, które odrzucono:
+        \begin{itemize}
+            \item klasa \texttt{algs.network.FlowNetworkAdjacencyList},
+            \item klasa \texttt{algs.network.ShortestPathArray}.
+        \end{itemize}
 \end{itemize}
+
 
 \subsection{Podejście}
 Środowisko testowe zakłada korzystanie z:
@@ -44,4 +55,4 @@ Oraz moduły nie wykorzystywane przez testowany system algorytmu:
 
 \noindent
 Specyficzne metodyki, narzędzia i kryteria satysfakcji są opisane w sekcji
-\ref{sec:szczegolowy_plan}.
+\ref{sec:plan_szczegolowy}.
