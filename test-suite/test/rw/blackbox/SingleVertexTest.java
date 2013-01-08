@@ -9,11 +9,9 @@ import algs.network.EdgeInfo;
 import algs.network.FlowNetwork;
 import algs.network.FlowNetworkArray;
 import algs.network.FordFulkerson;
-import algs.network.Search;
 import java.util.ArrayList;
 import java.util.Iterator;
 import static org.testng.Assert.*;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
@@ -319,4 +317,26 @@ public class SingleVertexTest {
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
  
+    @Test
+    public void testCase10() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+        
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(1, 2, 7);
+
+        preIterator.add(edge1);
+        
+        edges = preIterator.iterator();
+        
+        siecPrzeplywu=new FlowNetworkArray(4, 0, 2, edges);
+        
+        fulkerson=new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+        
+        assertFalse(fulkerson.compute(),"Algorytm znalazł niezerowy przepływ maksymalny w sieci bez ścieżki ze źródła do ujścia.");
+        
+        assertEquals(siecPrzeplywu.getFlow(), 0, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+    } 
 }
