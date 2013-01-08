@@ -468,6 +468,44 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
     pośredniego i z węzła pośredniego do ujścia.
     \emph{testCase1a i testCase1b}
+    \emph{testCase1a}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 512
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 126
+    \end{enumerate}
+    Oczekiwany wynik: 126
+
+    \emph{testCase1b}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 104526
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 75269
+        \item krawędź:
+        początek: 1
+        koniec: 0
+        przepustowość: 1523
+    \end{enumerate}
+    Oczekiwany wynik: 75269
+
     \emph{Algorytm poprawnie
     znajduje maksymalny przepływ w sieci.}
     % Z -> P -> U
@@ -475,6 +513,21 @@ w klasie SingleVertexTest.
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
     i z węzła pośredniego do źródła.
     \emph{testCase2}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 1
+        koniec: 0
+        przepustowość: 43
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 76
+    \end{enumerate}
+    Oczekiwany wynik: 0
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z <- P <- U
@@ -482,6 +535,21 @@ w klasie SingleVertexTest.
     \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
     i z węzła pośredniego do źródła.
     \emph{testCase3}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 1
+        koniec: 0
+        przepustowość: 325
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 12
+    \end{enumerate}
+    Oczekiwany wynik: 0
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z <- P -> U
@@ -489,6 +557,21 @@ w klasie SingleVertexTest.
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
     i z ujścia do węzła pośredniego.
     \emph{testCase4}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 9
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 13
+    \end{enumerate}
+    Oczekiwany wynik: 0
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z -> P <- U
@@ -497,6 +580,26 @@ w klasie SingleVertexTest.
     pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
     dodatniej przepustowości ze źródła do ujścia.
     \emph{testCase5}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 107209
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 75269
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 8301
+    \end{enumerate}
+    Oczekiwany wynik: 83570
+
     \emph{Algorytm poprawnie znajduje maksymalny
     przepływ w sieci.}
     % Z -> P -> U
@@ -505,7 +608,48 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
     pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
     przepustowości w węźle pośrednim.
-    \emph{testCase6a i testCase6b}
+    \emph{testCase6a}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 73
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 17
+        \item krawędź:
+        początek: 1
+        koniec: 1
+        przepustowość: 345
+    \end{enumerate}
+    Oczekiwany wynik: 17
+
+    \emph{testCase6b}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 73
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 17
+        \item krawędź:
+        początek: 1
+        koniec: 1
+        przepustowość: 345
+    \end{enumerate}
+    Oczekiwany wynik: Exception
+
     \emph{Algorytm poprawnie znajduje maksymalny
     przepływ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     % Z -> P -> U
@@ -514,7 +658,85 @@ w klasie SingleVertexTest.
 
     \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
     i z węzła pośredniego do źródła, z mieszanymi zwrotami.
-    \emph{testCase7a, testCase7b i testCase7c}
+    \emph{testCase7a}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+        \item krawędź:
+        początek: 1
+        koniec: 0
+        przepustowość: 12
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 5
+
+    \emph{testCase7b}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 16
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 8
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 2
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 13
+    \end{enumerate}
+    Oczekiwany wynik: Exception
+
+    \emph{testCase7c}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 16
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 8
+        \item krawędź:
+        początek: 1
+        koniec:0
+        przepustowość: 5
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 2
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 13
+    \end{enumerate}
+    Oczekiwany wynik: 16
+
     \emph{Algorytm poprawnie
     znajduje maksymalny przepływ w sieci o pojedynczych krawędziach. Konstruktor
     ani funkcja validate() z klasy FlowNetworkArray nie podnoszą wyjątków.
@@ -525,7 +747,20 @@ w klasie SingleVertexTest.
 
     \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
     pośredniego, bez krawędzi do ujścia.
+
     \emph{testCase8}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z -> P    U
@@ -533,6 +768,22 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
     pośredniego, oraz krawędzią ze źródłą do ujścia.
     \emph{testCase9}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 13
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 5
+    \end{enumerate}
+    Oczekiwany wynik: 5
+
     \emph{Algorytm poprawnie znajduje maksymalny
     przepływ w sieci.}
     % Z -> P    U
@@ -541,6 +792,18 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
     ujścia, bez połączenia ze źródłem.
     \emph{testCase10}
+    Liczba węzłów w sieci: 3
+    Indeks źródła: 0
+    Indeks ujścia: 2
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+    \end{enumerate}
+    Oczekiwany wynik: 0
+
     \emph{Algorytm poprawnie nie znajduje niezerowego
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
     % Z    P -> U
