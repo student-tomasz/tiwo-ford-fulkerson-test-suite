@@ -18,50 +18,35 @@ przez testy zawarte wraz z kodem źródłowym.
     \toprule
     FordFulkerson & 100\% \\
     FlowNetwork & 100\% \\
-    FlowNetworkAdjacencyList & 82\% \\
-    FlowNetworkArray & ??\% \\
+    FlowNetworkAdjacencyList & 75\% \\
+    FlowNetworkArray & 94\% \\
     Search & 100\% \\
-    DFS\_SearchList & ??\% \\
-    DFS\_SearchArray & ??\% \\
+    DFS\_SearchList & 100\% \\
+    DFS\_SearchArray & 100\% \\
     EdgeInfo & 100\% \\
     VertexInfo & 100\% \\
     VertexStructure & 93\% \\
     \bottomrule
 \end{tabular}
 \end{center}
-
-\begin{center}
-\begin{tabular}{@{} >{\ttfamily}p{0.33\textwidth} @{\hspace{0.02\textwidth}} c @{}}
-    \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries Pakiet \texttt{algs.list}} \\
-    \midrule
-    {\normalfont\bfseries Klasa} & {\bfseries Aktualne pokrycie} \\
-    \toprule
-    DoubleLinkedList & 19\% \\
-    DoubleLinkedListIterator & 59\% \\
-    DoubleNode & 27\% \\
-    List & 33\% \\
-    ListIterator & 88\% \\
-    Node & 100\% \\
-    \bottomrule
-\end{tabular}
-\end{center}
+Załacznik: \href{./raport/index.html}{Raport obecnego stanu pokrycia.}
 
 \subsubsection{Funkcje wyłączone z testowania}
-Lista nieużywanych metod dostarczanych przez testowane klasy:
+Lista metod dostarczanych przez testowane klasy, które nie wchodzą w zakres
+testowania biało\dywiz skrzynkowego:
 \begin{itemize}[nosep]
     \item \verb|FlowNetworkAdjacencyList.getCost()|
 \end{itemize}
 
 \subsubsection{Podejście}
 Testowanie zostanie przeprowadzone techniką testowania strukturalnego. Głównym
-kryterium zaliczenia testów będzie wartość pokrycia linii kodu, którego wartość
+kryterium zaliczenia testów będzie współczynnik pokrycia linii kodu, którego wartość
 musi przekraczać 90\%.\\
 
 \noindent
 Dodatkowo do wytycznych środowiska testowego ustalonych globalnie użyte zostaną:
 \begin{itemize}[nosep]
-    \item EMMA Code Coverage plugin 2.3
+    \item Cobertura plugin 1.9.4.1
 \end{itemize}
 
 \subsubsection{Zadania testowania}
