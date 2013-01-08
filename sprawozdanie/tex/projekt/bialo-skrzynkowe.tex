@@ -4,7 +4,7 @@
 \begin{center}
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    \multicolumn{2}{@{}c@{}}{\bfseries String \texttt{toString()}} \\
+    \multicolumn{2}{@{}c@{}}{\bfseries\texttt{ToStringTest} \\
     \midrule
     {\bfseries Id} & B.1.1 \\
     \hline
@@ -22,3 +22,72 @@
     \bottomrule
 \end{tabular}
 \end{center}
+
+\subsubsection{algs.network.FlowNetworkArray}
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries\texttt{MinimalConstructorTest} \\ 
+    \midrule
+    {\bfseries Id} & B.2.1 \\
+    \hline
+    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex, \bfseries int sinkIndex, \bfseries int numVertices)} \\
+    \hline
+    {\bfseries Opis} & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
+    \hline
+    {\bfseries Przypadki testowe} & {\begin{enumerate} 
+                                        \item Wartości zerowe
+                                        \item Ujemne wartości 
+                                        \item sinkIndex < sourceIndex
+                                        \item sinkIndex - sourceIndex != numVertices
+                                    \end{enumerate}} \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries\texttt{IllegalStateExceptionTest} \\
+    \midrule
+    {\bfseries Id} & B.2.2 \\
+    \hline
+    {\bfseries Funkcja} & \bfseries void \texttt{ validate()} \\
+    \hline
+    {\bfseries Opis} & Metoda weryfikuje czy informacje na temat sieci są akceptowalne. Wyjątek jest zwracany w dwóch przypadkach.
+        \begin{enumerate}
+            \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
+            \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
+        \end{enumerate}\\
+    \hline
+    {\bfseries Przypadki testowe} & Tak jak wyżej. \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{algs.network.ShortestPathArray}
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries\texttt{DecreaseKayTest} \\ %Nie wiem jak wykonać ten test, aby uzyskać zamierzony cel.
+    \midrule
+    {\bfseries Id} & B.3.1 \\
+    \hline
+    {\bfseries Funkcja} & \bfseries boolean \texttt{ findAugmentingPath (VertexInfo[] vertices)} \\
+    \hline
+    {\bfseries Opis} & Sprawdza czy została znaleziona ścieżka powiększająca\\
+    \hline
+    {\bfseries Przypadki testowe} & {\begin{enumerate} 
+                                        \item Jeszcze nie wiem co tu dać
+                                    \end{enumerate}} \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
