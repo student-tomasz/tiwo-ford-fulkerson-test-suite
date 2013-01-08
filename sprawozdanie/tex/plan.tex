@@ -1,0 +1,47 @@
+\subsection{Wprowadzenie}
+Testowaniu podlega system realizujący algorytm \textsc{Forda-Fulkersona} służący
+do wyznaczania maksymalnego przepływu w sieciach. Testowane elementy pochodzą z
+kodu załączonego wraz z książką \emph{Algorytmy. Almanach}. Celem testowania
+jest zweryfikowanie poprawności już zaimplementowanej funkcjonalności.
+
+\subsection{Testowane elementy}
+Testowaniu podlega projekt \texttt{ford-fulkerson-test-suite} zawierający
+implementację algorytmu \textsc{Forda-Fulkersona}. Testowana wersja projektu
+znajduje się w repozytorium, w rewizji \texttt{e5ebef7} o nazwie \texttt
+{testing-final}.
+
+\subsection{Testowana funkcjonalność}
+Uwaga procesu testowania będzie skupiona na konkretnych implementacjach systemu:
+\begin{itemize}
+    \item dla klasy \texttt{FlowNetwork} --- implementacja
+        \texttt{FlowNetworkArray},
+    \item dla klasy \texttt{Search} --- implementacja \texttt{DFS\_SearchArray}.
+\end{itemize}
+W chwili obecnej dostępne są też alternatywne implementacje operujące na
+listach, odpowiednio \texttt{FlowNetworkAdjacencyList} oraz
+\texttt{DFS\_SearchList}. Wyszczególnienie implementacji jest istotne dla
+planowania testów biało\dywiz skrzynkowych. Testy czarno\dywiz skrzynkowe
+nie mają wiedzy o wybranej implementacji, powinny działać niezależnie od wyboru.
+
+\subsection{Testowana funkcjonalność --- wyłączenia}
+Do zakresu testów nie wchodzą moduły pomocnicze:
+\begin{itemize}
+    \item pakiet \texttt{algs.heap},
+    \item pakiet \texttt{algs.list}.
+\end{itemize}
+Oraz moduły nie wykorzystywane przez testowany system algorytmu:
+\begin{itemize}
+    \item moduł \texttt{algs.network.generator}.
+\end{itemize}
+
+\subsection{Podejście}
+Środowisko testowe zakłada korzystanie z:
+\begin{itemize}
+    \item NetBeans IDE 7.2.1
+    \item Oracle JDK 1.7\_u9
+    \item TestNG 6.8
+\end{itemize}
+
+\noindent
+Specyficzne metodyki, narzędzia i kryteria satysfakcji są opisane w sekcji
+\ref{sec:szczegolowy_plan}.
