@@ -50,7 +50,7 @@ public class SingleVertexTest {
     }
     
         @Test
-        public void testCase2() throws Exception {
+        public void testCase1b() throws Exception {
         preIterator = new ArrayList(); // krawedzie i ich przepustowosc
         EdgeInfo edge1 = new EdgeInfo(0, 1, 104526);
         EdgeInfo edge2 = new EdgeInfo(1, 2, 75269);
@@ -71,5 +71,6 @@ public class SingleVertexTest {
         
         assertFalse(fulkerson.compute(),"Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
-    
+        
+
 }
