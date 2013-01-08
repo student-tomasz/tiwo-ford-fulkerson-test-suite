@@ -184,6 +184,7 @@ public class TwoSerialVerticesTest {
         preIterator.add(edge1);
         preIterator.add(edge2);
         preIterator.add(edge3);
+        preIterator.add(edge4);
 
         edges = preIterator.iterator();
 
@@ -193,7 +194,7 @@ public class TwoSerialVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 7, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
@@ -209,6 +210,7 @@ public class TwoSerialVerticesTest {
         preIterator.add(edge1);
         preIterator.add(edge2);
         preIterator.add(edge3);
+        preIterator.add(edge4);
 
         edges = preIterator.iterator();
 
@@ -218,7 +220,7 @@ public class TwoSerialVerticesTest {
 
         assertTrue(fulkerson.compute(), "Algorytm nie wyznaczył maksymalnego przepływu.");
 
-        assertEquals(siecPrzeplywu.getFlow(), 4, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
+        assertEquals(siecPrzeplywu.getFlow(), 9, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
     }
