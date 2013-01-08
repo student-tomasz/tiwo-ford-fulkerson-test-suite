@@ -24,7 +24,7 @@ public class SingleVertexTest {
     }
 
     @Test
-    public void testCase1() throws Exception {
+    public void testCase1a() throws Exception {
         ArrayList preIterator;
         Iterator<EdgeInfo> edges;
         FlowNetwork siecPrzeplywu;
@@ -178,7 +178,7 @@ public class SingleVertexTest {
     }
 
     @Test
-    public void testCase6() throws Exception {
+    public void testCase6a() throws Exception {
         ArrayList preIterator;
         Iterator<EdgeInfo> edges;
         FlowNetwork siecPrzeplywu;
@@ -203,6 +203,32 @@ public class SingleVertexTest {
         assertEquals(siecPrzeplywu.getFlow(), 17, "Wyznaczony przepływ jest inny niż określa wyrocznia.");
 
         assertFalse(fulkerson.compute(), "Algorytm znalazł nowy przepływ maksymalny w uprzednio sprawdzonej sieci.");
+    }
+    
+    @Test(expectedExceptions=Exception.class)//Czy przez pętle podnoszony jest jakikolwiek wyjątek
+    public void testCase6b() throws Exception {
+        ArrayList preIterator;
+        Iterator<EdgeInfo> edges;
+        FlowNetwork siecPrzeplywu;
+        FordFulkerson fulkerson;
+
+        preIterator = new ArrayList(); // krawedzie i ich przepustowosc
+        EdgeInfo edge1 = new EdgeInfo(0, 1, 73);
+        EdgeInfo edge2 = new EdgeInfo(1, 2, 17);
+        EdgeInfo edge3 = new EdgeInfo(1, 1, 345);
+        preIterator.add(edge1);
+        preIterator.add(edge2);
+        preIterator.add(edge3);
+
+        edges = preIterator.iterator();
+
+        siecPrzeplywu = new FlowNetworkArray(4, 0, 2, edges);
+        
+        siecPrzeplywu.validate();
+
+        fulkerson = new FordFulkerson(siecPrzeplywu, new DFS_SearchArray(siecPrzeplywu));
+
+        fulkerson.compute();
     }
 
     @Test
