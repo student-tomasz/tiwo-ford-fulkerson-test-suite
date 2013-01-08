@@ -22,8 +22,6 @@ import org.testng.annotations.Test;
  */
 public class HugeNetworkTest {
 
-    FordFulkerson fulkerson;
-    int flowBefore, flowAfter;
 
     public HugeNetworkTest() {
     }
@@ -59,6 +57,7 @@ public class HugeNetworkTest {
 
     @Test(dataProvider = "arrayData")
     public void ComputeTest(int numVertices, int minFanOut, int maxFanOut, int minCapacity, int maxCapacity) {
+        FordFulkerson fulkerson;
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
         assertEquals(fulkerson.compute(), true, "Nie znaleziono ścieżki powiększającej.");
@@ -67,6 +66,8 @@ public class HugeNetworkTest {
 
     @Test(dataProvider = "arrayData")
     public void ComputedFlowTest(int numVertices, int minFanOut, int maxFanOut, int minCapacity, int maxCapacity) {
+        FordFulkerson fulkerson;
+        int flowBefore, flowAfter;
         FlowNetwork<EdgeInfo[][]> siecPrzeplywu = FlowNetworkGenerator.generateArray(numVertices, minFanOut, maxFanOut, minCapacity, maxCapacity);
         fulkerson = new FordFulkerson((siecPrzeplywu), new DFS_SearchArray(siecPrzeplywu));
         flowBefore = siecPrzeplywu.getFlow();
