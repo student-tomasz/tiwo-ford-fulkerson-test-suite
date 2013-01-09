@@ -1,0 +1,149 @@
+\subsection{Testy czarno\dywiz skrzynkowe}
+
+Testy czarnoskrzynkowe można uruchomić z poziomu testSuite'a BlackBoxText.xml
+w pakiecie rw.blackbox.
+
+\subsubsection{Sieć bez węzłów}
+Wszystkie testy na sieci bez węzłów zrealizowano w klasie EmptyNetworkTest.
+
+\texttt{testCase2}
+Oczekiwany wynik: Exception
+Uzyskany wynik: Exception
+\textsc{Test zaliczony}
+
+\emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+z samym źródłem.}
+
+
+\subsubsection{Sieć bez węzłów pośrednich}
+Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
+\begin{itemize}[nosep]
+
+    \texttt{testCase3b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm
+    nie informuje o istnieniu pętli w sieci.}
+
+    \texttt{testCase8b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
+    bez ścieżki o dodatniej przepustowości od źródła do ujścia. Nie jest podnoszony 
+    wyjątek w związku z występowaniem krawędzi o ujemnej przepustowości.}
+
+    \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
+    \texttt{testCase9a}
+    Oczekiwany wynik: 18
+    Uzyskany wynik: 4
+    \textsc{Test nie zaliczony}
+
+    \texttt{testCase9b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \emph{Algorytm nie odczytuje poprawnie przepustowości ze zwielokrotnionych
+    krawędzi. Nie jest podnoszony wyjątek w związku z występowaniem
+    zwielokrotnionych krawędzi.}
+
+    \texttt{testCase10b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+
+    \emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego
+    w sieci bez ścieżki o dodatniej przepustowości od źródła do ujścia.
+    Nie jest podnoszony wyjątek mimo występowania krawędzi o ujemnej przepustowości
+    i krawędzi zwielokrotnionych.}
+
+    \texttt{testCase11b}
+    Oczekiwany wynik: 13
+    Uzyskany wynik: 7
+    \textsc{Test nie zaliczony}
+
+    \texttt{testCase11c}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \emph{Algorytm poprawnie znajduje przepływ maksymalny w sieci z dodatkową
+    krawędzią o tym samym kierunku, a przeciwnym zwrocie. W przypadku
+    zwielokrotnienia, którejkolwiek z tych krawędzi, algorytm zwraca nieprawidłową
+    wartość przepływu, nie podnosząc wyjątku w związku z występowaniem krawędzi
+    o ujemnej przepustowości.}
+
+\end{itemize}
+
+
+\subsubsection{Sieć z 1 węzłem pośrednim}
+Testy na sieciach z jednym węzłem pośrednim zostały zgrupowane
+w klasie SingleVertexTest.
+\begin{itemize}[nosep]
+}
+
+
+    \texttt{testCase6b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+
+    \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm
+    nie informuje o istnieniu pętli w sieci.}
+    % Z -> P -> U
+    %     / ^
+    %     \_|
+
+    \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
+    i z węzła pośredniego do źródła, z mieszanymi zwrotami.
+
+    \texttt{testCase7b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \texttt{testCase7c}
+    Oczekiwany wynik: 16
+    Uzyskany wynik: 13
+    \textsc{Test nie zaliczony}
+
+\end{itemize}
+
+\subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
+Testy wykorzystujące sieci z 2 węzłami pośrednimi znajdują się z kolei w klasie
+TwoSerialVerticesTest.
+\begin{itemize}[nosep]
+    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
+    krawędziami pomiędzy węzłami pośrednimi.
+    \texttt{testCase2a}
+    Oczekiwany wynik: 15
+    Uzyskany wynik: 3
+    \textsc{Test nie zaliczony}
+
+    \texttt{testCase2b}
+    Oczekiwany wynik: Exception
+    Uzyskany wynik: brak wyjątku
+    \textsc{Test nie zaliczony}
+
+    \emph{Zwraca niepoprawną wartość. Konstruktor ani funkcja validate() z klasy
+    FlowNetworkArray nie podnoszą wyjątków.}
+
+\end{itemize}
+
+
+\subsubsection{Sieć z nieistniejącymi węzłami}
+
+
+\subsubsection{Sieć z ujemną liczbą węzłów}
+Częściowo zrealizowano w klasie NegativeSizeNetworkTest Nie jest możliwe
+stworzenie sieci z ujemną ilością węzłów.
+
+\subsubsection{Sieć z $1e9$ węzłów}
+Ograniczono wielkość testowanej sieci do $1e3$ węzłów, zrealizowano w klasie
+HugeFlowNetworkTest Ręczne stworzenie sieci przepływu tej wielkości jest
+nierealne. Metoda generateEdges z klasy FlowNetworkGenerator ma złożoność
+rzędu O(n^3), co znacząco ogranicza możliwości w tym zakresie.
+%%n^3 poprawić notację
+
