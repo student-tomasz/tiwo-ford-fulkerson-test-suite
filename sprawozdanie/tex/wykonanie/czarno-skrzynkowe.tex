@@ -1,1 +1,1325 @@
 \subsection{Testowanie czarno\dywiz skrzynkowe}
+
+Testy czarno\dywiz skrzynkowe są załączone w zestawie
+\texttt{BlackBoxTests.xml} z pakietu \texttt{rw.blackbox}.
+
+\subsubsection{Sieć bez węzłów}
+Wszystkie testy na sieci bez węzłów zrealizowano w klasie
+\texttt{EmptyNetworkTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.EmptyNetworkTest.testCase1()} \\
+    \midrule
+    ID & C.1.1.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.EmptyNetworkTest.testCase1()} \\
+    \midrule
+    ID & C.1.1.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Sieć z 1 węzłem}
+Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase1()} \\
+    \midrule
+    ID & C.1.2.1 \\
+    \midrule
+    Opis & Samego źródła. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase2()} \\
+    \midrule
+    ID & C.1.2.2 \\
+    \midrule
+    Opis & Węzła pośredniego. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase3()} \\
+    \midrule
+    ID & C.1.2.3 \\
+    \midrule
+    Opis & Ujścia. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase4()} \\
+    \midrule
+    ID & C.1.2.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase5()} \\
+    \midrule
+    ID & C.1.2.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Sieć bez węzłów pośrednich}
+Testy na sieciach bez węzłów pośrednich zrealizowano w klasie \texttt{JustSourceAndSinkTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase1()} \\
+    \midrule
+    ID & C.1.3.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase2()} \\
+    \midrule
+    ID & C.1.3.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase3a()} \\
+    \midrule
+    ID & C.1.3.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{57956756}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{57956756}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase3b()} \\
+    \midrule
+    ID & C.1.3.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase4a()} \\
+    \midrule
+    ID & C.1.3.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{346723}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{346723}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase4b()} \\
+    \midrule
+    ID & C.1.3.6 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase5()} \\
+    \midrule
+    ID & C.1.3.7 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase6a()} \\
+    \midrule
+    ID & C.1.3.8 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase6b()} \\
+    \midrule
+    ID & C.1.3.9 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase7()} \\
+    \midrule
+    ID & C.1.3.10 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8a()} \\
+    \midrule
+    ID & C.1.3.11 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8b()} \\
+    \midrule
+    ID & C.1.3.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9a()} \\
+    \midrule
+    ID & C.1.3.13 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{18}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9b()} \\
+    \midrule
+    ID & C.1.3.14 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10a()} \\
+    \midrule
+    ID & C.1.3.15 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10b()} \\
+    \midrule
+    ID & C.1.3.16 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11a()} \\
+    \midrule
+    ID & C.1.3.17 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11b()} \\
+    \midrule
+    ID & C.1.3.18 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{13}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11c()} \\
+    \midrule
+    ID & C.1.3.19 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Sieć z 1 węzłem pośrednim}
+Testy na sieciach z jednym węzłem pośrednim zostały zgrupowane
+w klasie SingleVertexTest.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1a()} \\
+    \midrule
+    ID & C.1.4.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{126}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{126}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1b()} \\
+    \midrule
+    ID & C.1.4.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase2()} \\
+    \midrule
+    ID & C.1.4.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase3()} \\
+    \midrule
+    ID & C.1.4.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase4()} \\
+    \midrule
+    ID & C.1.4.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase5()} \\
+    \midrule
+    ID & C.1.4.6 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{83570}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{83570}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6a()} \\
+    \midrule
+    ID & C.1.4.7 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{17}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{17}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6b()} \\
+    \midrule
+    ID & C.1.4.8 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7a()} \\
+    \midrule
+    ID & C.1.4.9 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7b()} \\
+    \midrule
+    ID & C.1.4.10 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7c()} \\
+    \midrule
+    ID & C.1.4.11 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{16}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{13}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase8()} \\
+    \midrule
+    ID & C.1.4.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase9()} \\
+    \midrule
+    ID & C.1.4.13 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase10()} \\
+    \midrule
+    ID & C.1.4.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
+Testy operujące na sieciach z 2 węzłami pośrednimi połączonymi równolegle zostały
+zebrane w klasie \texttt{TwoParallelVerticesTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase1()} \\
+    \midrule
+    ID & C.1.5.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase3()} \\
+    \midrule
+    ID & C.1.5.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase4()} \\
+    \midrule
+    ID & C.1.5.6. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase5()} \\
+    \midrule
+    ID & C.1.5.7. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase6()} \\
+    \midrule
+    ID & C.1.5.8  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase7()} \\
+    \midrule
+    ID & C.1.5.9  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase8()} \\
+    \midrule
+    ID & C.1.5.9  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase9()} \\
+    \midrule
+    ID & C.1.5.10  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
+Testy wykorzystujące sieci z 2 węzłami pośrednimi znajdują się z kolei w klasie
+\texttt{TwoSerialVerticesTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase1()} \\
+    \midrule
+    ID & C.1.6.1  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.6.2  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{15}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase3()} \\
+    \midrule
+    ID & C.1.6.3  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase4()} \\
+    \midrule
+    ID & C.1.6.4  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase5()} \\
+    \midrule
+    ID & C.1.6.5  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase6()} \\
+    \midrule
+    ID & C.1.6.6  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase7()} \\
+    \midrule
+    ID & C.1.6.7  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Sieć z nieistniejącymi węzłami}
+
+
+\subsubsection{Sieć z ujemną liczbą węzłów}
+Częściowo zrealizowano w klasie NegativeSizeNetworkTest Nie jest możliwe
+stworzenie sieci z ujemną ilością węzłów.
+
+\subsubsection{Sieć z $1e9$ węzłów}
+Ograniczono wielkość testowanej sieci do $1e3$ węzłów, zrealizowano w klasie
+HugeFlowNetworkTest Ręczne stworzenie sieci przepływu tej wielkości jest
+nierealne. Metoda generateEdges z klasy FlowNetworkGenerator ma złożoność
+rzędu $O(n^3)$, co znacząco ogranicza możliwości w tym zakresie.
