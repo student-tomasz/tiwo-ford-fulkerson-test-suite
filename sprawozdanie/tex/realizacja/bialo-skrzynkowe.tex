@@ -13,7 +13,7 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     \midrule
     Dane wejściowe & Struktura bez zdefiniowanych krawędzi wejścia/wyjścia. \\
     \midrule
-    Oczekiwany wynik & "forward:List[0], backward:List[0]" \\
+    Oczekiwany wynik & \texttt{"forward:List[0],\newline backward:List[0]"} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -30,16 +30,14 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-        \item Krawędź wyjścia (1, 2, 1).
-        \item Krawędź wejścia (2, 1, 1).
+        \item Krawędź wyjścia \texttt{(1, 2, 1)}.
+        \item Krawędź wejścia \texttt{(2, 1, 1)}.
     \end{enumerate}
     \end{minipage} \\
     \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
-    \begin{enumerate}
-        \item "forward:List[1]: [0] -> [1] 0/1 @ 0, backward:List[1]: [0] -> [1] 0/1 @ 0"
-    \end{enumerate}
+        \texttt{"forward:List[1]: [0] -> [1] 0/1 @ 0,\newline backward:List[1]: [0] -> [1] 0/1 @ 0"}
     \end{minipage} \\
     \midrule
     Wykonawca & MO \\
@@ -57,16 +55,14 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-        \item Trzy krawędzie wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1).
-        \item Trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1), (3, 6, 1).
+        \item Trzy krawędzie wejścia \texttt{\{(0, 3, 1), (1, 3, 1), (2, 3, 1)\}}.
+        \item Trzy krawędzie wyjścia \texttt{\{(3, 4, 1), (3, 5, 1), (3, 6, 1)\}}.
     \end{enumerate}
     \end{minipage} \\
     \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
-    \begin{enumerate}
-        \item "forward:List[3]: [0] -> [1] 0/1 @ 0, backward:List[3]: [0] -> [1] 0/1 @ 0"
-    \end{enumerate}
+        \texttt{"forward:List[3]: [0] -> [1] 0/1 @ 0, backward:List[3]: [0] -> [1] 0/1 @ 0"}
     \end{minipage} \\
     \midrule
     Wykonawca & MO \\
@@ -87,21 +83,21 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.1 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item sourceIndex = 0
-       \item sinkIndex = 1
-       \item numVertices = 2    
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 1}
+       \item \texttt{numVertices = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item sourceIndex = 0
-       \item sinkIndex = 1
-       \item numVertices = 2 
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 1}
+       \item \texttt{numVertices = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -117,12 +113,12 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.2 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item sourceIndex = -1
-       \item sinkIndex = -2
-       \item numVertices = -2
+       \item \texttt{sourceIndex = -1}
+       \item \texttt{sinkIndex = -2}
+       \item \texttt{numVertices = -2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -145,19 +141,19 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.3 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item sourceIndex = 1
-       \item sinkIndex = 0
-       \item numVertices = 2
+       \item \texttt{sourceIndex = 1}
+       \item \texttt{sinkIndex = 0}
+       \item \texttt{numVertices = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException} 
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -173,19 +169,19 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.4 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item sourceIndex = 0
-       \item sinkIndex = 7
-       \item numVertices = 2
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 7}
+       \item \texttt{numVertices = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException}  
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -207,23 +203,23 @@ konstruktora
     \midrule
     ID & B.1.3.1 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 0
-       \item sinkIndex = 3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\} 
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 0
-       \item sinkIndex = 3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -239,20 +235,20 @@ konstruktora
     \midrule
     ID & B.1.3.2 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = -4
-       \item sourceIndex = 0
-       \item sinkIndex = 3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+       \item \texttt{numVertices = -4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException}  
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -268,20 +264,20 @@ konstruktora
     \midrule
     ID & B.1.3.3 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = -1
-       \item sinkIndex = 3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = -1}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException}  
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -297,17 +293,17 @@ konstruktora
     \midrule
     ID & B.1.3.4 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 0
-       \item sinkIndex = -3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = -3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
        \item \texttt{IllegalArgumentException}
@@ -329,17 +325,17 @@ konstruktora
     Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 2
-       \item sourceIndex = 0
-       \item sinkIndex = 3
-       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}  
+       \item \texttt{numVertices = 2}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException} 
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -358,17 +354,17 @@ konstruktora
     Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 3
-       \item sinkIndex = 0
-       \item edges = \{(0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)\} 
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 3}
+       \item \texttt{sinkIndex = 0}
+       \item \texttt{edges = \{(0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)\}}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalArgumentException} 
+       \item \texttt{IllegalArgumentException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -387,20 +383,20 @@ konstruktora
     Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 
-       \item sinkIndex = 3
-       \item edges = pusty Iterator  
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = pusty Iterator}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item numVertices = 4
-       \item sourceIndex = 0
-       \item sinkIndex = 3
-       \item edges = pusta tablica EdgeInfo[4][4]   
+       \item \texttt{numVertices = 4}
+       \item \texttt{sourceIndex = 0}
+       \item \texttt{sinkIndex = 3}
+       \item \texttt{edges = pusta tablica EdgeInfo[4][4]}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -423,18 +419,18 @@ poprawne wywoływanie wyjątków przez metodę
     ID & B.1.4.1 \\
     \midrule
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item Krawędź (1, 2, 1)
-       \item przepływ = 2   
+       \item \texttt{krawędź (1, 2, 1)}
+       \item \texttt{przepływ = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item \texttt{IllegalStateException} 
+       \item \texttt{IllegalStateException}
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -450,15 +446,15 @@ poprawne wywoływanie wyjątków przez metodę
     \midrule
     ID & B.1.4.2 \\
     \midrule
-    Dane wejściowe & 
+    Dane wejściowe &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-       \item Krawędź (1, 2, 1)
-       \item przepływ = 2 
+       \item \texttt{krawędź (1, 2, 1)}
+       \item \texttt{przepływ = 2}
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Oczekiwany wynik & 
+    Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
        \item \texttt{IllegalStateException}
