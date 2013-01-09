@@ -1,1 +1,41 @@
 \subsection{Testowanie z wykorzystaniem obiektów pozornych}
+
+\subsubsection{Klasa testująca \texttt{algs.network.ComputeTest}}
+Klasa \texttt{algs.network.ComputeTest} zawiera testy dla metody
+\texttt{algs.network.FordFulkerson.compute()}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.ToStringTest.testFindAugmentingPath()} \\
+    \midrule
+    ID & P.1.1.1 \\
+    \midrule
+    Dane wejściowe & numVertices = 6; srcIndex = 0; sinkIndex = 5; \\
+    \midrule
+    Oczekiwany wynik & Wywołanie 4 razy metody findAugmentingPath. \\
+    \midrule
+    Wykonawca & MM \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Klasa testująca \texttt{algs.network.PopulateTest}}
+Klasa \texttt{algs.network.PopulateTest} zawiera testy dla metody \\
+\texttt{algs.network.FlowNetworkArray.populate(Iterator<EdgeInfo>edges)}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.PopulateTest.testNumberOfCalls\_hasNext()} \\
+    \midrule
+    ID & P.1.2.1 \\
+    \midrule
+    Dane wejściowe & iterator po tablicy ośmiu wierzchołków. \\
+    \midrule
+    Oczekiwany wynik & 8 wywołań metody next \\
+    \midrule
+    Wykonawca & MM \\
+    \bottomrule
+\end{tabular}
+\end{center}
