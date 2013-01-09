@@ -13,7 +13,7 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     \midrule
     Dane wejściowe & Struktura bez zdefiniowanych krawędzi wejścia/wyjścia. \\
     \midrule
-    Oczekiwany wynik & Struktura bez zdefiniowanych krawędzi wejścia/wyjścia. \\
+    Oczekiwany wynik & "forward:List[0], backward:List[0]" \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -38,8 +38,7 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-        \item Krawędź wyjścia (1, 2, 1).
-        \item Krawędź wejścia (2, 1, 1).
+        \item "forward:List[1]: [0] -> [1] 0/1 @ 0, backward:List[1]: [0] -> [1] 0/1 @ 0"
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -66,8 +65,7 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
     Oczekiwany wynik &
     \begin{minipage}[h]{0.78\textwidth}
     \begin{enumerate}
-        \item Trzy krawędzie wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1).
-        \item Trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1), (3, 6, 1).
+        \item "forward:List[3]: [0] -> [1] 0/1 @ 0, backward:List[3]: [0] -> [1] 0/1 @ 0"
     \end{enumerate}
     \end{minipage} \\
     \midrule
@@ -277,7 +275,7 @@ konstruktora
     \midrule
     Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 0; sourceIndex = 1; sinkIndex = 2; edges = pusty Iterator} \\
+    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = pusty Iterator} \\
     \midrule
     Oczekiwany wynik & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = pusta tablica EdgeInfo[4][4]} \\
     \midrule
@@ -309,7 +307,7 @@ poprawne wywoływanie wyjątków przez metodę
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2 \\
+    Dane wejściowe & Krawędź (1, 2, 1), przepływ = 2 \\
     \midrule
     Oczekiwany wynik & \texttt{IllegalStateException} \\
     \midrule
@@ -335,9 +333,9 @@ poprawne wywoływanie wyjątków przez metodę
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2 \\
+    Dane wejściowe & Krawędź (1, 2, 1), przepływ = 2 \\
     \midrule
-    Oczekiwany wynik & Krawędź (1, 2, 1), wymuszony flow = 1 \\
+    Oczekiwany wynik & Krawędź (1, 2, 1), przepływ = 1 \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
