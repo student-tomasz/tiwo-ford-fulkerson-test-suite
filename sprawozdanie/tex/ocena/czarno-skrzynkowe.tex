@@ -3,18 +3,6 @@
 Testy czarnoskrzynkowe można uruchomić z poziomu testSuite'a BlackBoxText.xml
 w pakiecie rw.blackbox.
 
-\subsubsection{Sieć bez węzłów}
-Wszystkie testy na sieci bez węzłów zrealizowano w klasie EmptyNetworkTest.
-
-\texttt{testCase2}
-Oczekiwany wynik: Exception
-Uzyskany wynik: Exception
-\textsc{Test zaliczony}
-
-\emph{Algorytm poprawnie nie znajduje niezerowego przepływu maksymalnego w sieci
-z samym źródłem.}
-
-
 \subsubsection{Sieć bez węzłów pośrednich}
 Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
 \begin{itemize}[nosep]
@@ -24,8 +12,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     Uzyskany wynik: brak wyjątku
     \textsc{Test nie zaliczony}
 
-    \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci. Algorytm
-    nie informuje o istnieniu pętli w sieci.}
+    \emph{Program nie podnosi wyjątku w związku z istnieniem pętli w grafie);
 
     \texttt{testCase8b}
     Oczekiwany wynik: Exception
