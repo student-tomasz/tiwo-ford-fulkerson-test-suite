@@ -85,7 +85,7 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
     \midrule
     ID & C.1.2.2 \\
     \midrule
-    Opis & Węzła wspólnego. \\
+    Opis & Węzła pośredniego. \\
     \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.6\textwidth}
@@ -102,26 +102,77 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
 \end{tabular}
 \end{center}
 
-\begin{itemize}[nosep]
-    \item Ujścia.
-    \texttt{testCase3}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: Exception
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase3()} \\
+    \midrule
+    ID & C.1.2.3 \\
+    \midrule
+    Opis & Ujścia. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Wspólnego źródła i ujścia.
-    \texttt{testCase4}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase4()} \\
+    \midrule
+    ID & C.1.2.4 \\
+    \midrule
+    Opis & Ujścia. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Wspólnego źródła i ujścia z pętlą.
-    \texttt{testCase5}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
-\end{itemize}
-
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustOneElementTest.testCase5()} \\
+    \midrule
+    ID & C.1.2.5 \\
+    \midrule
+    Opis & Ujścia. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć bez węzłów pośrednich}
 Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
