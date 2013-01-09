@@ -1,23 +1,68 @@
 \subsection{Testowanie czarno\dywiz skrzynkowe}
 
-
-
 \subsubsection{Sieć bez węzłów}
-Wszystkie testy na sieci bez węzłów zrealizowano w klasie EmptyNetworkTest.
+Wszystkie testy na sieci bez węzłów zrealizowano w klasie
+\texttt{rw.blackbox.EmptyNetworkTest}.
 
-\texttt{testCase1}
-Liczba węzłów w sieci:0
-Indeks źródła: 2
-Indeks ujścia: 5
-Krawędzie: NULL
-Oczekiwany wynik: 0
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.EmptyNetworkTest.testCase1()} \\
+    \midrule
+    ID & C.1.1.1 \\ % Popraw ID do swojej sytuacji.
+    \midrule
+    Opis &
+    \begin{minipage}[h]{0.6\textwidth}
+    Możesz usunąć od \verb|\midrule| do włącznie drugiego \verb|\midrule| jak
+    nie potrzebujesz opisów.
+    \end{minipage} \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{0},
+        \item indeks źródła: \texttt{2},
+        \item indeks ujścia: \texttt{5},
+        \item krawędzie: \texttt{NULL};
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-\texttt{testCase2}
-Liczba węzłów w sieci: 0
-Indeks źródła: 0
-Indeks ujścia: 0
-Krawędzie: NULL
-Oczekiwany wynik: Exception
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.EmptyNetworkTest.testCase2()} \\
+    \midrule
+    ID & C.1.1.2 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{0},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{0},
+        \item krawędzie: \texttt{NULL};
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z 1 węzłem}
 Wszystkie testy zrealizowane w klasie JustOneElementTest.
