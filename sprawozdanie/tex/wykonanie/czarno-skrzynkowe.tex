@@ -360,37 +360,7 @@ TwoSerialVerticesTest.
     \texttt{testCase2b}
     Oczekiwany wynik: 15
 
-    \texttt{testCase2a}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 15
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 1
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 21
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 5
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 7
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 3
-    \end{enumerate}
+    \texttt{testCase2c}
     Oczekiwany wynik: Exception
 
     \emph{Zwraca niepoprawną wartość. Konstruktor ani funkcja validate() z klasy FlowNetworkArray nie podnoszą wyjątków.}
@@ -398,24 +368,6 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     zerowej przepustowości pomiędzy węzłami pośrednimi.
     \texttt{testCase3}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 3
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 0
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 4
-    \end{enumerate}
     Oczekiwany wynik: 0
 
     \emph{Poprawnie nie znajduje niezerowego maksymalnego przepływu w sieci o zerowym przepływie maksymalnym.}
@@ -423,24 +375,6 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     ujemnej przepustowości pomiędzy węzłami pośrednimi.
     \texttt{testCase4}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 7
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: -1
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 8
-    \end{enumerate}
     Oczekiwany wynik: 0
 
     \emph{Poprawnie nie znajduje niezerowego maksymalnego przepływu w sieci z ujemną przepustowością krawędzi w wąskim gardle.}
@@ -448,28 +382,6 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
     drugiego węzłą pośredniego do pierwszego węzła pośredniego.
     \texttt{testCase5}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 12
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 4
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 15
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 6
-    \end{enumerate}
     Oczekiwany wynik: 4
 
     \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
@@ -477,28 +389,6 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     pierwszego węzła pośredniego do ujścia.
     \texttt{testCase6}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 9
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 7
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 2
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 5
-    \end{enumerate}
     Oczekiwany wynik: 7
 
     \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
@@ -506,28 +396,6 @@ TwoSerialVerticesTest.
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     źródła do drugiego węzła pośredniego.
     \texttt{testCase7}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 11
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 3
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 10
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 6
-    \end{enumerate}
     Oczekiwany wynik: 9
 
     \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
