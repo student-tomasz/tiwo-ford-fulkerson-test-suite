@@ -52,42 +52,51 @@
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex,
-                                                    \bfseries int sinkIndex, \bfseries int numVertices,
-                                                    \bfseries Iterator<Edges> edges)} \\
-    \hline
-    {\bfseries Opis} & Konstruktor struktury reprezentującej graf przpływu. \\
-    \hline
-    {\bfseries Przypadki testowe} & {\begin{enumerate}
-                                        \item Wartości oczekiwane
-                                        \item Ujemne wartości
-                                        \item sinkIndex - sourceIndex > numVertices
-                                        \item sinkIndex < sourceIndex
-                                        \item Pusta kolekcja krawędzi
-                                    \end{enumerate}} \\
-    \hline
-    {\bfseries Wykonawca} & MO \\
+    Testowana Metoda & \texttt{FlowNetworkArray ( int sourceIndex,
+                                                  int sinkIndex,  int numVertices,
+                                                  Iterator<Edges> edges)} \\
+    \midrule
+    Opis & 
+    \begin{minipage}[h]{0.6\textwidth}
+    Konstruktor struktury reprezentującej graf przpływu. \\
+    \end{minipage} \\
+    \midrule
+    Przypadki testowe & 
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{enumerate}
+        \item Wartości oczekiwane
+        \item Ujemne wartości
+        \item sinkIndex - sourceIndex > numVertices
+        \item sinkIndex < sourceIndex
+        \item Pusta kolekcja krawędzi
+    \end{enumerate} 
+    \end{minipage} \\
+    \midrule
+    \bfseries Wykonawca & MO \\
     \bottomrule
 \end{tabular}
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    {\bfseries Funkcja} & \bfseries void \texttt{ validate()} \\
-    \hline
-    {\bfseries Opis} & Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
-                       Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
+    Testowana Metoda & \textbf{void} \texttt{validate()} \\
+    \midrule
+    Opis & 
+    \begin{minipage}[h]{0.6\textwidth}
+        Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
+        Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
         \begin{enumerate}
             \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
             \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
-        \end{enumerate}\\
-    \hline
-    {\bfseries Przypadki testowe} & Tak jak wyżej. \\
-    \hline
-    {\bfseries Wykonawca} & MO \\
+        \end{enumerate}
+    \end{minipage} \\
+    /midrule
+    Przypadki testowe & Tak jak wyżej. \\
+    \midrule
+    Wykonawca & MO \\
     \bottomrule
 \end{tabular}
 \end{center}
