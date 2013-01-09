@@ -1,22 +1,19 @@
 \subsection{Testowanie biało\dywiz skrzynkowe}
 
 \subsubsection{Klasa testująca \texttt{algs.network.ToStringTest}}
-% Krótki opis jakie testy ta klasa zawiera.
 Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
 \texttt{algs.network.VertexStructure.toString()}.
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.ToStringTest.testEmpty()} \\
     \midrule
     ID & B.1.1.1 \\
     \midrule
-    Opis & Wypisuje listę węzłów wychodzących i wchodzacych. \\
+    Dane wejściowe & Struktura bez zdefiniowanych krawędzi wejścia/wyjścia. \\
     \midrule
-    Dane wejściowe & Struktura bez zdefiniowanych krawędzi wejscia/wyjścia. \\
-    \midrule
-    Oczekiwany wynik & Struktura bez zdefiniowanych krawędzi wejscia/wyjścia. \\
+    Oczekiwany wynik & Struktura bez zdefiniowanych krawędzi wejścia/wyjścia. \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -24,17 +21,27 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.ToStringTest.testOneEdge()} \\
     \midrule
     ID & B.1.1.2 \\
     \midrule
-    Opis &  Wypisuje listę węzłów wychodzących i wchodzacych. \\
+    Dane wejściowe &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+        \item Krawędź wyjścia (1, 2, 1).
+        \item Krawędź wejścia (2, 1, 1).
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź wyjścia (1, 2, 1); krawędź wejścia (2, 1, 1). \\
-    \midrule
-    Oczekiwany wynik & Krawędź wyjścia (1, 2, 1); krawędź wejścia (2, 1, 1). \\
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+        \item Krawędź wyjścia (1, 2, 1).
+        \item Krawędź wejścia (2, 1, 1).
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -42,17 +49,27 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.ToStringTest.testThreeEdges()} \\
     \midrule
     ID & B.1.1.3 \\
     \midrule
-    Opis & Wypisuje listę węzłów wychodzących i wchodzacych. \\
+    Dane wejściowe &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+        \item Trzy krawędzie wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1).
+        \item Trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1), (3, 6, 1).
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & Trzy krawędzie  wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1); trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1) , (3, 6, 1). \\
-    \midrule
-    Oczekiwany wynik & Trzy krawędzie wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1); trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1) , (3, 6, 1). \\
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+        \item Trzy krawędzie wejścia (0, 3, 1), (1, 3, 1), (2, 3, 1).
+        \item Trzy krawędzie wyjścia (3, 4, 1), (3, 5, 1), (3, 6, 1).
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -62,21 +79,21 @@ Klasa \texttt{algs.network.ToStringTest} zawiera testy dla metody
 
 \subsubsection{Klasa testująca \texttt{algs.network.MinimalNetworkConstructorTest}}
 Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
-minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
+minimalnego konstruktora
+\texttt{algs.network.FlowNetworkArray(int sourceIndex, int sinkIndex, int numVertices)}.
 
-\textt{FlowNetworkArray(int sourceIndex, int sinkIndex, int numVertices)}
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.validArgumentTest()} \\
     \midrule
     ID & B.1.2.1 \\
     \midrule
-    Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
+    Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbędne zmienne. \\
     \midrule
-    Dane wejściowe & sourceIndex = 0; sinkIndex = 1; numVertices = 2
+    Dane wejściowe & \texttt{sourceIndex = 0; sinkIndex = 1; numVertices = 2;} \\
     \midrule
-    Oczekiwany wynik & sourceIndex = 0; sinkIndex = 1; numVertices = 2
+    Oczekiwany wynik & \texttt{sourceIndex = 0; sinkIndex = 1; numVertices = 2;} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -84,17 +101,17 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.invalidArgumentsTest()} \\
     \midrule
     ID & B.1.2.2 \\
     \midrule
-    Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
+    Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbędne zmienne. \\
     \midrule
-    Dane wejściowe & sourceIndex = -1; sinkIndex = -2; numVertices = -2
+    Dane wejściowe & \texttt{sourceIndex = -1; sinkIndex = -2; numVertices = -2;} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & IllegalArgumentException \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -102,7 +119,7 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.sinkBeforeSourceTest()} \\
     \midrule
@@ -110,9 +127,9 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
     \midrule
     Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
     \midrule
-    Dane wejściowe & sourceIndex = 1; sinkIndex = 0; numVertices = 2
+    Dane wejściowe & \texttt{sourceIndex = 1; sinkIndex = 0; numVertices = 2;} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -120,7 +137,7 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.tooFewVerticesTest()} \\
     \midrule
@@ -128,9 +145,9 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
     \midrule
     Opis & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
     \midrule
-    Dane wejściowe & sourceIndex = 0; sinkIndex = 7; numVertices = 2
+    Dane wejściowe & \texttt{sourceIndex = 0; sinkIndex = 7; numVertices = 2;} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -140,21 +157,21 @@ minimalnego konstruktora \texttt{algs.network.FlowNetworkArray}.
 
 \subsubsection{Klasa testująca \texttt{algs.network.NetworkConstructorTest}}
 Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
- konstruktora \texttt{algs.network.FlowNetworkArray}.
+konstruktora
+\texttt{algs.network.FlowNetworkArray(int numVertices, int sourceIndex, int sinkIndex, Iterator<EdgeInfo> edges)}.
 
-\textt{FlowNetworkArray(int numVertices, int sourceIndex, int sinkIndex, Iterator<EdgeInfo> edges)}
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.validArgumentsTest()} \\
     \midrule
     ID & B.1.3.1 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 4; sourceIndex = 0; sinkIndex = 3;  edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & numVertices = 4; sourceIndex = 0; sinkIndex = 3;  edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Oczekiwany wynik & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -162,17 +179,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.invalidNumVerticesTest()} \\
     \midrule
     ID & B.1.3.2 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -180,17 +197,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.invalidSourceIndexTest()} \\
     \midrule
     ID & B.1.3.3 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -198,17 +215,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.invalidSinkIndexTest()} \\
     \midrule
     ID & B.1.3.4 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 4; sourceIndex = 0; sinkIndex = -3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = -3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -216,17 +233,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.tooFewVerticesTest()} \\
     \midrule
     ID & B.1.3.5 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 2; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = 2; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -234,17 +251,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.sinkBeforeSourceTest()} \\
     \midrule
     ID & B.1.3.6 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 4; sourceIndex = 3; sinkIndex = 0; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)
+    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 3; sinkIndex = 0; edges = \{(0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException
+    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -252,17 +269,17 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.NetworkConstructorTest.sinkBeforeSourceTest()} \\
     \midrule
     ID & B.1.3.7 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przpływu. \\
+    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
     \midrule
-    Dane wejściowe & numVertices = 0; sourceIndex = 1; sinkIndex = 2; edges =  pusty Iterator
+    Dane wejściowe & \texttt{numVertices = 0; sourceIndex = 1; sinkIndex = 2; edges = pusty Iterator} \\
     \midrule
-    Oczekiwany wynik & numVertices = 4; sourceIndex = 0; sinkIndex = 3;  edges =  pusta tablica EdgeInfo[4][4]
+    Oczekiwany wynik & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = pusta tablica EdgeInfo[4][4]} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -272,25 +289,29 @@ Klasa \texttt{algs.network.MinimalNetworkConstructorTest} zawiera testy dla
 
 \subsubsection{Klasa testująca \texttt{algs.network.IllegalStateExceptionTest}}
 Klasa \texttt{algs.network.IllegalStateExceptionTest} zawiera testy weryfikujące
- poprawne wywoływanie wyjątków przez metodę \texttt{algs.network.FlowNetworkArray.validate()}.
+poprawne wywoływanie wyjątków przez metodę
+\texttt{algs.network.FlowNetworkArray.validate()}.
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.IllegalStateExceptionTest.moreFlowThanCapacityTest()} \\
     \midrule
     ID & B.1.4.1 \\
     \midrule
-    Opis & Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
-           Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
-        \begin{enumerate}
-            \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
-            \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
-        \end{enumerate}\\
+    Opis &
+    \begin{minipage}[h]{0.78\textwidth}
+    Metoda weryfikuje czy informacje na temat sieci są akceptowalne. Zwracany
+    jest wyjątek, \texttt{IllegalStateException} w dwóch przypadkach:
+    \begin{enumerate}
+        \item Przepływ krawędzi jest większy niż przepustowość.
+        \item Liczba krawędzi wchodzących jest różna od liczby krawędzi wychodzących.
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2
+    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2 \\
     \midrule
-    Oczekiwany wynik & IllegalStateException
+    Oczekiwany wynik & \texttt{IllegalStateException} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -298,22 +319,25 @@ Klasa \texttt{algs.network.IllegalStateExceptionTest} zawiera testy weryfikując
 \end{center}
 
 \begin{center}
-\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.78\textwidth} @{}}
     \toprule
     TestCase & \texttt{algs.network.IllegalStateExceptionTest.flowConservationTest()} \\
     \midrule
     ID & B.1.4.2 \\
     \midrule
-    Opis & Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
-           Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
-        \begin{enumerate}
-            \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
-            \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
-        \end{enumerate}\\
+    Opis &
+    \begin{minipage}[h]{0.78\textwidth}
+    Metoda weryfikuje czy informacje na temat sieci są akceptowalne. Zwracany
+    jest wyjątek, \texttt{IllegalStateException} w dwóch przypadkach:
+    \begin{enumerate}
+        \item Przepływ krawędzi jest większy niż przepustowość.
+        \item Liczba krawędzi wchodzących jest różna od liczby krawędzi wychodzących.
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2
+    Dane wejściowe & Krawędź (1, 2, 1), wymuszony flow = 2 \\
     \midrule
-    Oczekiwany wynik & Krawędź (1, 2, 1), wymuszony flow = 1
+    Oczekiwany wynik & Krawędź (1, 2, 1), wymuszony flow = 1 \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
