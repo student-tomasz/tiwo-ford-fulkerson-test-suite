@@ -1,1 +1,206 @@
 \subsection{Testowanie biało\dywiz skrzynkowe}
+
+\subsubsection{Raporty błędów}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.validArgumentTest()} \\
+    \midrule
+    ID & B.1.2.1 \\
+    \midrule
+    Data wykonania & 08.01.13 15:33 \\
+    \midrule
+    Opis błędu & Niewłaściwie przypisywane wartości\\
+    \midrule
+    Dane wejściowe & sourceIndex = 0; sinkIndex = 1; numVertices = 2 \\
+    \midrule
+    Otrzymany wynik & sourceIndex = 2; sinkIndex = 1; numVertices = 0 \\
+    \midrule
+    Oczekiwany wynik & sourceIndex = 0; sinkIndex = 1; numVertices = 2 \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.invalidArgumentTest()} \\
+    \midrule
+    ID & B.1.2.2 \\
+    \midrule
+    Data wykonania & 08.01.13 15:33\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie obiektu o niedopuszczalnych polach\\
+    \midrule
+    Dane wejściowe & sourceIndex = -1; sinkIndex = -2; numVertices = -2 \\
+    \midrule
+    Otrzymany wynik & sourceIndex = 0; sinkIndex = 1; numVertices = 2 \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.sinkBeforeSourceTest()} \\
+    \midrule
+    ID & B.1.2.3 \\
+    \midrule
+    Data wykonania & 08.01.13 15:33 \\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie obiektu o niedopuszczalnych polach\\
+    \midrule
+    Dane wejściowe & sourceIndex = 1; sinkIndex = 0; numVertices = 2 \\
+    \midrule
+    Otrzymany wynik & sourceIndex = 1; sinkIndex = 0; numVertices = 2 \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.tooFewVerticesTest()} \\
+    \midrule
+    ID & B.1.2.1 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie obiektu o niedopuszczalnych polach\\
+    \midrule
+    Dane wejściowe & sourceIndex = 0; sinkIndex = 7; numVertices = 2 \\
+    \midrule
+    Otrzymany wynik & sourceIndex = 0; sinkIndex = 7; numVertices = 2 \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.invalidNumVerticesTest()} \\
+    \midrule
+    ID & B.1.3.2 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie sieci o ujemniej liczbie węzłów\\
+    \midrule
+    Dane wejściowe & numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Otrzymany wynik & numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.invalidSourceIndexTest()} \\
+    \midrule
+    ID & B.1.3.3 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie sieci o ujemniej liczbie węzłów\\
+    \midrule
+    Dane wejściowe & numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Otrzymany wynik & numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.invalidSinkIndexTest()} \\
+    \midrule
+    ID & B.1.3.2 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie sieci o ujemniej liczbie węzłów\\
+    \midrule
+    Dane wejściowe & numVertices = 4; sourceIndex = 0; sinkIndex = -3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Otrzymany wynik & numVertices = 4; sourceIndex = 0; sinkIndex = -3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.tooFewVerticesTest()} \\
+    \midrule
+    ID & B.1.3.2 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie sieci o ujemniej liczbie węzłów\\
+    \midrule
+    Dane wejściowe & numVertices = 2; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Otrzymany wynik & numVertices = 2; sourceIndex = 0; sinkIndex = 3; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.sinkBeforeSourceTest()} \\
+    \midrule
+    ID & B.1.3.2 \\
+    \midrule
+    Data wykonania & 08.01.13 15:42\\
+    \midrule
+    Opis błędu & Możliwe jest stworzenie sieci o ujemniej liczbie węzłów\\
+    \midrule
+    Dane wejściowe & numVertices = 4; sourceIndex = 3; sinkIndex = 0; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Otrzymany wynik & numVertices = 4; sourceIndex = 3; sinkIndex = 0; edges =  (0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3) \\
+    \midrule
+    Oczekiwany wynik & IllegalArgumentException \\
+    \midrule
+    Wykonawca & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsubsection{Przebieg procesu testowania}
+
+Proces testowania przebiegł zgodnie z planem. Błędy zostały skutecznie wykryte. W efekcie uzyskane zostało 100\% pokrycia instrukcji.
