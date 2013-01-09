@@ -1,42 +1,52 @@
 \subsection{Testowanie biało\dywiz skrzynkowe}
 
-Moduły oraz metody poddawane testowaniu: 
-
-\subsubsection{Klasa \texttt algs.network.VertexStructure}
+\subsubsection{Klasa testowana \texttt{algs.network.VertexStructure}}
 \begin{center}
-\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    {\bfseries Funkcja} & \bfseries String \texttt{toString()} \\
-    \hline
-    {\bfseries Opis} & Wypisuje listę węzłów wychodzących i wchodzacych. \\
-    \hline
-    {\bfseries Przypadki testowe} & {\begin{enumerate}
-                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia
-                                        \item Struktura z pojedynczą krawędzią wejścia/wyjścia
-                                        \item Struktura z wieloma krawędziami wejścia wyjścia
-                                    \end{enumerate}} \\
-    \hline
-    {\bfseries Wykonawca} & MO \\
+    Testowana metoda & \texttt{\textbf{String} toString()} \\
+    \midrule
+    Opis &
+    \begin{minipage}[h]{0.6\textwidth}
+    Wypisuje listę węzłów wychodzących i wchodzących.
+    \end{minipage} \\
+    \midrule
+    Przypadki testowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{enumerate}[leftmargin=*]
+        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia.
+        \item Struktura z pojedynczą krawędzią wejścia/wyjścia.
+        \item Struktura z wieloma krawędziami wejścia wyjścia.
+    \end{enumerate}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & MO \\
     \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection{Klasa \texttt algs.network.FlowNetworkArray}
+\subsubsection{Klasa testowana \texttt{algs.network.FlowNetworkArray}}
 \begin{center}
-\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex, \bfseries int sinkIndex, \bfseries int numVertices)} \\
-    \hline
-    {\bfseries Opis} & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
-    \hline
-    {\bfseries Przypadki testowe} & {\begin{enumerate}
-                                        \item Wartości oczekiwane
-                                        \item Ujemne wartości
-                                        \item sinkIndex < sourceIndex
-                                        \item sinkIndex - sourceIndex > numVertices
-                                    \end{enumerate}} \\
-    \hline
-    {\bfseries Wykonawca} & MO \\
+    Testowana metoda & \texttt{FlowNetworkArray(\textbf{int} sourceIndex, \textbf{int} sinkIndex, \textbf{int} numVertices)} \\
+    \midrule
+    Opis &
+    \begin{minipage}[h]{0.6\textwidth}
+    Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbędne zmienne.
+    \end{minipage} \\
+    \midrule
+    Przypadki testowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{enumerate}[leftmargin=*]
+        \item Wartości oczekiwane.
+        \item Wartości ujemne.
+        \item \texttt{sinkIndex < sourceIndex}
+        \item \texttt{sinkIndex - sourceIndex > numVertices}
+    \end{enumerate}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & MO \\
     \bottomrule
 \end{tabular}
 \end{center}
@@ -45,8 +55,8 @@ Moduły oraz metody poddawane testowaniu:
 \begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
     {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex,
-                                                    \bfseries int sinkIndex, \bfseries int numVertices),
-                                                    \bfseries Iterator<Edges> edges} \\
+                                                    \bfseries int sinkIndex, \bfseries int numVertices,
+                                                    \bfseries Iterator<Edges> edges)} \\
     \hline
     {\bfseries Opis} & Konstruktor struktury reprezentującej graf przpływu. \\
     \hline
