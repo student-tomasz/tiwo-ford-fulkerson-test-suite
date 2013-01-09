@@ -448,7 +448,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase7()} \\
     \midrule
-    ID & C.1.4.0 \\
+    ID & C.1.3.10 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -475,7 +475,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8a()} \\
     \midrule
-    ID & C.1.4.1 \\
+    ID & C.1.3.11 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -503,7 +503,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8b()} \\
     \midrule
-    ID & C.1.4.2 \\
+    ID & C.1.3.12 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -530,7 +530,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9a()} \\
     \midrule
-    ID & C.1.4.3 \\
+    ID & C.1.3.13 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -557,7 +557,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9b()} \\
     \midrule
-    ID & C.1.4.4 \\
+    ID & C.1.3.14 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -584,7 +584,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10a()} \\
     \midrule
-    ID & C.1.4.5 \\
+    ID & C.1.3.15 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -611,7 +611,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10b()} \\
     \midrule
-    ID & C.1.4.5 \\
+    ID & C.1.3.16 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -638,7 +638,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11a()} \\
     \midrule
-    ID & C.1.4.6 \\
+    ID & C.1.3.17 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -665,7 +665,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11b()} \\
     \midrule
-    ID & C.1.4.7 \\
+    ID & C.1.3.18 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -692,7 +692,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \toprule
     TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11c()} \\
     \midrule
-    ID & C.1.4.8 \\
+    ID & C.1.3.19 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -714,309 +714,414 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
 \end{tabular}
 \end{center}
 
-
 \subsubsection{Sieć z 1 węzłem pośrednim}
 Testy na sieciach z jednym węzłem pośrednim zostały zgrupowane
 w klasie SingleVertexTest.
-\begin{itemize}[nosep]
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
-    pośredniego i z węzła pośredniego do ujścia.
-    \texttt{testCase1a}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 512
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 126
-    \end{enumerate}
-    Oczekiwany wynik: 126
+%%%%% 1 Węzeł pośredni %%%%%
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1a()} \\
+    \midrule
+    ID & C.1.4.1 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,512);(1,2,126)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{126}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase1b}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 104526
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 75269
-        \item krawędź:
-        początek: 1
-        koniec: 0
-        przepustowość: 1523
-    \end{enumerate}
-    Oczekiwany wynik: 75269
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1b()} \\
+    \midrule
+    ID & C.1.4.2 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,104526);(1,2,75269);(1,0,1523)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
-    i z węzła pośredniego do źródła.
-    \texttt{testCase2}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 1
-        koniec: 0
-        przepustowość: 43
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 76
-    \end{enumerate}
-    Oczekiwany wynik: 0
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase2()} \\
+    \midrule
+    ID & C.1.4.3 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,104526);(1,2,75269);(1,0,1523)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
-    i z węzła pośredniego do źródła.
-    \texttt{testCase3}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 1
-        koniec: 0
-        przepustowość: 325
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 12
-    \end{enumerate}
-    Oczekiwany wynik: 0
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase3()} \\
+    \midrule
+    ID & C.1.4.4 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(1,0,325);(1,2,12)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
-    i z ujścia do węzła pośredniego.
-    \texttt{testCase4}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 9
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 13
-    \end{enumerate}
-    Oczekiwany wynik: 0
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase4()} \\
+    \midrule
+    ID & C.1.4.5 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,9);(2,1,13)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
-    pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
-    dodatniej przepustowości ze źródła do ujścia.
-    \texttt{testCase5}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 107209
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 75269
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 8301
-    \end{enumerate}
-    Oczekiwany wynik: 83570
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase5()} \\
+    \midrule
+    ID & C.1.4.6 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,107209);(1,2,75269);(0,2,8301)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{83570}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
-    pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
-    przepustowości w węźle pośrednim.
-    \texttt{testCase6a}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 73
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 17
-        \item krawędź:
-        początek: 1
-        koniec: 1
-        przepustowość: 345
-    \end{enumerate}
-    Oczekiwany wynik: 17
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6a()} \\
+    \midrule
+    ID & C.1.4.7 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,73);(1,2,17);(1,1,345)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{17}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase6b}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 73
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 17
-        \item krawędź:
-        początek: 1
-        koniec: 1
-        przepustowość: 345
-    \end{enumerate}
-    Oczekiwany wynik: Exception
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6b()} \\
+    \midrule
+    ID & C.1.4.8 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,73);(1,2,17);(1,1,345)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
-    i z węzła pośredniego do źródła, z mieszanymi zwrotami.
-    \texttt{testCase7a}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 5
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 7
-        \item krawędź:
-        początek: 1
-        koniec: 0
-        przepustowość: 12
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 3
-    \end{enumerate}
-    Oczekiwany wynik: 5
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7a()} \\
+    \midrule
+    ID & C.1.4.9 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,5);(1,2,7);(1,0,12);(2,1,3)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase7b}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 16
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 8
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 2
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 13
-    \end{enumerate}
-    Oczekiwany wynik: Exception
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7b()} \\
+    \midrule
+    ID & C.1.4.10 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,16);(1,2,8);(2,1,2);(1,2,13)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase7c}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 16
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 8
-        \item krawędź:
-        początek: 1
-        koniec:0
-        przepustowość: 5
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 2
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 13
-    \end{enumerate}
-    Oczekiwany wynik: 16
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7c()} \\
+    \midrule
+    ID & C.1.4.11 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,16);(1,2,8);(1,0,5);(2,1,2);(1,2,13)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{16}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
-    pośredniego, bez krawędzi do ujścia.
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase8()} \\
+    \midrule
+    ID & C.1.4.12 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,3)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase8}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 3
-    \end{enumerate}
-    Oczekiwany wynik: 0
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase9()} \\
+    \midrule
+    ID & C.1.4.13 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,13);(0,2,5)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
-    pośredniego, oraz krawędzią ze źródłą do ujścia.
-    \texttt{testCase9}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 13
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 5
-    \end{enumerate}
-    Oczekiwany wynik: 5
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase10()} \\
+    \midrule
+    ID & C.1.4.14 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(0,1,13);(0,2,5)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
-    ujścia, bez połączenia ze źródłem.
-    \texttt{testCase10}
-    Liczba węzłów w sieci: 3
-    Indeks źródła: 0
-    Indeks ujścia: 2
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 7
-    \end{enumerate}
-    Oczekiwany wynik: 0
-\end{itemize}
-
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase10()} \\
+    \midrule
+    ID & C.1.4.14 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{3},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{2},
+        \item krawędzie: \texttt{\{(1,2,7)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 Testy operujące na sieciach z 2 węzłami pośrednimi połączonymi równolegle zostały
