@@ -5,14 +5,14 @@
 \subsubsection{Sieć bez węzłów}
 Wszystkie testy na sieci bez węzłów zrealizowano w klasie EmptyNetworkTest.
 
-\emph{testCase1}
+\texttt{testCase1}
 Liczba węzłów w sieci:0
 Indeks źródła: 2
 Indeks ujścia: 5
 Krawędzie: NULL
 Oczekiwany wynik: 0
 
-\emph{testCase2}
+\texttt{testCase2}
 Liczba węzłów w sieci: 0
 Indeks źródła: 0
 Indeks ujścia: 0
@@ -26,7 +26,7 @@ z samym źródłem.}
 Wszystkie testy zrealizowane w klasie JustOneElementTest.
 \begin{itemize}[nosep]
     \item Samego źródła.
-    \emph{testCase1}
+    \texttt{testCase1}
     Liczba węzłów w sieci: 1
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -37,7 +37,7 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
     z samym źródłem.}
 
     \item Węzła pośredniego.
-    \emph{testCase2}
+    \texttt{testCase2}
     Liczba węzłów w sieci: 1
     Indeks źródła: 2
     Indeks ujścia: 1
@@ -48,7 +48,7 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
     do nieistniejącego węzła.}
 
     \item Ujścia.
-    \emph{testCase3}
+    \texttt{testCase3}
     Liczba węzłów w sieci: 1
     Indeks źródła: 1
     Indeks ujścia: 0
@@ -59,7 +59,7 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
     do nieistniejącego węzła.}
 
     \item Wspólnego źródła i ujścia.
-    \emph{testCase4}
+    \texttt{testCase4}
     Liczba węzłów w sieci: 1
     Indeks źródła: 0
     Indeks ujścia: 0
@@ -70,7 +70,7 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
     przepływu maksymalnego w sieci ze źródłem i ujściem w tym samym punkcie.}
 
     \item Wspólnego źródła i ujścia z pętlą.
-    \emph{testCase5}
+    \texttt{testCase5}
     Liczba węzłów w sieci: 1
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -92,7 +92,7 @@ Wszystkie testy zrealizowane w klasie JustOneElementTest.
 Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
 \begin{itemize}[nosep]
     \item Nie połączonymi żadną krawędzią.
-    \emph{testCase1}
+    \texttt{testCase1}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -103,7 +103,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
-    \emph{testCase2}
+    \texttt{testCase2}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -118,7 +118,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \emph{Algorytm poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
-    \emph{testCase3a}
+    \texttt{testCase3a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -135,7 +135,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
     \end{enumerate}
     Oczekiwany wynik: 57956756
 
-    \emph{testCase3b}
+    \texttt{testCase3b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -156,8 +156,7 @@ Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndS
 w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
-    \emph{testCase4a i testCase4b}
-    \emph{testCase4a}
+    \texttt{testCase4a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -174,7 +173,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 346723
 
-    \emph{testCase4b}
+    \texttt{testCase4b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -195,7 +194,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     w sieci. Algorytm nie podnosi wyjątku przy pętli o ujemnej przepustowości.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
-    \emph{testCase5}
+    \texttt{testCase5}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -212,7 +211,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     maksymalnego w sieci bez ścieżki od źródła do ujścia.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
-    \emph{testCase6a}
+    \texttt{testCase6a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -225,7 +224,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 0
 
-    \emph{testCase6b}
+    \texttt{testCase6b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -243,7 +242,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     podnoszony jest wyjątek dla krawędzi o ujemnej przepustowości.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
-    \emph{testCase7}
+    \texttt{testCase7}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -260,7 +259,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     przepływu maksymalnego w sieci bez ścieżki od źródła do ujścia.}
 
     \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
-    \emph{testCase8a}
+    \texttt{testCase8a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -273,7 +272,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 0
 
-    \emph{testCase8b}
+    \texttt{testCase8b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -292,7 +291,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     w związku z występowaniem krawędzi o ujemnej przepustowości.}
 
     \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
-    \emph{testCase9a}
+    \texttt{testCase9a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -313,7 +312,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 18
 
-    \emph{testCase9b}
+    \texttt{testCase9b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -339,7 +338,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     podnoszony wyjątek w związku z występowaniem zwielokrotnionych krawędzi.}
 
     \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
-    \emph{testCase10a}
+    \texttt{testCase10a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -360,7 +359,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 0
 
-    \emph{testCase10b}
+    \texttt{testCase10b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -384,8 +383,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     zwielokrotnionych.}
 
     \item Z wieloma krawędziami skierowanymi w różnych stronach.
-    \emph{testCase11a, testCase11b i testCase11c}
-    \emph{testCase11a}
+    \texttt{testCase11a}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -402,7 +400,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 4
 
-    \emph{testCase11b}
+    \texttt{testCase11b}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -427,7 +425,7 @@ w sieci. Algorytm nie informuje o istnieniu pętli w sieci.}
     \end{enumerate}
     Oczekiwany wynik: 13
 
-    \emph{testCase11c}
+    \texttt{testCase11c}
     Liczba węzłów w sieci: 2
     Indeks źródła: 0
     Indeks ujścia: 1
@@ -467,8 +465,7 @@ w klasie SingleVertexTest.
 \begin{itemize}[nosep]
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
     pośredniego i z węzła pośredniego do ujścia.
-    \emph{testCase1a i testCase1b}
-    \emph{testCase1a}
+    \texttt{testCase1a}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -485,7 +482,7 @@ w klasie SingleVertexTest.
     \end{enumerate}
     Oczekiwany wynik: 126
 
-    \emph{testCase1b}
+    \texttt{testCase1b}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -512,7 +509,7 @@ w klasie SingleVertexTest.
 
     \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
     i z węzła pośredniego do źródła.
-    \emph{testCase2}
+    \texttt{testCase2}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -534,7 +531,7 @@ w klasie SingleVertexTest.
 
     \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
     i z węzła pośredniego do źródła.
-    \emph{testCase3}
+    \texttt{testCase3}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -556,7 +553,7 @@ w klasie SingleVertexTest.
 
     \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
     i z ujścia do węzła pośredniego.
-    \emph{testCase4}
+    \texttt{testCase4}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -579,7 +576,7 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
     pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
     dodatniej przepustowości ze źródła do ujścia.
-    \emph{testCase5}
+    \texttt{testCase5}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -608,7 +605,7 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
     pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
     przepustowości w węźle pośrednim.
-    \emph{testCase6a}
+    \texttt{testCase6a}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -629,7 +626,7 @@ w klasie SingleVertexTest.
     \end{enumerate}
     Oczekiwany wynik: 17
 
-    \emph{testCase6b}
+    \texttt{testCase6b}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -658,7 +655,7 @@ w klasie SingleVertexTest.
 
     \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
     i z węzła pośredniego do źródła, z mieszanymi zwrotami.
-    \emph{testCase7a}
+    \texttt{testCase7a}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -683,7 +680,7 @@ w klasie SingleVertexTest.
     \end{enumerate}
     Oczekiwany wynik: 5
 
-    \emph{testCase7b}
+    \texttt{testCase7b}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -708,7 +705,7 @@ w klasie SingleVertexTest.
     \end{enumerate}
     Oczekiwany wynik: Exception
 
-    \emph{testCase7c}
+    \texttt{testCase7c}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -748,7 +745,7 @@ w klasie SingleVertexTest.
     \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
     pośredniego, bez krawędzi do ujścia.
 
-    \emph{testCase8}
+    \texttt{testCase8}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -767,7 +764,7 @@ w klasie SingleVertexTest.
 
     \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
     pośredniego, oraz krawędzią ze źródłą do ujścia.
-    \emph{testCase9}
+    \texttt{testCase9}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -791,7 +788,7 @@ w klasie SingleVertexTest.
 
     \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
     ujścia, bez połączenia ze źródłem.
-    \emph{testCase10}
+    \texttt{testCase10}
     Liczba węzłów w sieci: 3
     Indeks źródła: 0
     Indeks ujścia: 2
@@ -816,7 +813,7 @@ zebrane w klasie TwoParallelVerticesTest.
 \begin{itemize}[nosep]
     \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
     pośrednich i z obu węzłów pośrednich do ujścia.
-    \emph{testCase1}
+    \texttt{testCase1}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -845,7 +842,7 @@ zebrane w klasie TwoParallelVerticesTest.
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do drugiego węzła pośredniego.
-    \emph{testCase2}
+    \texttt{testCase2}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -878,7 +875,7 @@ zebrane w klasie TwoParallelVerticesTest.
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
-    \emph{testCase3}
+    \texttt{testCase3}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -912,7 +909,7 @@ zebrane w klasie TwoParallelVerticesTest.
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
     węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
     pośredniego do pierwszego węzła pośredniego.
-    \emph{testCase4}
+    \texttt{testCase4}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -948,7 +945,7 @@ zebrane w klasie TwoParallelVerticesTest.
     \emph{Algorytm poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
-    \emph{testCase5}
+    \texttt{testCase5}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -981,7 +978,7 @@ zebrane w klasie TwoParallelVerticesTest.
     poprawnie znajduje maksymalny przepływ.}
 
     \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
-    \emph{testCase6}
+    \texttt{testCase6}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -1014,7 +1011,7 @@ zebrane w klasie TwoParallelVerticesTest.
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego.
-    \emph{testCase7}
+    \texttt{testCase7}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -1047,7 +1044,7 @@ zebrane w klasie TwoParallelVerticesTest.
 
     \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
     pośredniego do źródłą.
-    \emph{testCase8}
+    \texttt{testCase8}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -1081,7 +1078,7 @@ zebrane w klasie TwoParallelVerticesTest.
 
     \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
     pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
-    \emph{testCase9}
+    \texttt{testCase9}
     Liczba węzłów w sieci: 4
     Indeks źródła: 0
     Indeks ujścia: 3
@@ -1124,21 +1121,156 @@ TwoSerialVerticesTest.
     \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
     pośredniego, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
     drugiego węzła pośredniego do ujścia.
+    \texttt{testCase1}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 3
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 7
+    \end{enumerate}
+    Oczekiwany wynik: 15
 
-    \emph{testCase1}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
     krawędziami pomiędzy węzłami pośrednimi.
+    \texttt{testCase2a}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 15
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 1
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 21
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 15
 
-    \emph{testCase2a i testCase2b}
+    \texttt{testCase2a}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 15
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 1
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 21
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: 15
+
+    \texttt{testCase2a}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 15
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 1
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 21
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 5
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 3
+    \end{enumerate}
+    Oczekiwany wynik: Exception
+
     \emph{Zwraca niepoprawną wartość. Konstruktor ani funkcja validate()
     z klasy FlowNetworkArray nie podnoszą wyjątków.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     zerowej przepustowości pomiędzy węzłami pośrednimi.
-    \emph{testCase3}
+    \texttt{testCase3}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 3
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 0
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 4
+    \end{enumerate}
+    Oczekiwany wynik: 0
 
     \emph{Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
@@ -1146,8 +1278,26 @@ TwoSerialVerticesTest.
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
     ujemnej przepustowości pomiędzy węzłami pośrednimi.
-
-    \emph{testCase4}
+    \texttt{testCase4}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 7
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: -1
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 8
+    \end{enumerate}
+    Oczekiwany wynik: 0
 
     \emph{Poprawnie
     nie znajduje niezerowego maksymalnego przepływu
@@ -1155,22 +1305,91 @@ TwoSerialVerticesTest.
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
     drugiego węzłą pośredniego do pierwszego węzła pośredniego.
+    \texttt{testCase5}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 12
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 4
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 15
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 6
+    \end{enumerate}
+    Oczekiwany wynik: 4
 
-    \emph{testCase5}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     pierwszego węzła pośredniego do ujścia.
+    \texttt{testCase6}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 9
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 7
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 2
+        \item krawędź:
+        początek: 2
+        koniec: 1
+        przepustowość: 5
+    \end{enumerate}
+    Oczekiwany wynik: 7
 
-    \emph{testCase6}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
     \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
     źródła do drugiego węzła pośredniego.
+    \texttt{testCase7}
+    Liczba węzłów w sieci: 4
+    Indeks źródła: 0
+    Indeks ujścia: 3
+    Krawędzie:
+    \begin{enumerate}[nosep]
+        \item krawędź:
+        początek: 0
+        koniec: 1
+        przepustowość: 11
+        \item krawędź:
+        początek: 1
+        koniec: 2
+        przepustowość: 3
+        \item krawędź:
+        początek: 2
+        koniec: 3
+        przepustowość: 10
+        \item krawędź:
+        początek: 0
+        koniec: 2
+        przepustowość: 6
+    \end{enumerate}
+    Oczekiwany wynik: 9
 
-    \emph{testCase7}
     \emph{Algorytm
     poprawnie znajduje maksymalny przepływ w sieci.}
 
