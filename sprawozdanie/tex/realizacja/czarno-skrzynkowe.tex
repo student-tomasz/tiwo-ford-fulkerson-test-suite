@@ -1101,7 +1101,7 @@ w klasie SingleVertexTest.
     \toprule
     TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase10()} \\
     \midrule
-    ID & C.1.4.14 \\
+    ID & C.1.4.15 \\
     \midrule
     Dane wejściowe &
     \begin{minipage}[h]{0.6\textwidth}
@@ -1126,290 +1126,249 @@ w klasie SingleVertexTest.
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 Testy operujące na sieciach z 2 węzłami pośrednimi połączonymi równolegle zostały
 zebrane w klasie TwoParallelVerticesTest.
-\begin{itemize}[nosep]
-    \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
-    pośrednich i z obu węzłów pośrednich do ujścia.
-    \texttt{testCase1}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 1
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 4
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 2
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 3
-    \end{enumerate}
-    Oczekiwany wynik: 4
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
-    pośredniego do drugiego węzła pośredniego.
-    \texttt{testCase2}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 7
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 1
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 5
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 3
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 9
-    \end{enumerate}
-    Oczekiwany wynik: 8
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase1()} \\
+    \midrule
+    ID & C.1.5.1 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,1);(0,2,4);(1,3,2);(2,3,3)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
-    pośredniego do pierwszego węzła pośredniego.
-    \texttt{testCase3}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 3
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 6
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 10
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 4
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 2
-    \end{enumerate}
-    Oczekiwany wynik: 9
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.2 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,7);(0,2,1);(1,3,5);(2,3,3);(1,2,9)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
-    węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
-    pośredniego do pierwszego węzła pośredniego.
-    \texttt{testCase4}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 17
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 11
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 5
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 3
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 9
-        \item krawędź:
-        początek: 1
-        koniec: 2
-        przepustowość: 6
-    \end{enumerate}
-    Oczekiwany wynik: 8
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase3()} \\
+    \midrule
+    ID & C.1.5.3 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,3);(0,2,6);(1,3,10);(2,3,4);(2,1,2)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
-    \texttt{testCase5}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 5
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 3
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 4
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 9
-        \item krawędź:
-        początek: 0
-        koniec: 3
-        przepustowość: 3
-    \end{enumerate}
-    Oczekiwany wynik: 10
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase4()} \\
+    \midrule
+    ID & C.1.5.4 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,17);(0,2,11);(1,3,5);(2,3,3);(2,1,9),(1,2,6)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
-    \texttt{testCase6}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 2
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 5
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 8
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 1
-        \item krawędź:
-        początek: 3
-        koniec: 0
-        przepustowość: 4
-    \end{enumerate}
-    Oczekiwany wynik: 3
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase5()} \\
+    \midrule
+    ID & C.1.5.5 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,5);(0,2,3);(1,3,4);(2,3,9);(0,3,3)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{10}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
-    pierwszego węzła pośredniego.
-    \texttt{testCase7}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 1
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 9
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 12
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 4
-        \item krawędź:
-        początek: 3
-        koniec: 1
-        przepustowość: 3
-    \end{enumerate}
-    Oczekiwany wynik: 5
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase6()} \\
+    \midrule
+    ID & C.1.5.6 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,2);(0,2,5);(1,3,8);(2,3,1);(3,0,4)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
-    pośredniego do źródłą.
-    \texttt{testCase8}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 8
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 3
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 5
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 7
-        \item krawędź:
-        początek: 2
-        koniec: 1
-        przepustowość: 6
-    \end{enumerate}
-    Oczekiwany wynik: 8
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase7()} \\
+    \midrule
+    ID & C.1.5.7 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,1);(0,2,9);(1,3,12);(2,3,4);(3,1,3)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
-    pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
-    \texttt{testCase9}
-    Liczba węzłów w sieci: 4
-    Indeks źródła: 0
-    Indeks ujścia: 3
-    Krawędzie:
-    \begin{enumerate}[nosep]
-        \item krawędź:
-        początek: 0
-        koniec: 1
-        przepustowość: 7
-        \item krawędź:
-        początek: 0
-        koniec: 2
-        przepustowość: 8
-        \item krawędź:
-        początek: 1
-        koniec: 3
-        przepustowość: 2
-        \item krawędź:
-        początek: 2
-        koniec: 3
-        przepustowość: 3
-        \item krawędź:
-        początek: 3
-        koniec: 1
-        przepustowość: 11
-        \item krawędź:
-        początek: 1
-        koniec: 0
-        przepustowość: 8
-    \end{enumerate}
-    Oczekiwany wynik: 5
-\end{itemize}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase8()} \\
+    \midrule
+    ID & C.1.5.8 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,8);(0,2,3);(1,3,5);(2,3,7);(2,1,6)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase9()} \\
+    \midrule
+    ID & C.1.5.9 \\
+    \midrule
+    Dane wejściowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{itemize}[leftmargin=*]
+        \item liczba węzłów w sieci: \texttt{4},
+        \item indeks źródła: \texttt{0},
+        \item indeks ujścia: \texttt{3},
+        \item krawędzie: \texttt{\{(0,1,7);(0,2,8);(1,3,2);(2,3,3);(3,1,11),(1,0,8)\}}
+    \end{itemize}
+    \end{minipage} \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+    \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Wykonawca & RW \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
 Testy wykorzystujące sieci z 2 węzłami pośrednimi znajdują się z kolei w klasie
