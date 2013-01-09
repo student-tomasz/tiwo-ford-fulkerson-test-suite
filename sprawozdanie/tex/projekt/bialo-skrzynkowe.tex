@@ -13,7 +13,7 @@
     \midrule
     Przypadki testowe &
     \begin{minipage}[h]{0.6\textwidth}
-    \begin{enumerate}[leftmargin=*]
+    \begin{enumerate}
         \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia.
         \item Struktura z pojedynczą krawędzią wejścia/wyjścia.
         \item Struktura z wieloma krawędziami wejścia wyjścia.
@@ -38,7 +38,7 @@
     \midrule
     Przypadki testowe &
     \begin{minipage}[h]{0.6\textwidth}
-    \begin{enumerate}[leftmargin=*]
+    \begin{enumerate}
         \item Wartości oczekiwane.
         \item Wartości ujemne.
         \item \texttt{sinkIndex < sourceIndex}
@@ -54,24 +54,24 @@
 \begin{center}
 \begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    Testowana metoda & \texttt{FlowNetworkArray ( int sourceIndex,
-                                                  int sinkIndex,  int numVertices,
-                                                  Iterator<Edges> edges)} \\
+    Testowana metoda & \texttt{FlowNetworkArray(int numVertices,
+                                                int srcIndex, int sinkIndex,
+                                                Iterator<Edges> edges)} \\
     \midrule
-    Opis & 
+    Opis &
     \begin{minipage}[h]{0.6\textwidth}
-    Konstruktor struktury reprezentującej graf przpływu. \\
+    Konstruktor struktury reprezentującej graf przpływu.
     \end{minipage} \\
     \midrule
-    Przypadki testowe & 
+    Przypadki testowe &
     \begin{minipage}[h]{0.6\textwidth}
     \begin{enumerate}
-        \item Wartości oczekiwane
-        \item Ujemne wartości
-        \item sinkIndex - sourceIndex > numVertices
-        \item sinkIndex < sourceIndex
-        \item Pusta kolekcja krawędzi
-    \end{enumerate} 
+        \item Wartości oczekiwane.
+        \item Wartości ujemne.
+        \item \texttt{sinkIndex - sourceIndex > numVertices}
+        \item \texttt{sinkIndex < sourceIndex}
+        \item Pusta kolekcja krawędzi.
+    \end{enumerate}
     \end{minipage} \\
     \midrule
     \bfseries Wykonawca & MO \\
@@ -82,19 +82,28 @@
 \begin{center}
 \begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
     \toprule
-    Testowana metoda & \textbf{void} \texttt{validate()} \\
+    Testowana metoda & \texttt{\textbf{void} validate()} \\
     \midrule
-    Opis & 
+    Opis &
     \begin{minipage}[h]{0.6\textwidth}
-        Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
-        Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
-        \begin{enumerate}
-            \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
-            \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
-        \end{enumerate}
+    Metoda weryfikuje czy informacje na temat sieci są poprawne. Zwracany
+    jest wyjątek, \texttt{IllegalStateException} w dwóch przypadkach:
+    \begin{enumerate}
+        \item Przepływ krawędzi jest większy niż jej przepustowość.
+        \item Liczba krawędzi wchodzących jest różna od krawędzi wychodzących.
+    \end{enumerate}
     \end{minipage} \\
     \midrule
-    Przypadki testowe & Tak jak wyżej. \\
+    Przypadki testowe &
+    \begin{minipage}[h]{0.6\textwidth}
+    \begin{enumerate}
+        \item Wartości oczekiwane.
+        \item Wartości ujemne.
+        \item \texttt{sinkIndex - sourceIndex > numVertices}
+        \item \texttt{sinkIndex < sourceIndex}
+        \item Pusta kolekcja krawędzi.
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
