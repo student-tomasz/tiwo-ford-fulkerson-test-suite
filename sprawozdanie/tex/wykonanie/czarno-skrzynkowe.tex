@@ -133,8 +133,6 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
     \midrule
     ID & C.1.2.4 \\
     \midrule
-    Opis & Ujścia. \\
-    \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.6\textwidth}
         \texttt{0}
@@ -157,8 +155,6 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
     \midrule
     ID & C.1.2.5 \\
     \midrule
-    Opis & Ujścia. \\
-    \midrule
     Oczekiwany wynik &
     \begin{minipage}[h]{0.6\textwidth}
         \texttt{0}
@@ -176,212 +172,739 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
 
 \subsubsection{Sieć bez węzłów pośrednich}
 Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
-\begin{itemize}[nosep]
-    \item Nie połączonymi żadną krawędzią.
-    \texttt{testCase1}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości.
-    \texttt{testCase2}
-    Oczekiwany wynik: 9
-    Uzyskany wynik: 9
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase1()} \\
+    \midrule
+    ID & C.1.3.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o dodatniej przepustowości w ujściu.
-    \texttt{testCase3a}
-    Oczekiwany wynik: 57956756
-    Uzyskany wynik: 57956756
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase2()} \\
+    \midrule
+    ID & C.1.3.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase3b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase3a()} \\
+    \midrule
+    ID & C.1.3.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{57956756}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{57956756}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o dodatniej przepustowości z pętlą o ujemnej przepustowości w źródle.
-    \texttt{testCase4a}
-    Oczekiwany wynik: 346723
-    Uzyskany wynik: 346723
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase3b()} \\
+    \midrule
+    ID & C.1.3.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase4b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase4a()} \\
+    \midrule
+    ID & C.1.3.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{346723}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{346723}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o zerowej przepustowości.
-    \texttt{testCase5}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase4b()} \\
+    \midrule
+    ID & C.1.3.6 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od źródła do ujścia o ujemnej przepustowości.
-    \texttt{testCase6a}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase5()} \\
+    \midrule
+    ID & C.1.3.7 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase6b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: Exception
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase6a()} \\
+    \midrule
+    ID & C.1.3.8 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o dodatniej przepustowości.
-    \texttt{testCase7}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase6b()} \\
+    \midrule
+    ID & C.1.3.9 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączonymi pojedynczą krawędzią skierowaną od ujścia do źródła o ujemnej przepustowości.
-    \texttt{testCase8a}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase7()} \\
+    \midrule
+    ID & C.1.3.10 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase8b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8a()} \\
+    \midrule
+    ID & C.1.3.11 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z wieloma krawędziami skierowanymi od żródła do ujścia.
-    \texttt{testCase9a}
-    Oczekiwany wynik: 18
-    Uzyskany wynik: 4
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase8b()} \\
+    \midrule
+    ID & C.1.3.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase9b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9a()} \\
+    \midrule
+    ID & C.1.3.13 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{18}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z wieloma krawędziami skierowanymi od ujścia do źródła.
-    \texttt{testCase10a}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase9b()} \\
+    \midrule
+    ID & C.1.3.14 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase10b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10a()} \\
+    \midrule
+    ID & C.1.3.15 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase10b()} \\
+    \midrule
+    ID & C.1.3.16 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11a()} \\
+    \midrule
+    ID & C.1.3.17 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 
-    \item Z wieloma krawędziami skierowanymi w różnych stronach.
-    \texttt{testCase11a}
-    Oczekiwany wynik: 4
-    Uzyskany wynik: 4
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11b()} \\
+    \midrule
+    ID & C.1.3.18 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{13}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase11b}
-    Oczekiwany wynik: 13
-    Uzyskany wynik: 7
-    \textsc{Test nie zaliczony}
 
-    \texttt{testCase11c}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
-
-
-\end{itemize}
-
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.JustSourceAndSinkTest.testCase11c()} \\
+    \midrule
+    ID & C.1.3.19 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z 1 węzłem pośrednim}
 Testy na sieciach z jednym węzłem pośrednim zostały zgrupowane
 w klasie SingleVertexTest.
-\begin{itemize}[nosep]
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzłą
-    pośredniego i z węzła pośredniego do ujścia.
-    \texttt{testCase1a}
-    Oczekiwany wynik: 126
-    Uzyskany wynik: 126
-    \textsc{Test zaliczony}
 
-    \texttt{testCase1b}
-    Oczekiwany wynik: 75269
-    Uzyskany wynik: 75269
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1a()} \\
+    \midrule
+    ID & C.1.4.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{126}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{126}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi z ujścia do węzła pośredniego
-    i z węzła pośredniego do źródła.
-    \texttt{testCase2}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase1b()} \\
+    \midrule
+    ID & C.1.4.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{75269}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi z węzła pośredniego do ujścia
-    i z węzła pośredniego do źródła.
-    \texttt{testCase3}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase2()} \\
+    \midrule
+    ID & C.1.4.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z pojedynczymi krawędziami skierowanymi ze źródła do węzła pośredniego
-    i z ujścia do węzła pośredniego.
-    \texttt{testCase4}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase3()} \\
+    \midrule
+    ID & C.1.4.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
-    pośredniego i z węzła pośredniego do źródła z dodatkową krawędzią o
-    dodatniej przepustowości ze źródła do ujścia.
-    \texttt{testCase5}
-    Oczekiwany wynik: 83570
-    Uzyskany wynik: 83570
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase4()} \\
+    \midrule
+    ID & C.1.4.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczymi krawędziami skierowanymi ze źródła do węzła
-    pośredniego i z węzła pośredniego do źródła z pętlą o dodatniej
-    przepustowości w węźle pośrednim.
-    \texttt{testCase6a}
-    Oczekiwany wynik: 17
-    Uzyskany wynik: 17
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase5()} \\
+    \midrule
+    ID & C.1.4.6 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{83570}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{83570}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase6b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6a()} \\
+    \midrule
+    ID & C.1.4.7 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{17}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{17}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone zwielokrotnionymi krawędziami ze źródła do węzła pośredniego
-    i z węzła pośredniego do źródła, z mieszanymi zwrotami.
-    \texttt{testCase7a}
-    Oczekiwany wynik: 5
-    Uzyskany wynik: 5
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase6b()} \\
+    \midrule
+    ID & C.1.4.8 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase7b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7a()} \\
+    \midrule
+    ID & C.1.4.9 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase7c}
-    Oczekiwany wynik: 16
-    Uzyskany wynik: 13
-    \textsc{Test nie zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7b()} \\
+    \midrule
+    ID & C.1.4.10 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{Exception}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{brak wyjątku}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczą krawędzią skierowaną ze źródła do węzła
-    pośredniego, bez krawędzi do ujścia.
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase7c()} \\
+    \midrule
+    ID & C.1.4.11 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{16}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{13}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase8}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase8()} \\
+    \midrule
+    ID & C.1.4.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Połączone pojedynczą krawędzia skierowaną ze źródła do węzła
-    pośredniego, oraz krawędzią ze źródłą do ujścia.
-    \texttt{testCase9}
-    Oczekiwany wynik: 5
-    Uzyskany wynik: 5
-    \textsc{Test zaliczony}
 
-    \item Połączone pojedynczą krawędzia skierowaną z węzła pośredniego do
-    ujścia, bez połączenia ze źródłem.
-    \texttt{testCase10}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
-\end{itemize}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase9()} \\
+    \midrule
+    ID & C.1.4.13 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.SingleVertexTest.testCase10()} \\
+    \midrule
+    ID & C.1.4.12 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
