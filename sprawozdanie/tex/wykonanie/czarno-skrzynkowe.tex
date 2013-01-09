@@ -171,7 +171,7 @@ Wszystkie testy zrealizowane w klasie \texttt{JustOneElementTest}.
 \end{center}
 
 \subsubsection{Sieć bez węzłów pośrednich}
-Testy na sieciach bez węzłów pośrednich zrealizowano w klasie JustSourceAndSinkTest.
+Testy na sieciach bez węzłów pośrednich zrealizowano w klasie \texttt{JustSourceAndSinkTest}.
 
 \begin{center}
 \begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
@@ -909,136 +909,394 @@ w klasie SingleVertexTest.
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi równolegle}
 Testy operujące na sieciach z 2 węzłami pośrednimi połączonymi równolegle zostały
-zebrane w klasie TwoParallelVerticesTest.
-\begin{itemize}[nosep]
-    \item Z krawędziami o dodatniej przepustowości ze źródła do obu węzłów
-    pośrednich i z obu węzłów pośrednich do ujścia.
-    \texttt{testCase1}
-    Oczekiwany wynik: 4
-    Uzyskany wynik: 4
-    \textsc{Test zaliczony}
+zebrane w klasie \texttt{TwoParallelVerticesTest}.
+
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase1()} \\
+    \midrule
+    ID & C.1.5.1 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
-    pośredniego do drugiego węzła pośredniego.
-    \texttt{testCase2}
-    Oczekiwany wynik: 8
-    Uzyskany wynik: 8
-    \textsc{Test zaliczony}
+\begin{center}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.2 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z drugiego węzła
-    pośredniego do pierwszego węzła pośredniego.
-    \texttt{testCase3}
-    Oczekiwany wynik: 9
-    Uzyskany wynik: 9
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.3 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkowymi krawędziami o dodatniej przepustowości z pierwszego
-    węzła pośredniego do drugiego węzła pośredniego i z drugiego węzła
-    pośredniego do pierwszego węzła pośredniego.
-    \texttt{testCase4}
-    Oczekiwany wynik: 8
-    Uzyskany wynik: 8
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.5.4 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości ze źródła do ujścia.
-    \texttt{testCase5}
-    Oczekiwany wynik: 10
-    Uzyskany wynik: 10
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase3()} \\
+    \midrule
+    ID & C.1.5.5 \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzia o dodatniej przepustowości z ujścia do źródła.
-    \texttt{testCase6}
-    Oczekiwany wynik: 3
-    Uzyskany wynik: 3
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase4()} \\
+    \midrule
+    ID & C.1.5.6. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z ujścia do
-    pierwszego węzła pośredniego.
-    \texttt{testCase7}
-    Oczekiwany wynik: 5
-    Uzyskany wynik: 5
-    \textsc{Test zaliczony}
 
-    \item Z dodatkową krawędzią o dodatniej przepustowości z pierwszego węzła
-    pośredniego do źródłą.
-    \texttt{testCase8}
-    Oczekiwany wynik: 8
-    Uzyskany wynik: 8
-    \textsc{Test zaliczony}
 
-    \item Z dodatkowymi krawędziami o dodatniej przepustowości z ujścia do
-    pierwszego węzła pośredniego i z pierwszego węzłą pośredniego do źródła.
-    \texttt{testCase9}
-    Oczekiwany wynik: 5
-    Uzyskany wynik: 5
-    \textsc{Test zaliczony}
-\end{itemize}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase5()} \\
+    \midrule
+    ID & C.1.5.7. \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase6()} \\
+    \midrule
+    ID & C.1.5.8  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase7()} \\
+    \midrule
+    ID & C.1.5.9  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase8()} \\
+    \midrule
+    ID & C.1.5.9  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{8}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoParallelVerticesTest.testCase9()} \\
+    \midrule
+    ID & C.1.5.10  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{5}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z 2 węzłami pośrednimi połączonymi szeregowo}
 Testy wykorzystujące sieci z 2 węzłami pośrednimi znajdują się z kolei w klasie
-TwoSerialVerticesTest.
-\begin{itemize}[nosep]
-    \item Z krawędziami o dodatniej przepustowości ze źródła do pierwszego węzła
-    pośredniego, z pierwszego węzła pośredniego do drugiego węzła pośredniego i z
-    drugiego węzła pośredniego do ujścia.
-    \texttt{testCase1}
-    Oczekiwany wynik: 3
-    Uzyskany wynik: 3
-    \textsc{Test zaliczony}
+\texttt{TwoSerialVerticesTest}.
 
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z wieloma
-    krawędziami pomiędzy węzłami pośrednimi.
-    \texttt{testCase2a}
-    Oczekiwany wynik: 15
-    Uzyskany wynik: 3
-    \textsc{Test nie zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase1()} \\
+    \midrule
+    ID & C.1.6.1  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \texttt{testCase2b}
-    Oczekiwany wynik: Exception
-    Uzyskany wynik: brak wyjątku
-    \textsc{Test nie zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase2()} \\
+    \midrule
+    ID & C.1.6.2  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{15}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{3}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test nie zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
-    zerowej przepustowości pomiędzy węzłami pośrednimi.
-    \texttt{testCase3}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase3()} \\
+    \midrule
+    ID & C.1.6.3  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią o
-    ujemnej przepustowości pomiędzy węzłami pośrednimi.
-    \texttt{testCase4}
-    Oczekiwany wynik: 0
-    Uzyskany wynik: 0
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase4()} \\
+    \midrule
+    ID & C.1.6.4  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{0}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią z
-    drugiego węzłą pośredniego do pierwszego węzła pośredniego.
-    \texttt{testCase5}
-    Oczekiwany wynik: 4
-    Uzyskany wynik: 4
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase5()} \\
+    \midrule
+    ID & C.1.6.5  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{4}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
-    pierwszego węzła pośredniego do ujścia.
-    \texttt{testCase6}
-    Oczekiwany wynik: 7
-    Uzyskany wynik: 7
-    \textsc{Test zaliczony}
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase6()} \\
+    \midrule
+    ID & C.1.6.6  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{7}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
-
-    \item Sieć z 2 węzłami pośrednimi połączonymi szeregowo z krawędzią od
-    źródła do drugiego węzła pośredniego.
-    \texttt{testCase7}
-    Oczekiwany wynik: 9
-    Uzyskany wynik: 9
-    \textsc{Test zaliczony}
-
-
-\end{itemize}
-
+\begin{tabular}{@{} >{\bfseries}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    TestCase & \texttt{rw.blackbox.TwoSerialVerticesTest.testCase7()} \\
+    \midrule
+    ID & C.1.6.7  \\
+    \midrule
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Uzyskany wynik &
+    \begin{minipage}[h]{0.6\textwidth}
+        \texttt{9}
+    \end{minipage} \\
+    \midrule
+    Rezultat & \textsc{Test zaliczony} \\
+    \bottomrule
+\end{tabular}
+\end{center}
 
 \subsubsection{Sieć z nieistniejącymi węzłami}
 
