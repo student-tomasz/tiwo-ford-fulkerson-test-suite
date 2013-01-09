@@ -5,85 +5,56 @@
 
 
 \Tytul{Sprawozdanie z testowania algorytmu \textsc{Forda-Fulkersona}}
-\Data{2012-12-25}
-\Wersja{0.2.2}
+\Data{2013-01-08}
+\Wersja{1.0}
 \Autorzy{TC, MM, MO, RW}
 \MakeDokumentMeta
 
 
 \section{Plan testowania}
-
-\subsection{Wprowadzenie}
-Testowaniu podlega system realizujący algorytm \textsc{Forda-Fulkersona} służący
-do wyznaczania maksymalnego przepływu w sieciach. Testowane elementy pochodzą z
-kodu załączonego wraz z książką \emph{Algorytmy. Almanach}. Celem testowania
-jest zweryfikowanie poprawności już zaimplementowanej funkcjonalności.
-
-\subsection{Testowane elementy}
-Testowaniu podlega projekt \texttt{ford-fulkerson-test-suite} zawierający
-implementację algorytmu \textsc{Forda-Fulkersona}. Testowana wersja projektu
-znajduje się w repozytorium, w rewizji \texttt{e5ebef7} o nazwie \texttt
-{testing-final}.
-
-\subsection{Testowana funkcjonalność}
-Uwaga procesu testowania będzie skupiona na konkretnych implementacjach systemu:
-\begin{itemize}[nosep]
-    \item dla klasy \texttt{FlowNetwork} --- implementacja
-        \texttt{FlowNetworkArray},
-    \item dla klasy \texttt{Search} --- implementacja \texttt{DFS\_SearchArray},
-\end{itemize}
-W chwili obecnej dostępne są też alternatywne implementacje operujące na
-listach, odpowiednio \texttt{FlowNetworkAdjacencyList} oraz
-\texttt{DFS\_SearchList}. Wyszczególnienie implementacji jest istotne dla
-planowania testów biało\dywiz skrzynkowych. Testy czarno\dywiz skrzynkowe
-nie mają wiedzy o wybranej implementacji, powinny działać niezależnie od wyboru.
-
-\subsection{Testowana funkcjonalność --- wyłączenia}
-Do zakresu testów nie wchodzą moduły pomocnicze:
-\begin{itemize}[nosep]
-    \item pakiet \texttt{algs.heap},
-    \item pakiet \texttt{algs.list}.
-\end{itemize}
-Oraz moduły nie wykorzystywane przez testowany system algorytmu:
-\begin{itemize}[nosep]
-    \item moduł \texttt{algs.network.generator}.
-\end{itemize}
-
-\subsection{Podejście}
-Środowisko testowe wymaga korzystani z:
-\begin{itemize}[nosep]
-    \item NetBeans IDE 7.2.1
-    \item Oracle JDK 1.7\_u9
-    \item TestNG 6.8
-\end{itemize}
-
-\noindent
-Specyficzne metodyki, narzędzia i kryteria satysfakcji są opisane w sekcji
-\ref{sec:szczegolowy_plan}.
+\label{sec:plan_ogolny}
+\input{tex/plan.tex}
 
 
 \section{Szczegółowy plan testowania}
-\label{sec:szczegolowy_plan}
+\label{sec:plan_szczegolowy}
 \input{tex/plan/czarno-skrzynkowe.tex}
 \input{tex/plan/bialo-skrzynkowe.tex}
+\input{tex/plan/pozorne.tex}
 
 
 \section{Projekt testów}
 \label{sec:projekt}
 \input{tex/projekt/czarno-skrzynkowe.tex}
+\input{tex/projekt/bialo-skrzynkowe.tex}
+\input{tex/projekt/pozorne.tex}
 
 
 \section{Realizacja testów}
+\label{sec:realizacja}
+\input{tex/realizacja/czarno-skrzynkowe.tex}
+\input{tex/realizacja/bialo-skrzynkowe.tex}
+\input{tex/realizacja/pozorne.tex}
 
 \input{tex/realizacja/czarno-skrzynkowe.tex}
 
 \section{Wykonanie testów}
+\label{sec:wykonanie}
+\input{tex/wykonanie/czarno-skrzynkowe.tex}
+\input{tex/wykonanie/bialo-skrzynkowe.tex}
+\input{tex/wykonanie/pozorne.tex}
 
 
 \section{Ocena rezultatów testów}
+\label{sec:ocena}
+\input{tex/ocena/czarno-skrzynkowe.tex}
+\input{tex/ocena/bialo-skrzynkowe.tex}
+\input{tex/ocena/pozorne.tex}
 
 
 \section{Wnioski}
+\label{sec:wnioski}
+\input{tex/wnioski.tex}
 
 
 \newpage
@@ -92,12 +63,31 @@ Specyficzne metodyki, narzędzia i kryteria satysfakcji są opisane w sekcji
     \version*{0.1.0}{2012-12-21}{TC}%
         Szablon dokumentu.
     \version{0.2.0}{2012-12-22}{RW}
-        Dodanie planu testowania biało-skrzynkowego.
+        Dodano plan testowania biało-skrzynkowego.
     \version{0.2.1}{2012-12-22}{MO}
-        Dodanie planu testowania czarno-skrzynkowego.
+        Dodano plan testowania czarno-skrzynkowego.
     \version{0.2.2}{2012-12-25}{TC}
-        Połączenie planów. Dodanie planu ogólnego. Rozróżnienie na plany
+        Połączono plany. Dodano plan ogólny. Rozróżnionio plany
         szczegółowe.
+    \version{0.2.3}{2012-12-28}{MM}
+        Dodano plan testowania z mockami.
+    \version{0.3}{2012-12-29}{TC, MM, MO, RW}
+        Zmergowano projekty testowania biało\dywiz, czarno\dywiz
+        skrzynkowego oraz z wykorzystaniem mocków.
+    \version{0.4}{2013-01-02}{RW}
+        Dodano realizację testów czarno\dywiz skrzynkowych.
+    \version{0.4.1}{2013-01-02}{MO}
+        Dodano realizację testów biało\dywiz skrzynkowych.
+    \version{0.4.2}{2013-01-03}{MO}
+        Dodano realizację testów z mockami.
+    \version{0.5}{2013-01-05}{TC, MM, MO, RW}
+        Dodano opis wykonania testów.
+    \version{0.5.1}{2013-01-05}{TC}
+        Dodano rysunki \texttt{Graphviz} do wykonania części testów.
+    \version{0.6}{2013-01-07}{TC, MM, MO, RW}
+        Dodano sumaryczną ocenę rezultatów testów. Dodano wnioski.
+    \version{1.0}{2013-01-08}{TC}
+        Sprawdzono. Zatwierdzono.
 \end{versions}
 
 

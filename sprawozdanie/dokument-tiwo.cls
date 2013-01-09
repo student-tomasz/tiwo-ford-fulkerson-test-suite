@@ -66,7 +66,7 @@
 }
 
 \RequirePackage[inline]{enumitem}
-\setlist{nosep, align=parleft, leftmargin=*}
+\setlist{nosep}
 
 \RequirePackage{titlesec}
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}

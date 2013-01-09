@@ -1,0 +1,97 @@
+\subsection{Testowanie biało\dywiz skrzynkowe}
+
+\subsubsection{algs.network.VertexStructure}
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries{ToStringTest}} \\
+    \midrule
+    {\bfseries Id} & B.1.1 \\
+    \hline
+    {\bfseries Funkcja} & \bfseries String \texttt{toString()} \\
+    \hline
+    {\bfseries Opis} & Wypisuje listę węzłów wychodzących i wchodzacych. \\
+    \hline
+    {\bfseries Przypadki testowe} & {\begin{enumerate}
+                                        \item Struktura bez zdefiniowanych krawędzi wejscia/wyjścia
+                                        \item Struktura z pojedynczą krawędzią wejścia/wyjścia
+                                        \item Struktura z wieloma krawędziami wejścia wyjścia
+                                    \end{enumerate}} \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{algs.network.FlowNetworkArray}
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries{MinimalNetworkConstructorTest}} \\
+    \midrule
+    {\bfseries Id} & B.2.1 \\
+    \hline
+    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex, \bfseries int sinkIndex, \bfseries int numVertices)} \\
+    \hline
+    {\bfseries Opis} & Konstruktor minimalnej struktury sieci. Inicjalizuje tylko niezbedne zmienne. \\
+    \hline
+    {\bfseries Przypadki testowe} & {\begin{enumerate}
+                                        \item Wartości oczekiwane
+                                        \item Ujemne wartości
+                                        \item sinkIndex < sourceIndex
+                                        \item sinkIndex - sourceIndex != numVertices
+                                    \end{enumerate}} \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries{NetworkConstructorTest}} \\
+    \midrule
+    {\bfseries Id} & B.2.1 \\
+    \hline
+    {\bfseries Funkcja} & \texttt{FlowNetworkArray (\bfseries int sourceIndex,
+                                                    \bfseries int sinkIndex, \bfseries int numVertices),
+                                                    \bfseries Iterator<Edges> edges} \\
+    \hline
+    {\bfseries Opis} & Konstruktor struktury reprezentującej graf przpływu. \\
+    \hline
+    {\bfseries Przypadki testowe} & {\begin{enumerate}
+                                        \item Wartości oczekiwane
+                                        \item Ujemne wartości
+                                        \item sinkIndex - sourceIndex != numVertices
+                                        \item sinkIndex > sourceIndex
+                                        \item Pusta kolekcja krawędzi
+                                    \end{enumerate}} \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{} >{\ttfamily}p{0.2\textwidth} @{\hspace{0.02\textwidth}} p{0.6\textwidth} @{}}
+    \toprule
+    \multicolumn{2}{@{}c@{}}{\bfseries{IllegalStateExceptionTest}} \\
+    \midrule
+    {\bfseries Id} & B.2.2 \\
+    \hline
+    {\bfseries Funkcja} & \bfseries void \texttt{ validate()} \\
+    \hline
+    {\bfseries Opis} & Metoda weryfikuje czy informacje na temat sieci są akceptowalne.
+                       Zwracany jest wyjątek, IllegalStateException w dwóch przypadkach:
+        \begin{enumerate}
+            \item Przepływ krawędzi jest wiekszy niż przepustowaość przepustowaść
+            \item Ilość krawędzi wchodzących jest różna od krawędzi wychodzących
+        \end{enumerate}\\
+    \hline
+    {\bfseries Przypadki testowe} & Tak jak wyżej. \\
+    \hline
+    {\bfseries Wykonawca} & MO \\
+    \bottomrule
+\end{tabular}
+\end{center}
