@@ -86,11 +86,24 @@ minimalnego konstruktora
     TestCase & \texttt{algs.network.MinimalNetworkConstructorTest.validArgumentTest()} \\
     \midrule
     ID & B.1.2.1 \\
-
     \midrule
-    Dane wejściowe & \texttt{sourceIndex = 0; sinkIndex = 1; numVertices = 2;} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item sourceIndex = 0
+       \item sinkIndex = 1
+       \item numVertices = 2    
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & \texttt{sourceIndex = 0; sinkIndex = 1; numVertices = 2;} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item sourceIndex = 0
+       \item sinkIndex = 1
+       \item numVertices = 2 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -104,9 +117,21 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.2 \\
     \midrule
-    Dane wejściowe & \texttt{sourceIndex = -1; sinkIndex = -2; numVertices = -2;} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item sourceIndex = -1
+       \item sinkIndex = -2
+       \item numVertices = -2
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & IllegalArgumentException \\
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+        \item \texttt{IllegalArgumentException}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -120,9 +145,21 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.3 \\
     \midrule
-    Dane wejściowe & \texttt{sourceIndex = 1; sinkIndex = 0; numVertices = 2;} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item sourceIndex = 1
+       \item sinkIndex = 0
+       \item numVertices = 2
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -136,9 +173,21 @@ minimalnego konstruktora
     \midrule
     ID & B.1.2.4 \\
     \midrule
-    Dane wejściowe & \texttt{sourceIndex = 0; sinkIndex = 7; numVertices = 2;} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item sourceIndex = 0
+       \item sinkIndex = 7
+       \item numVertices = 2
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException}  
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -158,9 +207,25 @@ konstruktora
     \midrule
     ID & B.1.3.1 \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 0
+       \item sinkIndex = 3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 0
+       \item sinkIndex = 3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -174,9 +239,22 @@ konstruktora
     \midrule
     ID & B.1.3.2 \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = -4; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = -4
+       \item sourceIndex = 0
+       \item sinkIndex = 3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException}  
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -190,11 +268,22 @@ konstruktora
     \midrule
     ID & B.1.3.3 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = -1
+       \item sinkIndex = 3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = -1; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
-    \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException}  
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -208,11 +297,22 @@ konstruktora
     \midrule
     ID & B.1.3.4 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
+    Dane wejściowe & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 0
+       \item sinkIndex = -3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = -3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
-    \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -226,11 +326,22 @@ konstruktora
     \midrule
     ID & B.1.3.5 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
+    Dane wejściowe &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 2
+       \item sourceIndex = 0
+       \item sinkIndex = 3
+       \item edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\}  
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 2; sourceIndex = 0; sinkIndex = 3; edges = \{(0, 1, 3); (1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
-    \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -244,11 +355,22 @@ konstruktora
     \midrule
     ID & B.1.3.6 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
+    Dane wejściowe &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 3
+       \item sinkIndex = 0
+       \item edges = \{(0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)\} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 3; sinkIndex = 0; edges = \{(0, 1, 3);(1, 2, 2); (2, 3, 2); (0, 2, 3)\};} \\
-    \midrule
-    Oczekiwany wynik & \texttt{IllegalArgumentException} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalArgumentException} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -262,11 +384,25 @@ konstruktora
     \midrule
     ID & B.1.3.7 \\
     \midrule
-    Opis & Konstruktor struktury reprezentującej graf przepływu. \\
+    Dane wejściowe &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 
+       \item sinkIndex = 3
+       \item edges = pusty Iterator  
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
-    Dane wejściowe & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = pusty Iterator} \\
-    \midrule
-    Oczekiwany wynik & \texttt{numVertices = 4; sourceIndex = 0; sinkIndex = 3; edges = pusta tablica EdgeInfo[4][4]} \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item numVertices = 4
+       \item sourceIndex = 0
+       \item sinkIndex = 3
+       \item edges = pusta tablica EdgeInfo[4][4]   
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -286,19 +422,21 @@ poprawne wywoływanie wyjątków przez metodę
     \midrule
     ID & B.1.4.1 \\
     \midrule
-    Opis &
+    \midrule
+    Dane wejściowe & 
     \begin{minipage}[h]{0.78\textwidth}
-    Metoda weryfikuje czy informacje na temat sieci są akceptowalne. Zwracany
-    jest wyjątek, \texttt{IllegalStateException} w dwóch przypadkach:
     \begin{enumerate}
-        \item Przepływ krawędzi jest większy niż przepustowość.
-        \item Liczba krawędzi wchodzących jest różna od liczby krawędzi wychodzących.
+       \item Krawędź (1, 2, 1)
+       \item przepływ = 2   
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), przepływ = 2 \\
-    \midrule
-    Oczekiwany wynik & \texttt{IllegalStateException} \\
+    Oczekiwany wynik &
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalStateException} 
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
@@ -312,19 +450,20 @@ poprawne wywoływanie wyjątków przez metodę
     \midrule
     ID & B.1.4.2 \\
     \midrule
-    Opis &
+    Dane wejściowe & 
     \begin{minipage}[h]{0.78\textwidth}
-    Metoda weryfikuje czy informacje na temat sieci są akceptowalne. Zwracany
-    jest wyjątek, \texttt{IllegalStateException} w dwóch przypadkach:
     \begin{enumerate}
-        \item Przepływ krawędzi jest większy niż przepustowość.
-        \item Liczba krawędzi wchodzących jest różna od liczby krawędzi wychodzących.
+       \item Krawędź (1, 2, 1)
+       \item przepływ = 2 
     \end{enumerate}
     \end{minipage} \\
     \midrule
-    Dane wejściowe & Krawędź (1, 2, 1), przepływ = 2 \\
-    \midrule
-    Oczekiwany wynik & Krawędź (1, 2, 1), przepływ = 1 \\
+    Oczekiwany wynik & 
+    \begin{minipage}[h]{0.78\textwidth}
+    \begin{enumerate}
+       \item \texttt{IllegalStateException}
+    \end{enumerate}
+    \end{minipage} \\
     \midrule
     Wykonawca & MO \\
     \bottomrule
